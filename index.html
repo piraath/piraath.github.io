@@ -1,10 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pirasanth & Sangavi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pirasanth & Sangavi Wedding</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #f7f0e6;
+      color: #3b2412;
+      text-align: center;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px;
+      background: linear-gradient(rgba(247,240,230,0.85), rgba(247,240,230,0.95));
+    }
+
+    .small-title {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #8b6f32;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin: 20px 0 10px;
+      color: #4b2a12;
+    }
+
+    .date {
+      font-size: 22px;
+      color: #8b6f32;
+      margin-bottom: 30px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      background: #8b6f32;
+      color: white;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 70px 25px;
+    }
+
+    h2 {
+      font-size: 34px;
+      color: #4b2a12;
+    }
+
+    .card {
+      max-width: 750px;
+      margin: 25px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      padding: 35px;
+      background: #4b2a12;
+      color: #f7f0e6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Pirasanth & Sangavi</h1>
-  <p>Welcome to our wedding website.</p>
+
+  <header>
+    <div class="small-title">Wedding Memories</div>
+    <h1>Pirasanth & Sangavi</h1>
+    <div class="date">31 October 2026</div>
+
+    <p class="intro">
+      Thank you for being part of our special day.
+      This website will be used to share our wedding photos with family and friends.
+    </p>
+
+    <div class="buttons">
+      <a href="#photos">View Photos</a>
+      <a href="#download">Download Photos</a>
+    </div>
+  </header>
+
+  <section id="photos">
+    <h2>Photos</h2>
+    <div class="card">
+      <p>
+        The photo gallery will be available here after the wedding.
+      </p>
+      <p>
+        We will add the link once the photographer has delivered the pictures.
+      </p>
+    </div>
+  </section>
+
+  <section id="download">
+    <h2>Download</h2>
+    <div class="card">
+      <p>
+        A download link will be added here so guests can save the photos.
+      </p>
+      <p>
+        For now, this section is ready and waiting for the final gallery.
+      </p>
+    </div>
+  </section>
+
+  <section id="info">
+    <h2>Information</h2>
+    <div class="card">
+      <p>
+        This website is temporary and will remain online before and after the wedding
+        so everyone can access the memories easily.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    With love, Pirasanth & Sangavi
+  </footer>
+
 </body>
 </html>
