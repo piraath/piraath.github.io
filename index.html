@@ -3,151 +3,328 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pirasanth & Sangavi Wedding</title>
+  <title>Pirasanth & Shankavie</title>
+
   <style>
+    :root {
+      --gold: #c89b4b;
+      --dark-gold: #9b7430;
+      --cream: #fff8ee;
+      --brown: #2b1609;
+      --text: #3a2415;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Georgia, serif;
-      background: #f7f0e6;
-      color: #3b2412;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--text);
       text-align: center;
     }
 
     header {
       min-height: 100vh;
+      position: relative;
+      color: white;
+      background:
+        linear-gradient(rgba(20, 10, 3, 0.65), rgba(20, 10, 3, 0.75)),
+        url("images/hero.jpg");
+      background-size: cover;
+      background-position: center;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
       padding: 30px;
-      background: linear-gradient(rgba(247,240,230,0.85), rgba(247,240,230,0.95));
+    }
+
+    nav {
+      position: absolute;
+      top: 25px;
+      right: 40px;
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo {
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      color: var(--gold);
+      font-size: 24px;
+      letter-spacing: 5px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      animation: fadeIn 1.5s ease;
     }
 
     .small-title {
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #8b6f32;
-      font-size: 14px;
+      font-size: 24px;
+      letter-spacing: 8px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 52px;
-      margin: 20px 0 10px;
-      color: #4b2a12;
+      font-size: 82px;
+      margin: 10px 0;
+      color: var(--gold);
+      font-style: italic;
+      font-weight: normal;
     }
 
     .date {
-      font-size: 22px;
-      color: #8b6f32;
-      margin-bottom: 30px;
+      font-size: 28px;
+      letter-spacing: 8px;
+      margin: 25px 0;
     }
 
     .intro {
+      font-size: 20px;
+      line-height: 1.6;
       max-width: 650px;
       margin: 0 auto 35px;
-      font-size: 19px;
-      line-height: 1.6;
     }
 
-    .buttons a {
+    .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      border-radius: 30px;
+      margin-top: 20px;
+      padding: 16px 35px;
+      background: var(--gold);
+      color: var(--brown);
       text-decoration: none;
-      background: #8b6f32;
-      color: white;
-      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     section {
-      padding: 70px 25px;
+      padding: 80px 25px;
     }
 
     h2 {
-      font-size: 34px;
-      color: #4b2a12;
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
     .card {
-      max-width: 750px;
-      margin: 25px auto;
-      padding: 30px;
       background: white;
-      border-radius: 18px;
+      padding: 35px 25px;
+      border-radius: 10px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border: 1px solid rgba(200,155,75,0.2);
+    }
+
+    .card .icon {
+      font-size: 42px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .card a {
+      color: var(--dark-gold);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1150px;
+      margin: 0 auto 35px;
+    }
+
+    .photo {
+      height: 210px;
+      background: #eadcc8;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-gold);
+      font-weight: bold;
+      overflow: hidden;
+    }
+
+    .quote {
+      background: #f6ead9;
+      padding: 70px 25px;
+      font-size: 28px;
+      font-style: italic;
     }
 
     footer {
+      background: var(--brown);
+      color: var(--gold);
       padding: 35px;
-      background: #4b2a12;
-      color: #f7f0e6;
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .cards,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      nav {
+        display: none;
+      }
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 38px;
+      .cards,
+      .gallery-grid {
+        grid-template-columns: 1fr;
       }
 
-      .intro {
-        font-size: 17px;
+      h1 {
+        font-size: 44px;
+      }
+
+      .small-title {
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+
+      .date {
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+
+      .logo {
+        left: 25px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="small-title">Wedding Memories</div>
-    <h1>Pirasanth & Sangavi</h1>
-    <div class="date">31 October 2026</div>
+  <header id="home">
+    <div class="logo">P & S</div>
 
-    <p class="intro">
-      Thank you for being part of our special day.
-      This website will be used to share our wedding photos with family and friends.
-    </p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
+      <a href="#download">Download</a>
+      <a href="#thanks">Contact</a>
+    </nav>
 
-    <div class="buttons">
-      <a href="#photos">View Photos</a>
-      <a href="#download">Download Photos</a>
+    <div class="hero-content">
+      <div class="small-title">When Two Souls Meet...</div>
+      <h1>Pirasanth & Sangavi</h1>
+      <div class="date">31 OCTOBER 2026</div>
+
+      <p class="intro">
+        Thank you for being part of our special day.
+        Here you can view and download our wedding memories.
+      </p>
+
+      <a class="btn" href="#gallery">View Gallery</a>
     </div>
   </header>
 
-  <section id="photos">
-    <h2>Photos</h2>
-    <div class="card">
-      <p>
-        The photo gallery will be available here after the wedding.
-      </p>
-      <p>
-        We will add the link once the photographer has delivered the pictures.
-      </p>
+  <section>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📷</div>
+        <h3>Gallery</h3>
+        <p>Relive the beautiful moments from our wedding day.</p>
+        <a href="#gallery">View Photos →</a>
+      </div>
+
+      <div class="card" id="videos">
+        <div class="icon">▶</div>
+        <h3>Videos</h3>
+        <p>Watch the highlights and special memories.</p>
+        <a href="#">Coming Soon →</a>
+      </div>
+
+      <div class="card" id="download">
+        <div class="icon">⬇</div>
+        <h3>Download</h3>
+        <p>Download all photos in high quality.</p>
+        <a href="#">Download All →</a>
+      </div>
+
+      <div class="card" id="thanks">
+        <div class="icon">♡</div>
+        <h3>Thank You</h3>
+        <p>Your love and blessings mean the world to us.</p>
+        <a href="#message">Read Message →</a>
+      </div>
     </div>
   </section>
 
-  <section id="download">
-    <h2>Download</h2>
-    <div class="card">
-      <p>
-        A download link will be added here so guests can save the photos.
-      </p>
-      <p>
-        For now, this section is ready and waiting for the final gallery.
-      </p>
+  <section id="gallery">
+    <h2>A Glimpse of Our Day</h2>
+
+    <div class="gallery-grid">
+      <div class="photo">Photo 1</div>
+      <div class="photo">Photo 2</div>
+      <div class="photo">Photo 3</div>
+      <div class="photo">Photo 4</div>
+      <div class="photo">Photo 5</div>
     </div>
+
+    <a class="btn" href="#">View Full Gallery</a>
   </section>
 
-  <section id="info">
-    <h2>Information</h2>
-    <div class="card">
-      <p>
-        This website is temporary and will remain online before and after the wedding
-        so everyone can access the memories easily.
-      </p>
-    </div>
+  <section class="quote" id="message">
+    “Together is a wonderful place to be.”
   </section>
 
   <footer>
-    With love, Pirasanth & Sangavi
+    With love, Pirasanth & Shankavie<br />
+    ♡<br />
+    © 2026 P&S Wedding Memories
   </footer>
 
 </body>
