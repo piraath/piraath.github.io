@@ -6,242 +6,318 @@
   <title>Pirasanth & Shankavie</title>
 
   <style>
-    :root {
-      --gold: #c89b4b;
-      --dark-gold: #9b7430;
-      --cream: #fff8ee;
-      --brown: #2b1609;
-      --text: #3a2415;
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+  :root {
+    --gold: #d5aa57;
+    --deep-gold: #9f762f;
+    --cream: #fff8ee;
+    --brown: #251207;
+    --text: #3a2415;
+  }
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--cream);
-      color: var(--text);
-      text-align: center;
-    }
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
 
-    header {
-      min-height: 100vh;
-      position: relative;
-      color: white;
-      background:
-        linear-gradient(rgba(20, 10, 3, 0.65), rgba(20, 10, 3, 0.75)),
-        url("images/hero.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-    }
+  body {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    text-align: center;
+  }
 
-    nav {
-      position: absolute;
-      top: 25px;
-      right: 40px;
-      display: flex;
-      gap: 28px;
-      font-size: 14px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+  header {
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background:
+      linear-gradient(rgba(18, 8, 3, 0.48), rgba(18, 8, 3, 0.58)),
+      url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    overflow: hidden;
+  }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.04);
+    animation: slowZoom 18s ease-in-out infinite alternate;
+    z-index: -1;
+  }
 
-    .logo {
-      position: absolute;
-      top: 25px;
-      left: 40px;
-      color: var(--gold);
-      font-size: 24px;
-      letter-spacing: 5px;
-    }
+  nav {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    display: flex;
+    gap: 34px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 
-    .hero-content {
-      max-width: 850px;
-      animation: fadeIn 1.5s ease;
-    }
+  nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-    .small-title {
-      font-size: 24px;
-      letter-spacing: 8px;
-      margin-bottom: 20px;
+  nav a:hover {
+    color: var(--gold);
+  }
+
+  .logo {
+    position: absolute;
+    top: 28px;
+    left: 45px;
+    color: var(--gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    letter-spacing: 7px;
+    font-weight: 500;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin-top: -90px;
+    animation: fadeIn 1.6s ease forwards;
+  }
+
+  .small-title {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-bottom: 22px;
+    color: rgba(255,255,255,0.95);
+  }
+
+  h1 {
+    font-size: 92px;
+    line-height: 0.95;
+    margin: 10px 0 22px;
+    color: var(--gold);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  }
+
+  .date {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 9px;
+    margin: 28px 0;
+    color: rgba(255,255,255,0.96);
+  }
+
+  .intro {
+    font-size: 22px;
+    line-height: 1.45;
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 15px 38px;
+    background: linear-gradient(135deg, #e8bd67, #bf8e39);
+    color: var(--brown);
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+  }
+
+  section {
+    padding: 80px 25px;
+  }
+
+  h2 {
+    font-size: 46px;
+    font-weight: 300;
+    margin-bottom: 35px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.72);
+    padding: 36px 25px;
+    border-radius: 12px;
+    box-shadow: 0 14px 45px rgba(80,45,15,0.08);
+    border: 1px solid rgba(200,155,75,0.18);
+    backdrop-filter: blur(8px);
+  }
+
+  .card .icon {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 15px;
+  }
+
+  .card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .card p {
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  .card a {
+    color: var(--deep-gold);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    max-width: 1150px;
+    margin: 0 auto 35px;
+  }
+
+  .photo {
+    height: 210px;
+    background: #eadcc8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--deep-gold);
+    font-weight: bold;
+    overflow: hidden;
+  }
+
+  .quote {
+    background: #f6ead9;
+    padding: 70px 25px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  footer {
+    background: var(--brown);
+    color: var(--gold);
+    padding: 35px;
+    font-size: 19px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slowZoom {
+    from {
+      transform: scale(1.02);
+    }
+    to {
+      transform: scale(1.09);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .cards,
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     h1 {
-      font-size: 82px;
-      margin: 10px 0;
-      color: var(--gold);
-      font-style: italic;
-      font-weight: normal;
+      font-size: 62px;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .hero-content {
+      margin-top: -40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cards,
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    header {
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 46px;
+    }
+
+    .small-title {
+      font-size: 17px;
+      letter-spacing: 5px;
     }
 
     .date {
-      font-size: 28px;
-      letter-spacing: 8px;
-      margin: 25px 0;
+      font-size: 13px;
+      letter-spacing: 5px;
     }
 
     .intro {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 650px;
-      margin: 0 auto 35px;
+      font-size: 19px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 16px 35px;
-      background: var(--gold);
-      color: var(--brown);
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+    .logo {
+      left: 25px;
+      font-size: 23px;
     }
-
-    section {
-      padding: 80px 25px;
-    }
-
-    h2 {
-      font-size: 42px;
-      font-weight: normal;
-      margin-bottom: 35px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      max-width: 1150px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      border: 1px solid rgba(200,155,75,0.2);
-    }
-
-    .card .icon {
-      font-size: 42px;
-      color: var(--gold);
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .card a {
-      color: var(--dark-gold);
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      max-width: 1150px;
-      margin: 0 auto 35px;
-    }
-
-    .photo {
-      height: 210px;
-      background: #eadcc8;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark-gold);
-      font-weight: bold;
-      overflow: hidden;
-    }
-
-    .quote {
-      background: #f6ead9;
-      padding: 70px 25px;
-      font-size: 28px;
-      font-style: italic;
-    }
-
-    footer {
-      background: var(--brown);
-      color: var(--gold);
-      padding: 35px;
-      font-size: 18px;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .cards,
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      h1 {
-        font-size: 56px;
-      }
-
-      nav {
-        display: none;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .cards,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 44px;
-      }
-
-      .small-title {
-        font-size: 18px;
-        letter-spacing: 4px;
-      }
-
-      .date {
-        font-size: 18px;
-        letter-spacing: 4px;
-      }
-
-      .logo {
-        left: 25px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
