@@ -56,6 +56,7 @@
   nav a {
     color: rgba(255,255,255,0.9);
     text-decoration: none;
+    transition: color .3s ease;
   }
 
   nav a:hover {
@@ -65,54 +66,146 @@
   main {
     min-height: calc(100vh - 90px);
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 70px 25px;
+    justify-content: center;
+    padding: 70px 30px;
   }
 
-  .infos {
+  .info-card {
+    position: relative;
+    width: min(950px, 100%);
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 45px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    border: 1px solid rgba(159,118,47,.40);
+
+    box-shadow:
+      0 25px 70px rgba(72,42,18,.13),
+      inset 0 0 0 7px rgba(255,248,238,.65);
+
+    background:
+      linear-gradient(
+        rgba(255,248,238,.82),
+        rgba(255,248,238,.90)
+      ),
+      url("images/infos-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .info-card::after {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(213,170,87,.45);
+    border-radius: 11px;
+    pointer-events: none;
+  }
+
+  .info-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
     max-width: 760px;
+  }
+
+  .eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--deep-gold);
+    margin-bottom: 22px;
   }
 
   h1 {
     font-family: "Bodoni Moda", serif;
-    font-size: 52px;
+    font-size: 54px;
     font-weight: 400;
-    margin: 0 0 35px;
+    margin: 0 0 20px;
+  }
+
+  .ornament {
+    color: var(--gold);
+    font-size: 24px;
+    margin: 10px 0 30px;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin: 0 auto 35px;
+    max-width: 620px;
+  }
+
+  .detail-box {
+    background: rgba(255,248,238,.55);
+    border: 1px solid rgba(213,170,87,.28);
+    border-radius: 12px;
+    padding: 20px 18px;
+    backdrop-filter: blur(3px);
+  }
+
+  .detail-label {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--deep-gold);
+    margin-bottom: 8px;
+  }
+
+  .detail-value {
+    font-size: 22px;
+    line-height: 1.4;
   }
 
   .venue-name {
     font-family: "Bodoni Moda", serif;
-    font-size: 34px;
+    font-size: 30px;
     color: var(--deep-gold);
-    margin-bottom: 18px;
+    margin-bottom: 10px;
   }
 
   .venue-address {
-    font-size: 23px;
-    line-height: 1.6;
+    font-size: 21px;
+    line-height: 1.55;
     margin: 0;
   }
 
   .btn {
     display: inline-block;
-    margin-top: 38px;
-    padding: 18px 42px;
+    margin-top: 32px;
+    padding: 18px 44px;
+
     background: linear-gradient(180deg,#e7bc65,#c99841);
+
     color: #2b1609;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 7px;
+
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
-    box-shadow: 0 18px 40px rgba(80,45,15,.15);
+
+    box-shadow: 0 15px 35px rgba(80,45,15,.17);
     transition: all .35s ease;
   }
 
   .btn:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(80,45,15,.22);
   }
 
   @media (max-width: 700px) {
@@ -127,8 +220,36 @@
       font-size: 10px;
     }
 
+    main {
+      padding: 30px 15px;
+    }
+
+    .info-card {
+      min-height: auto;
+      padding: 55px 22px;
+      border-radius: 14px;
+    }
+
+    .info-card::after {
+      inset: 9px;
+    }
+
     h1 {
-      font-size: 40px;
+      font-size: 39px;
+    }
+
+    .details-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .detail-value,
+    .venue-address {
+      font-size: 18px;
+    }
+
+    .venue-name {
+      font-size: 27px;
     }
   }
   </style>
@@ -142,31 +263,53 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="infos.html">Infos</a>
-      <a href="memories.html">Memories</a>
+      <a href="memories.html">Share Your Memories</a>
     </nav>
   </div>
 
   <main>
-    <div class="infos">
+    <div class="info-card">
 
-      <h1>Wedding Information</h1>
+      <div class="info-content">
 
-      <div class="venue-name">Hall 111</div>
+        <div class="eyebrow">P & S · 31 OCTOBER 2026</div>
 
-      <p class="venue-address">
-        Im Grund 5<br>
-        5014 Gretzenbach<br>
-        Switzerland
-      </p>
+        <h1>Wedding Information</h1>
 
-      <a
-        class="btn"
-        href="https://www.google.com/maps/search/?api=1&query=Hall+111+Im+Grund+5+5014+Gretzenbach+Switzerland"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open in Google Maps
-      </a>
+        <div class="ornament">♡</div>
+
+        <div class="details-grid">
+
+          <div class="detail-box">
+            <div class="detail-label">Date</div>
+            <div class="detail-value">31 October 2026</div>
+          </div>
+
+          <div class="detail-box">
+            <div class="detail-label">Ceremony</div>
+            <div class="detail-value">09:00 AM</div>
+          </div>
+
+        </div>
+
+        <div class="venue-name">Hall 111</div>
+
+        <p class="venue-address">
+          Im Grund 5<br>
+          5014 Gretzenbach<br>
+          Switzerland
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.google.com/maps/search/?api=1&query=Hall+111+Im+Grund+5+5014+Gretzenbach+Switzerland"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open in Google Maps
+        </a>
+
+      </div>
 
     </div>
   </main>
