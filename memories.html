@@ -63,98 +63,196 @@
   }
 
   main {
-    min-height: calc(100vh - 90px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 65px 25px;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 30px;
+}
+
+/* GRANDE CARTE */
+
+.memory-card {
+  position: relative;
+  width: min(1050px, 100%);
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 40px;
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid rgba(159,118,47,.40);
+
+  box-shadow:
+    0 25px 70px rgba(72,42,18,.13),
+    inset 0 0 0 7px rgba(255,248,238,.65);
+
+  background:
+    linear-gradient(
+      rgba(255,248,238,.84),
+      rgba(255,248,238,.91)
+    ),
+    url("images/couple.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* PETIT CADRE DORÉ INTÉRIEUR */
+
+.memory-card::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid rgba(213,170,87,.45);
+  border-radius: 11px;
+  pointer-events: none;
+}
+
+/* CONTENU */
+
+.memory-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  width: 100%;
+}
+
+.memory-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--deep-gold);
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 54px;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+
+.intro {
+  font-size: 21px;
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* QR */
+
+.qr-wrap {
+  margin: 15px auto 0;
+  padding: 13px;
+  width: fit-content;
+
+  background: rgba(255,255,255,.94);
+
+  border-radius: 12px;
+  border: 1px solid rgba(213,170,87,.25);
+
+  box-shadow: 0 12px 35px rgba(72,42,18,.12);
+}
+
+.qr-wrap img {
+  display: block;
+  width: 180px;
+  height: 180px;
+}
+
+/* BOUTON */
+
+.btn {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding: 18px 44px;
+
+  background: linear-gradient(180deg,#e7bc65,#c99841);
+
+  color: #2b1609;
+  text-decoration: none;
+
+  border-radius: 7px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  box-shadow: 0 15px 35px rgba(80,45,15,.17);
+
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(80,45,15,.22);
+}
+
+.private-note {
+  margin-top: 20px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+
+  color: #7b6657;
+}
+
+  @media (max-width: 700px) {
+
+  .topbar {
+    padding: 22px 25px;
+    flex-direction: column;
+    gap: 18px;
   }
 
-  .memories {
-    max-width: 760px;
+  nav {
+    gap: 18px;
+    font-size: 10px;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  .memory-card {
+    min-height: auto;
+    padding: 55px 22px;
+    border-radius: 14px;
+  }
+
+  .memory-card::after {
+    inset: 9px;
   }
 
   h1 {
-    font-family: "Bodoni Moda", serif;
-    font-size: 52px;
-    font-weight: 400;
-    margin: 0 0 20px;
+    font-size: 39px;
   }
 
   .intro {
-    font-size: 22px;
-    line-height: 1.55;
-    margin: 0 auto 25px;
-  }
-
-  .qr-wrap {
-    margin: 40px auto 15px;
-    padding: 18px;
-    width: fit-content;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 14px 45px rgba(80,45,15,0.12);
-    border: 1px solid rgba(200,155,75,0.2);
+    font-size: 18px;
   }
 
   .qr-wrap img {
-    display: block;
-    width: 220px;
-    height: 220px;
+    width: 165px;
+    height: 165px;
   }
-
-  .btn {
-    display: inline-block;
-    margin-top: 55px;
-    padding: 20px 48px;
-    background: linear-gradient(180deg,#e7bc65,#c99841);
-    color: #2b1609;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    box-shadow: 0 18px 40px rgba(80,45,15,.15);
-    transition: all .35s ease;
-  }
-
-  .btn:hover {
-    transform: translateY(-4px);
-  }
-
-  .private-note {
-    margin-top: 25px;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    color: #7b6657;
-  }
-
-  @media (max-width: 700px) {
-    .topbar {
-      padding: 22px 25px;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    nav {
-      gap: 18px;
-      font-size: 10px;
-    }
-
-    h1 {
-      font-size: 40px;
-    }
-
-    .intro {
-      font-size: 19px;
-    }
-
-    .qr-wrap img {
-      width: 190px;
-      height: 190px;
-    }
+}
   }
   </style>
 </head>
@@ -172,14 +270,21 @@
   </div>
 
   <main>
-    <div class="memories">
+    <main>
+  <div class="memory-card">
+
+    <div class="memory-content">
+
+      <div class="memory-eyebrow">P & S · 31 OCTOBER 2026</div>
 
       <h1>Share Your Memories</h1>
 
       <p class="intro">
-        Help us capture our special day through your eyes.
+        Help us capture our special day through your eyes.<br>
         Share your favourite photos and videos with us.
       </p>
+
+      <div class="ornament">♡</div>
 
       <div class="qr-wrap">
         <img
@@ -202,7 +307,9 @@
       </div>
 
     </div>
-  </main>
+
+  </div>
+</main>
 
 </body>
 </html>
