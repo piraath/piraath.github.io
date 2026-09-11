@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Infos | Pirasanth & Shankavie</title>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #d5aa57;
+    --deep-gold: #9f762f;
+    --cream: #fff8ee;
+    --brown: #251207;
+    --text: #3a2415;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    text-align: center;
+  }
+
+  .topbar {
+    padding: 26px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--brown);
+  }
+
+  .logo {
+    color: var(--gold);
+    font-size: 28px;
+    letter-spacing: 7px;
+    font-weight: 500;
+  }
+
+  nav {
+    display: flex;
+    gap: 34px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--gold);
+  }
+
+  main {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 25px;
+  }
+
+  .infos {
+    max-width: 760px;
+  }
+
+  h1 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 52px;
+    font-weight: 400;
+    margin: 0 0 35px;
+  }
+
+  .venue-name {
+    font-family: "Bodoni Moda", serif;
+    font-size: 34px;
+    color: var(--deep-gold);
+    margin-bottom: 18px;
+  }
+
+  .venue-address {
+    font-size: 23px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 38px;
+    padding: 18px 42px;
+    background: linear-gradient(180deg,#e7bc65,#c99841);
+    color: #2b1609;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 18px 40px rgba(80,45,15,.15);
+    transition: all .35s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-4px);
+  }
+
+  @media (max-width: 700px) {
+    .topbar {
+      padding: 22px 25px;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    nav {
+      gap: 18px;
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="logo">P & S</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="infos.html">Infos</a>
+      <a href="memories.html">Memories</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="infos">
+
+      <h1>Wedding Information</h1>
+
+      <div class="venue-name">Hall 111</div>
+
+      <p class="venue-address">
+        Im Grund 5<br>
+        5014 Gretzenbach<br>
+        Switzerland
+      </p>
+
+      <a
+        class="btn"
+        href="https://www.google.com/maps/search/?api=1&query=Hall+111+Im+Grund+5+5014+Gretzenbach+Switzerland"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open in Google Maps
+      </a>
+
+    </div>
+  </main>
+
+</body>
+</html>
