@@ -177,6 +177,28 @@
     margin: 0 0 20px;
   }
 
+  .infos {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.venue-name {
+  font-family: "Bodoni Moda", serif;
+  font-size: 32px;
+  color: var(--deep-gold);
+  margin-bottom: 15px;
+}
+
+.venue-address {
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.info-btn {
+  margin-top: 30px;
+}
+    
   .memories {
     max-width: 760px;
     margin: 0 auto;
@@ -309,11 +331,12 @@
   <header id="home">
     <div class="logo">P & S</div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#memories">Memories</a>
-      <a href="#message">Contact</a>
-    </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#infos">Infos</a>
+  <a href="#memories">Memories</a>
+  <a href="#message">Contact</a>
+</nav>
 
     <div class="hero-content">
       <div class="small-title">When Two Souls Meet...</div>
@@ -329,7 +352,30 @@
       <a class="btn" href="#memories">Share Your Memories</a>
     </div>
   </header>
+  
+<section id="infos">
+  <div class="infos">
+    <h2>Wedding Information</h2>
 
+    <div class="venue-name">Hall 111</div>
+
+    <p class="venue-address">
+      Im Grund 5<br>
+      5014 Gretzenbach<br>
+      Switzerland
+    </p>
+
+    <a
+      class="btn info-btn"
+      href="https://www.google.com/maps/search/?api=1&query=Hall+111+Im+Grund+5+5014+Gretzenbach+Switzerland"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Open in Maps
+    </a>
+  </div>
+</section>
+  
   <section id="memories">
     <div class="memories">
       <h2>Share Your Memories</h2>
