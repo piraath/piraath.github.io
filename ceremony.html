@@ -190,7 +190,7 @@
 
 
     /* =========================
-       SMALL ORNAMENT
+       ORNAMENT
        ========================= */
 
     .ornament {
@@ -326,7 +326,7 @@
       max-width: 1050px;
       margin: 0 auto;
 
-      border: 1px solid rgba(159,118,47,0.5);
+      border: 1px solid rgba(159,118,47,0.50);
       border-radius: 22px;
 
       padding: 15px;
@@ -348,10 +348,10 @@
       position: relative;
       z-index: 1;
 
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
 
-      padding: 95px 35px 100px;
+      padding: 85px 35px 95px;
 
       text-align: center;
     }
@@ -388,27 +388,77 @@
       margin-top: 15px;
     }
 
+
+    /* IMAGE THAALI */
+
+    .thaali-image {
+      position: relative;
+
+      width: 100%;
+      max-width: 760px;
+
+      height: 360px;
+
+      margin: 42px auto 0;
+
+      border-radius: 12px;
+      overflow: hidden;
+
+      box-shadow: 0 18px 45px rgba(37,18,7,0.12);
+    }
+
+    .thaali-image img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      filter: saturate(0.92) contrast(0.97);
+    }
+
+    .thaali-image::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      border: 1px solid rgba(213,170,87,0.45);
+      border-radius: 12px;
+
+      pointer-events: none;
+    }
+
+
+    /* THAALI ORNAMENT */
+
     .thaali-ornament {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
 
-      margin: 38px 0 40px;
+      margin: 42px 0 38px;
     }
 
     .thaali-ornament::before,
     .thaali-ornament::after {
       content: "";
+
       width: 55px;
       height: 1px;
+
       background: var(--gold);
     }
 
     .thaali-diamond {
       width: 8px;
       height: 8px;
+
       border: 1px solid var(--gold);
+
       transform: rotate(45deg);
     }
 
@@ -480,15 +530,19 @@
     .final-ornament::before,
     .final-ornament::after {
       content: "";
+
       width: 45px;
       height: 1px;
+
       background: var(--gold);
     }
 
     .final-diamond {
       width: 8px;
       height: 8px;
+
       border: 1px solid var(--gold);
+
       transform: rotate(45deg);
     }
 
@@ -528,7 +582,7 @@
 
 
     /* =========================
-       MOBILE
+       TABLET
        ========================= */
 
     @media (max-width: 900px) {
@@ -551,6 +605,10 @@
     }
 
 
+    /* =========================
+       MOBILE TIMELINE
+       ========================= */
+
     @media (max-width: 700px) {
 
       .timeline {
@@ -567,6 +625,7 @@
         width: 100%;
         left: 0;
         text-align: left;
+
         padding: 25px 10px 65px 25px;
       }
 
@@ -577,6 +636,10 @@
       }
     }
 
+
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 600px) {
 
@@ -622,6 +685,9 @@
         font-size: 18px;
       }
 
+
+      /* THAALI MOBILE */
+
       .thaali-section {
         padding: 20px 15px 70px;
       }
@@ -637,7 +703,7 @@
       }
 
       .thaali-inner {
-        padding: 70px 20px 75px;
+        padding: 65px 17px 70px;
       }
 
       .thaali-title {
@@ -652,10 +718,25 @@
         font-size: 19px;
       }
 
+      .thaali-image {
+        height: 220px;
+
+        margin-top: 32px;
+
+        border-radius: 9px;
+      }
+
+      .thaali-image::after {
+        border-radius: 9px;
+      }
+
       .thaali-text {
         font-size: 19px;
         line-height: 1.65;
       }
+
+
+      /* FINAL MOBILE */
 
       .final-rituals {
         padding: 65px 24px 85px;
@@ -681,15 +762,19 @@
 <body>
 
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
   <div class="topbar">
 
-    <div class="logo">P & S</div>
+    <div class="logo">
+      P & S
+    </div>
 
     <nav>
-     <a href="index.html">Home</a>
-      <a href="ceremony.html">Ceremony</a>
+      <a href="index.html">Home</a>
+      <a href="ceremony.html" class="active">Ceremony</a>
       <a href="schedule.html">Schedule</a>
       <a href="infos.html">Infos</a>
       <a href="memories.html">Memories</a>
@@ -698,7 +783,9 @@
   </div>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+       ========================= -->
 
   <section class="ceremony-hero">
 
@@ -724,7 +811,9 @@
   </section>
 
 
-  <!-- INTRODUCTION -->
+  <!-- =========================
+       INTRODUCTION
+       ========================= -->
 
   <section class="ceremony-intro">
 
@@ -759,7 +848,9 @@
   </section>
 
 
-  <!-- TIMELINE -->
+  <!-- =========================
+       TIMELINE
+       ========================= -->
 
   <section class="timeline">
 
@@ -770,7 +861,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">01</div>
+      <div class="timeline-number">
+        01
+      </div>
 
       <h3 class="timeline-title">
         Welcoming the Groom
@@ -797,7 +890,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">02</div>
+      <div class="timeline-number">
+        02
+      </div>
 
       <h3 class="timeline-title">
         Opening Prayers
@@ -810,9 +905,9 @@
       <p class="timeline-text">
         The ceremony continues with prayers to Lord Ganesh,
         seeking his blessings and the removal of obstacles
-        from the couple's path. The Pallikai ritual follows,
-        symbolising prosperity, fertility and abundance
-        in their future life together.
+        from the couple's path.
+        The Pallikai ritual follows, symbolising prosperity,
+        fertility and abundance in their future life together.
       </p>
 
     </div>
@@ -824,7 +919,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">03</div>
+      <div class="timeline-number">
+        03
+      </div>
 
       <h3 class="timeline-title">
         Arrival of the Bride
@@ -850,7 +947,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">04</div>
+      <div class="timeline-number">
+        04
+      </div>
 
       <h3 class="timeline-title">
         The Sacred Fire
@@ -876,7 +975,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">05</div>
+      <div class="timeline-number">
+        05
+      </div>
 
       <h3 class="timeline-title">
         The Joining of Two Families
@@ -902,7 +1003,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">06</div>
+      <div class="timeline-number">
+        06
+      </div>
 
       <h3 class="timeline-title">
         The Koorai & Thaali
@@ -915,8 +1018,9 @@
       <p class="timeline-text">
         The Koorai, Shankavie's traditional wedding saree,
         and the Thaali, the sacred necklace representing their marriage,
-        are blessed. Shankavie then changes into her Koorai
-        before returning for the most significant moment of the ceremony.
+        are blessed.
+        Shankavie then changes into her Koorai before returning
+        for the most significant moment of the ceremony.
       </p>
 
     </div>
@@ -925,7 +1029,9 @@
   </section>
 
 
-  <!-- 07 — SACRED UNION -->
+  <!-- =========================
+       07 — THE SACRED UNION
+       ========================= -->
 
   <section class="thaali-section">
 
@@ -949,13 +1055,28 @@
           Thaali Kattu
         </div>
 
+
+        <!-- THAALI IMAGE -->
+
+        <div class="thaali-image">
+
+          <img
+            src="images/thaali-kattu.png"
+            alt="Illustration of the Thaali Kattu ceremony"
+          >
+
+        </div>
+
+
         <div class="thaali-ornament">
           <div class="thaali-diamond"></div>
         </div>
 
+
         <p class="thaali-text">
-          To the sound of traditional music, Pirasanth ties the sacred Thaali
-          around Shankavie's neck, marking their union as husband and wife.
+          To the sound of traditional music,
+          Pirasanth ties the sacred Thaali around Shankavie's neck,
+          marking their union as husband and wife.
           As the Thaali is tied, their families and loved ones
           shower the couple with flower petals and blessings.
         </p>
@@ -967,7 +1088,9 @@
   </section>
 
 
-  <!-- 08 — FINAL RITUALS -->
+  <!-- =========================
+       08 — FINAL RITUALS
+       ========================= -->
 
   <section class="final-rituals">
 
@@ -1011,7 +1134,9 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
   <footer>
 
