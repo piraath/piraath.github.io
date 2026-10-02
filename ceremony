@@ -31,12 +31,200 @@
       background: var(--cream);
       color: var(--text);
     }
+/* ===== TOP NAVIGATION ===== */
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  letter-spacing: 7px;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  gap: 34px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+
+/* ===== CEREMONY HERO ===== */
+
+.ceremony-hero {
+  min-height: 72vh;
+  position: relative;
+  background:
+    linear-gradient(rgba(25, 11, 4, 0.65), rgba(25, 11, 4, 0.82)),
+    url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 130px 30px 90px;
+}
+
+.ceremony-hero-content {
+  max-width: 850px;
+}
+
+.ceremony-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+
+.ceremony-title {
+  font-family: "Bodoni Moda", serif;
+  font-size: 68px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #fff8ee;
+}
+
+.gold-line {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto;
+}
+
+.ceremony-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.6;
+
+  color: rgba(255,255,255,0.88);
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+  nav {
+    display: none;
+  }
+
+  .topbar {
+    padding: 25px;
+  }
+
+  .ceremony-title {
+    font-size: 48px;
+  }
+
+  .ceremony-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .ceremony-hero {
+    min-height: 68vh;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .ceremony-title {
+    font-size: 39px;
+    line-height: 1.15;
+  }
+
+  .ceremony-kicker {
+    letter-spacing: 4px;
+  }
+
+  .ceremony-subtitle {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+}
   </style>
 </head>
 
 <body>
 
+<div class="topbar">
 
+  <div class="logo">P & S</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ceremony.html">Ceremony</a>
+    <a href="infos.html">Infos</a>
+    <a href="memories.html">Memories</a>
+  </nav>
+
+</div>
+
+
+<section class="ceremony-hero">
+
+  <div class="ceremony-hero-content">
+
+    <div class="ceremony-kicker">
+      Pirasanth & Shankavie
+    </div>
+
+    <h1 class="ceremony-title">
+      OUR CEREMONY
+    </h1>
+
+    <div class="gold-line"></div>
+
+    <p class="ceremony-subtitle">
+      A journey through the traditions and sacred rituals
+      of our Tamil Hindu wedding.
+    </p>
+
+  </div>
+
+</section>
 
 </body>
 </html>
