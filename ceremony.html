@@ -184,6 +184,88 @@ nav a:hover {
     line-height: 1.5;
   }
 }
+    /* ===== CEREMONY INTRO ===== */
+
+.ceremony-intro {
+  background: var(--cream);
+  padding: 95px 30px 80px;
+  text-align: center;
+}
+
+.intro-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.intro-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--deep-gold);
+  margin-bottom: 22px;
+}
+
+.intro-title {
+  font-family: "Bodoni Moda", serif;
+  font-size: 42px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--brown);
+  margin: 0 0 28px;
+}
+
+.intro-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0 auto;
+}
+
+.intro-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.intro-ornament::before,
+.intro-ornament::after {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.intro-diamond {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+  .ceremony-intro {
+    padding: 70px 24px 60px;
+  }
+
+  .intro-title {
+    font-size: 32px;
+  }
+
+  .intro-text {
+    font-size: 19px;
+    line-height: 1.6;
+  }
+}
   </style>
 </head>
 
@@ -221,6 +303,36 @@ nav a:hover {
       A journey through the traditions and sacred rituals
       of our Tamil Hindu wedding.
     </p>
+
+  </div>
+
+</section>
+  <section class="ceremony-intro">
+
+  <div class="intro-inner">
+
+    <div class="intro-kicker">
+      Tamil Hindu Traditions
+    </div>
+
+    <h2 class="intro-title">
+      Two Souls. Two Families.<br>
+      One Sacred Journey.
+    </h2>
+
+    <p class="intro-text">
+      Our wedding will be celebrated according to Tamil Hindu traditions,
+      through a series of sacred rituals symbolising love, commitment
+      and the joining of two families.
+      <br><br>
+      Each tradition carries its own meaning. For those experiencing
+      a Tamil Hindu wedding for the first time, discover the significance
+      behind the moments you will witness during our ceremony.
+    </p>
+
+    <div class="intro-ornament">
+      <div class="intro-diamond"></div>
+    </div>
 
   </div>
 
