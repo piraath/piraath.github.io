@@ -403,6 +403,102 @@ nav a:hover {
     font-size: 18px;
   }
 }
+    /* ===== THAALI MOMENT ===== */
+
+.thaali-section {
+  position: relative;
+  background: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: 115px 30px 120px;
+  overflow: hidden;
+}
+
+.thaali-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.thaali-number {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: var(--gold);
+  margin-bottom: 25px;
+}
+
+.thaali-kicker {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.thaali-title {
+  font-family: "Bodoni Moda", serif;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 500;
+  margin: 0;
+  color: var(--cream);
+}
+
+.thaali-traditional {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-style: italic;
+  color: #e4bf75;
+  margin-top: 15px;
+}
+
+.thaali-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 35px 0;
+}
+
+.thaali-ornament::before,
+.thaali-ornament::after {
+  content: "";
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.thaali-diamond {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+
+.thaali-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  line-height: 1.7;
+  color: rgba(255,248,238,0.88);
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+@media (max-width: 600px) {
+
+  .thaali-section {
+    padding: 85px 24px 90px;
+  }
+
+  .thaali-title {
+    font-size: 39px;
+  }
+
+  .thaali-text {
+    font-size: 19px;
+  }
+}
   </style>
 </head>
 
@@ -621,6 +717,40 @@ nav a:hover {
   </p>
 
 </div>
+</section>
+  <section class="thaali-section">
+
+  <div class="thaali-inner">
+
+    <div class="thaali-number">
+      07
+    </div>
+
+    <div class="thaali-kicker">
+      The Heart of Our Ceremony
+    </div>
+
+    <h2 class="thaali-title">
+      The Sacred Union
+    </h2>
+
+    <div class="thaali-traditional">
+      Thaali Kattu
+    </div>
+
+    <div class="thaali-ornament">
+      <div class="thaali-diamond"></div>
+    </div>
+
+    <p class="thaali-text">
+      To the sound of traditional music, Pirasanth ties the sacred Thaali
+      around Shankavie's neck, symbolising our union as husband and wife.
+      As the Thaali is tied, our families and loved ones shower us
+      with flower petals and their blessings.
+    </p>
+
+  </div>
+
 </section>
 
 </body>
