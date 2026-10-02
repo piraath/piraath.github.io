@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Our Ceremony | Pirasanth & Shankavie</title>
 
@@ -34,9 +34,9 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        NAVIGATION
-       ================================================== */
+       ========================= */
 
     .topbar {
       position: absolute;
@@ -52,7 +52,6 @@
 
     .logo {
       color: var(--gold);
-      font-family: "Cormorant Garamond", serif;
       font-size: 28px;
       letter-spacing: 7px;
       font-weight: 500;
@@ -80,9 +79,9 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        HERO
-       ================================================== */
+       ========================= */
 
     .ceremony-hero {
       min-height: 72vh;
@@ -90,22 +89,22 @@
 
       background:
         linear-gradient(
-          rgba(25, 11, 4, 0.65),
-          rgba(25, 11, 4, 0.82)
+          rgba(25,11,4,0.65),
+          rgba(25,11,4,0.82)
         ),
         url("images/hero.jpg");
 
       background-size: cover;
       background-position: center;
 
-      color: white;
-
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
 
       padding: 130px 30px 90px;
+
+      text-align: center;
+      color: white;
     }
 
     .ceremony-hero-content {
@@ -141,19 +140,20 @@
     .ceremony-subtitle {
       max-width: 650px;
       margin: 0 auto;
+
       font-size: 23px;
       font-weight: 300;
       line-height: 1.6;
+
       color: rgba(255,255,255,0.88);
     }
 
 
-    /* ==================================================
+    /* =========================
        INTRODUCTION
-       ================================================== */
+       ========================= */
 
     .ceremony-intro {
-      background: var(--cream);
       padding: 95px 30px 80px;
       text-align: center;
     }
@@ -185,55 +185,31 @@
     .intro-text {
       font-size: 21px;
       line-height: 1.7;
-      font-weight: 400;
-      color: var(--text);
-      margin: 0 auto;
+      margin: 0;
     }
 
 
-    /* ==================================================
-       ORNAMENTS
-       ================================================== */
+    /* =========================
+       SMALL ORNAMENT
+       ========================= */
 
-    .intro-ornament,
-    .final-ornament,
-    .thaali-ornament {
+    .ornament {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
+      margin: 45px 0 0;
     }
 
-    .intro-ornament {
-      margin-top: 48px;
-    }
-
-    .intro-ornament::before,
-    .intro-ornament::after,
-    .final-ornament::before,
-    .final-ornament::after,
-    .thaali-ornament::before,
-    .thaali-ornament::after {
+    .ornament::before,
+    .ornament::after {
       content: "";
+      width: 45px;
       height: 1px;
       background: var(--gold);
     }
 
-    .intro-ornament::before,
-    .intro-ornament::after,
-    .final-ornament::before,
-    .final-ornament::after {
-      width: 45px;
-    }
-
-    .thaali-ornament::before,
-    .thaali-ornament::after {
-      width: 55px;
-    }
-
-    .intro-diamond,
-    .final-diamond,
-    .thaali-diamond {
+    .diamond {
       width: 8px;
       height: 8px;
       border: 1px solid var(--gold);
@@ -241,15 +217,15 @@
     }
 
 
-    /* ==================================================
-       TIMELINE — STEPS 01 TO 06
-       ================================================== */
+    /* =========================
+       TIMELINE — 01 TO 06
+       ========================= */
 
     .timeline {
       position: relative;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 50px 30px 120px;
+      padding: 50px 30px 80px;
     }
 
     .timeline::before {
@@ -258,13 +234,9 @@
       top: 0;
       bottom: 0;
       left: 50%;
-      width: 1px;
 
-      background: linear-gradient(
-        to bottom,
-        var(--gold),
-        rgba(213, 170, 87, 0.35)
-      );
+      width: 1px;
+      background: rgba(213,170,87,0.55);
 
       transform: translateX(-50%);
     }
@@ -288,11 +260,14 @@
     .timeline-dot {
       position: absolute;
       top: 43px;
+
       width: 11px;
       height: 11px;
+
       background: var(--cream);
       border: 2px solid var(--gold);
       border-radius: 50%;
+
       z-index: 2;
     }
 
@@ -304,17 +279,12 @@
       left: -6px;
     }
 
-    .timeline-number,
-    .thaali-number,
-    .final-number {
+    .timeline-number {
       font-family: "Inter", sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 5px;
       color: var(--deep-gold);
-    }
-
-    .timeline-number {
       margin-bottom: 14px;
     }
 
@@ -337,62 +307,129 @@
     .timeline-text {
       font-size: 19px;
       line-height: 1.65;
-      color: var(--text);
       margin: 0;
     }
 
 
-  <!-- ==================================================
-     07 — THE SACRED UNION
-     ================================================== -->
+    /* =========================
+       07 — THE SACRED UNION
+       ========================= */
 
-<section class="thaali-section">
+    .thaali-section {
+      background: var(--cream);
+      padding: 35px 35px 105px;
+    }
 
-  <div class="thaali-card">
+    .thaali-card {
+      position: relative;
 
-    <div class="thaali-inner">
+      max-width: 1050px;
+      margin: 0 auto;
 
-      <div class="thaali-number">
-        07
-      </div>
+      border: 1px solid rgba(159,118,47,0.5);
+      border-radius: 22px;
 
-      <div class="thaali-kicker">
-        The Heart of the Ceremony
-      </div>
+      padding: 15px;
+    }
 
-      <h2 class="thaali-title">
-        The Sacred Union
-      </h2>
+    .thaali-card::before {
+      content: "";
 
-      <div class="thaali-traditional">
-        Thaali Kattu
-      </div>
+      position: absolute;
+      inset: 13px;
 
-      <div class="thaali-ornament">
-        <div class="thaali-diamond"></div>
-      </div>
+      border: 1px solid rgba(213,170,87,0.55);
+      border-radius: 15px;
 
-      <p class="thaali-text">
-        To the sound of traditional music, Pirasanth ties the sacred Thaali
-        around Shankavie's neck, marking their union as husband and wife.
-        As the Thaali is tied, their families and loved ones
-        shower the couple with flower petals and blessings.
-      </p>
+      pointer-events: none;
+    }
 
-    </div>
+    .thaali-inner {
+      position: relative;
+      z-index: 1;
 
-  </div>
+      max-width: 760px;
+      margin: 0 auto;
 
-</section>
+      padding: 95px 35px 100px;
 
-    /* ==================================================
-       STEP 08 — FINAL RITUALS
-       ================================================== */
+      text-align: center;
+    }
+
+    .thaali-number {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--deep-gold);
+      margin-bottom: 25px;
+    }
+
+    .thaali-kicker {
+      font-size: 19px;
+      font-style: italic;
+      color: var(--deep-gold);
+      margin-bottom: 12px;
+    }
+
+    .thaali-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 54px;
+      line-height: 1.15;
+      font-weight: 500;
+      color: var(--brown);
+      margin: 0;
+    }
+
+    .thaali-traditional {
+      font-size: 21px;
+      font-style: italic;
+      color: var(--deep-gold);
+      margin-top: 15px;
+    }
+
+    .thaali-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      margin: 38px 0 40px;
+    }
+
+    .thaali-ornament::before,
+    .thaali-ornament::after {
+      content: "";
+      width: 55px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .thaali-diamond {
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .thaali-text {
+      max-width: 680px;
+      margin: 0 auto;
+
+      font-size: 21px;
+      line-height: 1.75;
+
+      color: var(--text);
+    }
+
+
+    /* =========================
+       08 — FINAL RITUALS
+       ========================= */
 
     .final-rituals {
-      background: var(--cream);
+      padding: 70px 30px 115px;
       text-align: center;
-      padding: 110px 30px 115px;
     }
 
     .final-inner {
@@ -401,6 +438,11 @@
     }
 
     .final-number {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--deep-gold);
       margin-bottom: 22px;
     }
 
@@ -423,12 +465,31 @@
     .final-text {
       font-size: 20px;
       line-height: 1.7;
-      color: var(--text);
       margin: 0;
     }
 
     .final-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
       margin: 45px 0;
+    }
+
+    .final-ornament::before,
+    .final-ornament::after {
+      content: "";
+      width: 45px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .final-diamond {
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
     }
 
     .final-quote {
@@ -440,19 +501,17 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        FOOTER
-       ================================================== */
+       ========================= */
 
     footer {
       background: var(--brown);
       text-align: center;
       padding: 50px 25px;
-      color: var(--cream);
     }
 
     .footer-logo {
-      font-family: "Cormorant Garamond", serif;
       font-size: 25px;
       letter-spacing: 7px;
       color: var(--gold);
@@ -468,9 +527,9 @@
     }
 
 
-    /* ==================================================
-       TABLET / MOBILE
-       ================================================== */
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 900px) {
 
@@ -495,7 +554,7 @@
     @media (max-width: 700px) {
 
       .timeline {
-        padding: 35px 22px 80px 50px;
+        padding: 35px 22px 60px 50px;
       }
 
       .timeline::before {
@@ -516,14 +575,6 @@
         left: -28px;
         right: auto;
       }
-
-      .timeline-title {
-        font-size: 27px;
-      }
-
-      .timeline-text {
-        font-size: 18px;
-      }
     }
 
 
@@ -535,8 +586,7 @@
 
       .ceremony-hero {
         min-height: 68vh;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 120px 24px 80px;
       }
 
       .ceremony-title {
@@ -550,7 +600,6 @@
 
       .ceremony-subtitle {
         font-size: 19px;
-        line-height: 1.5;
       }
 
       .ceremony-intro {
@@ -563,23 +612,53 @@
 
       .intro-text {
         font-size: 19px;
-        line-height: 1.6;
+      }
+
+      .timeline-title {
+        font-size: 27px;
+      }
+
+      .timeline-text {
+        font-size: 18px;
       }
 
       .thaali-section {
-        padding: 85px 24px 90px;
+        padding: 20px 15px 70px;
+      }
+
+      .thaali-card {
+        padding: 10px;
+        border-radius: 17px;
+      }
+
+      .thaali-card::before {
+        inset: 9px;
+        border-radius: 12px;
+      }
+
+      .thaali-inner {
+        padding: 70px 20px 75px;
       }
 
       .thaali-title {
-        font-size: 39px;
+        font-size: 38px;
+      }
+
+      .thaali-kicker {
+        font-size: 18px;
+      }
+
+      .thaali-traditional {
+        font-size: 19px;
       }
 
       .thaali-text {
         font-size: 19px;
+        line-height: 1.65;
       }
 
       .final-rituals {
-        padding: 80px 24px 85px;
+        padding: 65px 24px 85px;
       }
 
       .final-title {
@@ -602,9 +681,7 @@
 <body>
 
 
-  <!-- ==================================================
-       NAVIGATION
-       ================================================== -->
+  <!-- NAVIGATION -->
 
   <div class="topbar">
 
@@ -620,9 +697,7 @@
   </div>
 
 
-  <!-- ==================================================
-       HERO
-       ================================================== -->
+  <!-- HERO -->
 
   <section class="ceremony-hero">
 
@@ -648,9 +723,7 @@
   </section>
 
 
-  <!-- ==================================================
-       INTRODUCTION
-       ================================================== -->
+  <!-- INTRODUCTION -->
 
   <section class="ceremony-intro">
 
@@ -676,8 +749,8 @@
         throughout the ceremony.
       </p>
 
-      <div class="intro-ornament">
-        <div class="intro-diamond"></div>
+      <div class="ornament">
+        <div class="diamond"></div>
       </div>
 
     </div>
@@ -685,9 +758,7 @@
   </section>
 
 
-  <!-- ==================================================
-       CEREMONY TIMELINE
-       ================================================== -->
+  <!-- TIMELINE -->
 
   <section class="timeline">
 
@@ -698,9 +769,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        01
-      </div>
+      <div class="timeline-number">01</div>
 
       <h3 class="timeline-title">
         Welcoming the Groom
@@ -727,9 +796,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        02
-      </div>
+      <div class="timeline-number">02</div>
 
       <h3 class="timeline-title">
         Opening Prayers
@@ -742,9 +809,9 @@
       <p class="timeline-text">
         The ceremony continues with prayers to Lord Ganesh,
         seeking his blessings and the removal of obstacles
-        from the couple's path.
-        The Pallikai ritual follows, symbolising prosperity,
-        fertility and abundance in their future life together.
+        from the couple's path. The Pallikai ritual follows,
+        symbolising prosperity, fertility and abundance
+        in their future life together.
       </p>
 
     </div>
@@ -756,9 +823,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        03
-      </div>
+      <div class="timeline-number">03</div>
 
       <h3 class="timeline-title">
         Arrival of the Bride
@@ -784,9 +849,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        04
-      </div>
+      <div class="timeline-number">04</div>
 
       <h3 class="timeline-title">
         The Sacred Fire
@@ -812,9 +875,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        05
-      </div>
+      <div class="timeline-number">05</div>
 
       <h3 class="timeline-title">
         The Joining of Two Families
@@ -840,9 +901,7 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">
-        06
-      </div>
+      <div class="timeline-number">06</div>
 
       <h3 class="timeline-title">
         The Koorai & Thaali
@@ -865,49 +924,49 @@
   </section>
 
 
-  <!-- ==================================================
-       07 — THE SACRED UNION
-       ================================================== -->
+  <!-- 07 — SACRED UNION -->
 
   <section class="thaali-section">
 
-    <div class="thaali-inner">
+    <div class="thaali-card">
 
-      <div class="thaali-number">
-        07
+      <div class="thaali-inner">
+
+        <div class="thaali-number">
+          07
+        </div>
+
+        <div class="thaali-kicker">
+          The Heart of the Ceremony
+        </div>
+
+        <h2 class="thaali-title">
+          The Sacred Union
+        </h2>
+
+        <div class="thaali-traditional">
+          Thaali Kattu
+        </div>
+
+        <div class="thaali-ornament">
+          <div class="thaali-diamond"></div>
+        </div>
+
+        <p class="thaali-text">
+          To the sound of traditional music, Pirasanth ties the sacred Thaali
+          around Shankavie's neck, marking their union as husband and wife.
+          As the Thaali is tied, their families and loved ones
+          shower the couple with flower petals and blessings.
+        </p>
+
       </div>
-
-      <div class="thaali-kicker">
-        The Heart of the Ceremony
-      </div>
-
-      <h2 class="thaali-title">
-        The Sacred Union
-      </h2>
-
-      <div class="thaali-traditional">
-        Thaali Kattu
-      </div>
-
-      <div class="thaali-ornament">
-        <div class="thaali-diamond"></div>
-      </div>
-
-      <p class="thaali-text">
-        To the sound of traditional music, Pirasanth ties the sacred Thaali
-        around Shankavie's neck, marking their union as husband and wife.
-        As the Thaali is tied, their families and loved ones
-        shower the couple with flower petals and blessings.
-      </p>
 
     </div>
 
   </section>
 
 
-  <!-- ==================================================
-       08 — FINAL RITUALS
-       ================================================== -->
+  <!-- 08 — FINAL RITUALS -->
 
   <section class="final-rituals">
 
@@ -951,9 +1010,7 @@
   </section>
 
 
-  <!-- ==================================================
-       FOOTER
-       ================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
