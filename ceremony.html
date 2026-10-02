@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,7 @@
   <title>Our Ceremony | Pirasanth & Shankavie</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
     :root {
       --gold: #d5aa57;
@@ -31,860 +32,964 @@
       background: var(--cream);
       color: var(--text);
     }
-/* ===== TOP NAVIGATION ===== */
-
-.topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 28px 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-}
-
-.logo {
-  color: var(--gold);
-  font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
-  letter-spacing: 7px;
-  font-weight: 500;
-}
-
-nav {
-  display: flex;
-  gap: 34px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-nav a {
-  color: rgba(255,255,255,0.9);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-
-/* ===== CEREMONY HERO ===== */
-
-.ceremony-hero {
-  min-height: 72vh;
-  position: relative;
-  background:
-    linear-gradient(rgba(25, 11, 4, 0.65), rgba(25, 11, 4, 0.82)),
-    url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  padding: 130px 30px 90px;
-}
-
-.ceremony-hero-content {
-  max-width: 850px;
-}
-
-.ceremony-kicker {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 22px;
-}
-
-.ceremony-title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 68px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin: 0;
-  color: #fff8ee;
-}
-
-.gold-line {
-  width: 65px;
-  height: 1px;
-  background: var(--gold);
-  margin: 30px auto;
-}
-
-.ceremony-subtitle {
-  max-width: 650px;
-  margin: 0 auto;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: 23px;
-  font-weight: 300;
-  line-height: 1.6;
-
-  color: rgba(255,255,255,0.88);
-}
-
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 900px) {
-
-  nav {
-    display: none;
-  }
-
-  .topbar {
-    padding: 25px;
-  }
-
-  .ceremony-title {
-    font-size: 48px;
-  }
-
-  .ceremony-subtitle {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .logo {
-    font-size: 23px;
-  }
-
-  .ceremony-hero {
-    min-height: 68vh;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .ceremony-title {
-    font-size: 39px;
-    line-height: 1.15;
-  }
-
-  .ceremony-kicker {
-    letter-spacing: 4px;
-  }
-
-  .ceremony-subtitle {
-    font-size: 19px;
-    line-height: 1.5;
-  }
-}
-    /* ===== CEREMONY INTRO ===== */
-
-.ceremony-intro {
-  background: var(--cream);
-  padding: 95px 30px 80px;
-  text-align: center;
-}
-
-.intro-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.intro-kicker {
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--deep-gold);
-  margin-bottom: 22px;
-}
-
-.intro-title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 42px;
-  line-height: 1.25;
-  font-weight: 500;
-  color: var(--brown);
-  margin: 0 0 28px;
-}
-
-.intro-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 21px;
-  line-height: 1.7;
-  font-weight: 400;
-  color: var(--text);
-  margin: 0 auto;
-}
-
-.intro-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 48px;
-}
-
-.intro-ornament::before,
-.intro-ornament::after {
-  content: "";
-  width: 45px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.intro-diamond {
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--gold);
-  transform: rotate(45deg);
-}
-
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 600px) {
-
-  .ceremony-intro {
-    padding: 70px 24px 60px;
-  }
-
-  .intro-title {
-    font-size: 32px;
-  }
-
-  .intro-text {
-    font-size: 19px;
-    line-height: 1.6;
-  }
-}
-    /* ===== CEREMONY TIMELINE ===== */
-
-.timeline {
-  position: relative;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 30px 120px;
-}
-
-/* Ligne centrale dorée */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: linear-gradient(
-    to bottom,
-    var(--gold),
-    rgba(213, 170, 87, 0.35)
-  );
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 35px 70px 90px;
-}
-
-/* Étapes impaires = gauche */
-.timeline-item.left {
-  left: 0;
-  text-align: right;
-}
-
-/* Étapes paires = droite */
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
-
-/* Petit point sur la ligne */
-.timeline-dot {
-  position: absolute;
-  top: 43px;
-  width: 11px;
-  height: 11px;
-  background: var(--cream);
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.timeline-item.left .timeline-dot {
-  right: -6px;
-}
-
-.timeline-item.right .timeline-dot {
-  left: -6px;
-}
-
-/* Numéro */
-.timeline-number {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: var(--deep-gold);
-  margin-bottom: 14px;
-}
-
-/* Titre */
-.timeline-title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 31px;
-  line-height: 1.2;
-  font-weight: 500;
-  color: var(--brown);
-  margin: 0 0 8px;
-}
-
-/* Nom traditionnel */
-.timeline-traditional {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
-  font-style: italic;
-  color: var(--deep-gold);
-  margin-bottom: 20px;
-}
-
-/* Description */
-.timeline-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  line-height: 1.65;
-  color: var(--text);
-  margin: 0;
-}
-
-
-/* ===== TIMELINE MOBILE ===== */
-
-@media (max-width: 700px) {
-
-  .timeline {
-    padding: 35px 22px 80px 50px;
-  }
-
-  .timeline::before {
-    left: 28px;
-  }
-
-  .timeline-item,
-  .timeline-item.left,
-  .timeline-item.right {
-    width: 100%;
-    left: 0;
-    text-align: left;
-    padding: 25px 10px 65px 25px;
-  }
-
-  .timeline-item.left .timeline-dot,
-  .timeline-item.right .timeline-dot {
-    left: -28px;
-    right: auto;
-  }
-
-  .timeline-title {
-    font-size: 27px;
-  }
-
-  .timeline-text {
-    font-size: 18px;
-  }
-}
-    /* ===== THAALI MOMENT ===== */
-
-.thaali-section {
-  position: relative;
-  background: var(--brown);
-  color: var(--cream);
-  text-align: center;
-  padding: 115px 30px 120px;
-  overflow: hidden;
-}
-
-.thaali-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.thaali-number {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  color: var(--gold);
-  margin-bottom: 25px;
-}
-
-.thaali-kicker {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  font-style: italic;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-
-.thaali-title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 52px;
-  line-height: 1.15;
-  font-weight: 500;
-  margin: 0;
-  color: var(--cream);
-}
-
-.thaali-traditional {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 21px;
-  font-style: italic;
-  color: #e4bf75;
-  margin-top: 15px;
-}
-
-.thaali-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin: 35px 0;
-}
-
-.thaali-ornament::before,
-.thaali-ornament::after {
-  content: "";
-  width: 55px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.thaali-diamond {
-  width: 9px;
-  height: 9px;
-  border: 1px solid var(--gold);
-  transform: rotate(45deg);
-}
-
-.thaali-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 21px;
-  line-height: 1.7;
-  color: rgba(255,248,238,0.88);
-  margin: 0 auto;
-  max-width: 680px;
-}
-
-@media (max-width: 600px) {
-
-  .thaali-section {
-    padding: 85px 24px 90px;
-  }
-
-  .thaali-title {
-    font-size: 39px;
-  }
-
-  .thaali-text {
-    font-size: 19px;
-  }
-}
-    /* ===== FINAL RITUALS ===== */
-
-.final-rituals {
-  background: var(--cream);
-  text-align: center;
-  padding: 110px 30px 115px;
-}
-
-.final-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.final-number {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  color: var(--deep-gold);
-  margin-bottom: 22px;
-}
-
-.final-title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 44px;
-  line-height: 1.2;
-  font-weight: 500;
-  color: var(--brown);
-  margin: 0 0 12px;
-}
-
-.final-traditional {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  font-style: italic;
-  color: var(--deep-gold);
-  margin-bottom: 32px;
-}
-
-.final-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  line-height: 1.7;
-  color: var(--text);
-  margin: 0;
-}
-
-.final-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin: 45px 0;
-}
-
-.final-ornament::before,
-.final-ornament::after {
-  content: "";
-  width: 45px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.final-diamond {
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--gold);
-  transform: rotate(45deg);
-}
-
-.final-quote {
-  font-family: "Bodoni Moda", serif;
-  font-size: 28px;
-  line-height: 1.45;
-  color: var(--brown);
-  margin: 0;
-}
-
-@media (max-width: 600px) {
-  .final-rituals {
-    padding: 80px 24px 85px;
-  }
-
-  .final-title {
-    font-size: 34px;
-  }
-
-  .final-text {
-    font-size: 19px;
-  }
-
-  .final-quote {
-    font-size: 24px;
-  }
-}
+
+
+    /* ==================================================
+       NAVIGATION
+       ================================================== */
+
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 28px 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      letter-spacing: 7px;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      gap: 34px;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+
+    /* ==================================================
+       HERO
+       ================================================== */
+
+    .ceremony-hero {
+      min-height: 72vh;
+      position: relative;
+
+      background:
+        linear-gradient(
+          rgba(25, 11, 4, 0.65),
+          rgba(25, 11, 4, 0.82)
+        ),
+        url("images/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      padding: 130px 30px 90px;
+    }
+
+    .ceremony-hero-content {
+      max-width: 850px;
+    }
+
+    .ceremony-kicker {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    .ceremony-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 68px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin: 0;
+      color: var(--cream);
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 1px;
+      background: var(--gold);
+      margin: 30px auto;
+    }
+
+    .ceremony-subtitle {
+      max-width: 650px;
+      margin: 0 auto;
+
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.6;
+
+      color: rgba(255,255,255,0.88);
+    }
+
+
+    /* ==================================================
+       INTRODUCTION
+       ================================================== */
+
+    .ceremony-intro {
+      background: var(--cream);
+      padding: 95px 30px 80px;
+      text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .intro-kicker {
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--deep-gold);
+      margin-bottom: 22px;
+    }
+
+    .intro-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 500;
+      color: var(--brown);
+      margin: 0 0 28px;
+    }
+
+    .intro-text {
+      font-size: 21px;
+      line-height: 1.7;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0 auto;
+    }
+
+
+    /* ==================================================
+       ORNAMENTS
+       ================================================== */
+
+    .intro-ornament,
+    .final-ornament,
+    .thaali-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .intro-ornament {
+      margin-top: 48px;
+    }
+
+    .intro-ornament::before,
+    .intro-ornament::after,
+    .final-ornament::before,
+    .final-ornament::after,
+    .thaali-ornament::before,
+    .thaali-ornament::after {
+      content: "";
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .intro-ornament::before,
+    .intro-ornament::after,
+    .final-ornament::before,
+    .final-ornament::after {
+      width: 45px;
+    }
+
+    .thaali-ornament::before,
+    .thaali-ornament::after {
+      width: 55px;
+    }
+
+    .intro-diamond,
+    .final-diamond,
+    .thaali-diamond {
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+
+    /* ==================================================
+       TIMELINE — STEPS 01 TO 06
+       ================================================== */
+
+    .timeline {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 30px 120px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+
+      background: linear-gradient(
+        to bottom,
+        var(--gold),
+        rgba(213, 170, 87, 0.35)
+      );
+
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 35px 70px 90px;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 43px;
+
+      width: 11px;
+      height: 11px;
+
+      background: var(--cream);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+
+      z-index: 2;
+    }
+
+    .timeline-item.left .timeline-dot {
+      right: -6px;
+    }
+
+    .timeline-item.right .timeline-dot {
+      left: -6px;
+    }
+
+    .timeline-number,
+    .thaali-number,
+    .final-number {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--deep-gold);
+    }
+
+    .timeline-number {
+      margin-bottom: 14px;
+    }
+
+    .timeline-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 31px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--brown);
+      margin: 0 0 8px;
+    }
+
+    .timeline-traditional {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--deep-gold);
+      margin-bottom: 20px;
+    }
+
+    .timeline-text {
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--text);
+      margin: 0;
+    }
+
+
+    /* ==================================================
+       STEP 07 — THAALI KATTU
+       ================================================== */
+
+    .thaali-section {
+      position: relative;
+      background: var(--brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 115px 30px 120px;
+      overflow: hidden;
+    }
+
+    .thaali-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .thaali-number {
+      color: var(--gold);
+      margin-bottom: 25px;
+    }
+
+    .thaali-kicker {
+      font-size: 19px;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .thaali-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 52px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin: 0;
+      color: var(--cream);
+    }
+
+    .thaali-traditional {
+      font-size: 21px;
+      font-style: italic;
+      color: #e4bf75;
+      margin-top: 15px;
+    }
+
+    .thaali-ornament {
+      margin: 35px 0;
+    }
+
+    .thaali-diamond {
+      width: 9px;
+      height: 9px;
+    }
+
+    .thaali-text {
+      font-size: 21px;
+      line-height: 1.7;
+      color: rgba(255,248,238,0.88);
+      margin: 0 auto;
+      max-width: 680px;
+    }
+
+
+    /* ==================================================
+       STEP 08 — FINAL RITUALS
+       ================================================== */
+
+    .final-rituals {
+      background: var(--cream);
+      text-align: center;
+      padding: 110px 30px 115px;
+    }
+
+    .final-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .final-number {
+      margin-bottom: 22px;
+    }
+
+    .final-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 44px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--brown);
+      margin: 0 0 12px;
+    }
+
+    .final-traditional {
+      font-size: 19px;
+      font-style: italic;
+      color: var(--deep-gold);
+      margin-bottom: 32px;
+    }
+
+    .final-text {
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .final-ornament {
+      margin: 45px 0;
+    }
+
+    .final-quote {
+      font-family: "Bodoni Moda", serif;
+      font-size: 28px;
+      line-height: 1.45;
+      color: var(--brown);
+      margin: 0;
+    }
+
+
+    /* ==================================================
+       FOOTER
+       ================================================== */
+
+    footer {
+      background: var(--brown);
+      text-align: center;
+      padding: 50px 25px;
+      color: var(--cream);
+    }
+
+    .footer-logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      letter-spacing: 7px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .footer-date {
+      font-family: "Inter", sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,248,238,0.65);
+    }
+
+
+    /* ==================================================
+       TABLET / MOBILE
+       ================================================== */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .topbar {
+        padding: 25px;
+      }
+
+      .ceremony-title {
+        font-size: 48px;
+      }
+
+      .ceremony-subtitle {
+        font-size: 20px;
+      }
+    }
+
+
+    @media (max-width: 700px) {
+
+      .timeline {
+        padding: 35px 22px 80px 50px;
+      }
+
+      .timeline::before {
+        left: 28px;
+      }
+
+      .timeline-item,
+      .timeline-item.left,
+      .timeline-item.right {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 25px 10px 65px 25px;
+      }
+
+      .timeline-item.left .timeline-dot,
+      .timeline-item.right .timeline-dot {
+        left: -28px;
+        right: auto;
+      }
+
+      .timeline-title {
+        font-size: 27px;
+      }
+
+      .timeline-text {
+        font-size: 18px;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .ceremony-hero {
+        min-height: 68vh;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .ceremony-title {
+        font-size: 39px;
+        line-height: 1.15;
+      }
+
+      .ceremony-kicker {
+        letter-spacing: 4px;
+      }
+
+      .ceremony-subtitle {
+        font-size: 19px;
+        line-height: 1.5;
+      }
+
+      .ceremony-intro {
+        padding: 70px 24px 60px;
+      }
+
+      .intro-title {
+        font-size: 32px;
+      }
+
+      .intro-text {
+        font-size: 19px;
+        line-height: 1.6;
+      }
+
+      .thaali-section {
+        padding: 85px 24px 90px;
+      }
+
+      .thaali-title {
+        font-size: 39px;
+      }
+
+      .thaali-text {
+        font-size: 19px;
+      }
+
+      .final-rituals {
+        padding: 80px 24px 85px;
+      }
+
+      .final-title {
+        font-size: 34px;
+      }
+
+      .final-text {
+        font-size: 19px;
+      }
+
+      .final-quote {
+        font-size: 24px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-<div class="topbar">
 
-  <div class="logo">P & S</div>
+  <!-- ==================================================
+       NAVIGATION
+       ================================================== -->
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="ceremony.html">Ceremony</a>
-    <a href="infos.html">Infos</a>
-    <a href="memories.html">Memories</a>
-  </nav>
+  <div class="topbar">
 
-</div>
+    <div class="logo">P & S</div>
 
-
-<section class="ceremony-hero">
-
-  <div class="ceremony-hero-content">
-
-    <div class="ceremony-kicker">
-      Pirasanth & Shankavie
-    </div>
-
-    <h1 class="ceremony-title">
-      OUR CEREMONY
-    </h1>
-
-    <div class="gold-line"></div>
-
-    <p class="ceremony-subtitle">
-      A journey through the traditions and sacred rituals
-      of our Tamil Hindu wedding.
-    </p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ceremony.html" class="active">Ceremony</a>
+      <a href="infos.html">Infos</a>
+      <a href="memories.html">Memories</a>
+    </nav>
 
   </div>
 
-</section>
+
+  <!-- ==================================================
+       HERO
+       ================================================== -->
+
+  <section class="ceremony-hero">
+
+    <div class="ceremony-hero-content">
+
+      <div class="ceremony-kicker">
+        Pirasanth & Shankavie
+      </div>
+
+      <h1 class="ceremony-title">
+        OUR CEREMONY
+      </h1>
+
+      <div class="gold-line"></div>
+
+      <p class="ceremony-subtitle">
+        A journey through the traditions and sacred rituals
+        of our Tamil Hindu wedding.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       INTRODUCTION
+       ================================================== -->
+
   <section class="ceremony-intro">
 
-  <div class="intro-inner">
+    <div class="intro-inner">
 
-    <div class="intro-kicker">
-      Tamil Hindu Traditions
+      <div class="intro-kicker">
+        Tamil Hindu Traditions
+      </div>
+
+      <h2 class="intro-title">
+        Two Souls. Two Families.<br>
+        One Sacred Journey.
+      </h2>
+
+      <p class="intro-text">
+        Our wedding will be celebrated according to Tamil Hindu traditions,
+        through a series of sacred rituals symbolising love, commitment
+        and the joining of two families.
+        <br><br>
+        Each tradition carries its own meaning. For those experiencing
+        a Tamil Hindu wedding for the first time, we invite you to discover
+        the significance behind the moments you will witness during our ceremony.
+      </p>
+
+      <div class="intro-ornament">
+        <div class="intro-diamond"></div>
+      </div>
+
     </div>
 
-    <h2 class="intro-title">
-      Two Souls. Two Families.<br>
-      One Sacred Journey.
-    </h2>
+  </section>
 
-    <p class="intro-text">
-      Our wedding will be celebrated according to Tamil Hindu traditions,
-      through a series of sacred rituals symbolising love, commitment
-      and the joining of two families.
-      <br><br>
-      Each tradition carries its own meaning. For those experiencing
-      a Tamil Hindu wedding for the first time, discover the significance
-      behind the moments you will witness during our ceremony.
-    </p>
 
-    <div class="intro-ornament">
-      <div class="intro-diamond"></div>
-    </div>
+  <!-- ==================================================
+       CEREMONY TIMELINE
+       ================================================== -->
 
-  </div>
-
-</section>
   <section class="timeline">
 
-  <div class="timeline-item left">
 
-    <div class="timeline-dot"></div>
-
-    <div class="timeline-number">
-      01
-    </div>
-
-    <h3 class="timeline-title">
-      Welcoming the Groom
-    </h3>
-
-    <div class="timeline-traditional">
-      Maapillai Varaverpu & Aalathi
-    </div>
-
-    <p class="timeline-text">
-      The ceremony begins with the arrival of Pirasanth,
-      who is welcomed by Shankavie's family.
-      The traditional Aalathi is performed to bless the groom,
-      ward off negative energies and welcome him
-      as he begins this new chapter.
-    </p>
-
-  </div>
-<div class="timeline-item right">
-
-  <div class="timeline-dot"></div>
-
-  <div class="timeline-number">
-    02
-  </div>
-
-  <h3 class="timeline-title">
-    Opening Prayers
-  </h3>
-
-  <div class="timeline-traditional">
-    Ganesh Pooja & Pallikai
-  </div>
-
-  <p class="timeline-text">
-    The ceremony begins with prayers to Lord Ganesh,
-    seeking his blessings and the removal of obstacles from our path.
-    The Pallikai ritual follows, symbolising prosperity,
-    fertility and abundance in our future life together.
-  </p>
-
-</div>
+    <!-- 01 -->
 
     <div class="timeline-item left">
 
-  <div class="timeline-dot"></div>
+      <div class="timeline-dot"></div>
 
-  <div class="timeline-number">
-    03
-  </div>
+      <div class="timeline-number">
+        01
+      </div>
 
-  <h3 class="timeline-title">
-    Arrival of the Bride
-  </h3>
+      <h3 class="timeline-title">
+        Welcoming the Groom
+      </h3>
 
-  <div class="timeline-traditional">
-    Manamahal Varugai
-  </div>
+      <div class="timeline-traditional">
+        Maapillai Varaverpu & Aalathi
+      </div>
 
-  <p class="timeline-text">
-    Shankavie makes her entrance accompanied by her family
-    and joins Pirasanth at the Manavarai, the sacred wedding stage.
-    Prayers to Shiva and Parvathi, followed by the Navagraha Pooja,
-    seek harmony and blessings for our marriage.
-  </p>
+      <p class="timeline-text">
+        Our ceremony begins with Pirasanth's arrival,
+        as he is welcomed by Shankavie's family.
+        The traditional Aalathi is performed to bless him,
+        ward off negative energies and welcome him
+        as we begin this new chapter.
+      </p>
 
-</div>
+    </div>
+
+
+    <!-- 02 -->
+
     <div class="timeline-item right">
 
-  <div class="timeline-dot"></div>
+      <div class="timeline-dot"></div>
 
-  <div class="timeline-number">
-    04
-  </div>
+      <div class="timeline-number">
+        02
+      </div>
 
-  <h3 class="timeline-title">
-    The Sacred Fire
-  </h3>
+      <h3 class="timeline-title">
+        Opening Prayers
+      </h3>
 
-  <div class="timeline-traditional">
-    Agni & Homam
-  </div>
+      <div class="timeline-traditional">
+        Ganesh Pooja & Pallikai
+      </div>
 
-  <p class="timeline-text">
-    The sacred fire, Agni, is lit as a divine witness to our marriage.
-    Offerings are made into the fire as a symbol of purity,
-    devotion and our commitment to one another.
-  </p>
+      <p class="timeline-text">
+        We begin with prayers to Lord Ganesh,
+        seeking his blessings and the removal of obstacles from our path.
+        The Pallikai ritual follows, symbolising prosperity,
+        fertility and abundance in our future life together.
+      </p>
 
-</div>
-   <div class="timeline-item left">
+    </div>
 
-  <div class="timeline-dot"></div>
 
-  <div class="timeline-number">
-    05
-  </div>
+    <!-- 03 -->
 
-  <h3 class="timeline-title">
-    The Joining of Our Families
-  </h3>
+    <div class="timeline-item left">
 
-  <div class="timeline-traditional">
-    Kanyadhanam
-  </div>
+      <div class="timeline-dot"></div>
 
-  <p class="timeline-text">
-    Shankavie's parents symbolically entrust their daughter to Pirasanth,
-    representing their blessing of our marriage.
-    More than the union of two people, Kanyadhanam represents
-    the coming together of our two families.
-  </p>
+      <div class="timeline-number">
+        03
+      </div>
 
-</div>
+      <h3 class="timeline-title">
+        Arrival of the Bride
+      </h3>
+
+      <div class="timeline-traditional">
+        Manamahal Varugai
+      </div>
+
+      <p class="timeline-text">
+        Shankavie makes her entrance accompanied by her family
+        and joins Pirasanth at the Manavarai, the sacred wedding stage.
+        Prayers to Shiva and Parvathi, followed by the Navagraha Pooja,
+        seek harmony and blessings for our life together.
+      </p>
+
+    </div>
+
+
+    <!-- 04 -->
+
     <div class="timeline-item right">
 
-  <div class="timeline-dot"></div>
+      <div class="timeline-dot"></div>
 
-  <div class="timeline-number">
-    06
-  </div>
+      <div class="timeline-number">
+        04
+      </div>
 
-  <h3 class="timeline-title">
-    The Koorai & Thaali
-  </h3>
+      <h3 class="timeline-title">
+        The Sacred Fire
+      </h3>
 
-  <div class="timeline-traditional">
-    Blessing of the Wedding Saree & Sacred Necklace
-  </div>
+      <div class="timeline-traditional">
+        Agni & Homam
+      </div>
 
-  <p class="timeline-text">
-    The Koorai, Shankavie's traditional wedding saree,
-    and the Thaali, the sacred necklace representing our marriage,
-    are blessed. Shankavie then changes into her Koorai
-    before returning for the most significant moment of the ceremony.
-  </p>
+      <p class="timeline-text">
+        The sacred fire, Agni, is lit as a divine witness to our union.
+        Offerings are made into the fire as symbols of purity,
+        devotion and the commitment we make to one another.
+      </p>
 
-</div>
-</section>
+    </div>
+
+
+    <!-- 05 -->
+
+    <div class="timeline-item left">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-number">
+        05
+      </div>
+
+      <h3 class="timeline-title">
+        The Joining of Our Families
+      </h3>
+
+      <div class="timeline-traditional">
+        Kanyadhanam
+      </div>
+
+      <p class="timeline-text">
+        Shankavie's parents symbolically entrust their daughter to Pirasanth,
+        giving their blessing to our marriage.
+        More than the union of two people, Kanyadhanam represents
+        the coming together of our two families.
+      </p>
+
+    </div>
+
+
+    <!-- 06 -->
+
+    <div class="timeline-item right">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-number">
+        06
+      </div>
+
+      <h3 class="timeline-title">
+        The Koorai & Thaali
+      </h3>
+
+      <div class="timeline-traditional">
+        Blessing of the Wedding Saree & Sacred Necklace
+      </div>
+
+      <p class="timeline-text">
+        The Koorai, Shankavie's traditional wedding saree,
+        and the Thaali, the sacred necklace representing our marriage,
+        are blessed. Shankavie then changes into her Koorai
+        before returning for the most significant moment of our ceremony.
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- ==================================================
+       07 — THE SACRED UNION
+       ================================================== -->
+
   <section class="thaali-section">
 
-  <div class="thaali-inner">
+    <div class="thaali-inner">
 
-    <div class="thaali-number">
-      07
+      <div class="thaali-number">
+        07
+      </div>
+
+      <div class="thaali-kicker">
+        The Heart of Our Ceremony
+      </div>
+
+      <h2 class="thaali-title">
+        The Sacred Union
+      </h2>
+
+      <div class="thaali-traditional">
+        Thaali Kattu
+      </div>
+
+      <div class="thaali-ornament">
+        <div class="thaali-diamond"></div>
+      </div>
+
+      <p class="thaali-text">
+        To the sound of traditional music, Pirasanth ties the sacred Thaali
+        around Shankavie's neck, marking our union as husband and wife.
+        As the Thaali is tied, our families and loved ones shower us
+        with flower petals and their blessings.
+      </p>
+
     </div>
 
-    <div class="thaali-kicker">
-      The Heart of Our Ceremony
+  </section>
+
+
+  <!-- ==================================================
+       08 — FINAL RITUALS
+       ================================================== -->
+
+  <section class="final-rituals">
+
+    <div class="final-inner">
+
+      <div class="final-number">
+        08
+      </div>
+
+      <h2 class="final-title">
+        Seven Steps & Final Blessings
+      </h2>
+
+      <div class="final-traditional">
+        Sapthapathi · Ammi · Metti · Arundhati · Asirvatham
+      </div>
+
+      <p class="final-text">
+        Together, we take the seven sacred steps,
+        representing the promises we make to support,
+        respect and walk alongside one another throughout our married life.
+        <br><br>
+        The Ammi, Metti and Arundhati rituals symbolise strength,
+        faithfulness and stability in our marriage.
+        Our ceremony concludes with Asirvatham,
+        as we receive the blessings and good wishes
+        of our families and loved ones.
+      </p>
+
+      <div class="final-ornament">
+        <div class="final-diamond"></div>
+      </div>
+
+      <p class="final-quote">
+        And so, our journey as<br>
+        husband and wife begins.
+      </p>
+
     </div>
 
-    <h2 class="thaali-title">
-      The Sacred Union
-    </h2>
+  </section>
 
-    <div class="thaali-traditional">
-      Thaali Kattu
+
+  <!-- ==================================================
+       FOOTER
+       ================================================== -->
+
+  <footer>
+
+    <div class="footer-logo">
+      P & S
     </div>
 
-    <div class="thaali-ornament">
-      <div class="thaali-diamond"></div>
+    <div class="footer-date">
+      31 October 2026
     </div>
 
-    <p class="thaali-text">
-      To the sound of traditional music, Pirasanth ties the sacred Thaali
-      around Shankavie's neck, symbolising our union as husband and wife.
-      As the Thaali is tied, our families and loved ones shower us
-      with flower petals and their blessings.
-    </p>
+  </footer>
 
-  </div>
 
-</section>
-<section class="final-rituals">
-
-  <div class="final-inner">
-
-    <div class="final-number">
-      08
-    </div>
-
-    <h2 class="final-title">
-      Seven Steps & Final Blessings
-    </h2>
-
-    <div class="final-traditional">
-      Sapthapathi · Ammi · Metti · Arundhati · Asirvatham
-    </div>
-
-    <p class="final-text">
-      Together, we take the seven sacred steps, representing the promises
-      we make to support, respect and walk alongside one another throughout
-      our married life.
-      <br><br>
-      The Ammi, Metti and Arundhati rituals symbolise strength,
-      faithfulness and stability in our marriage. The ceremony concludes
-      with Asirvatham, as we receive the blessings and good wishes
-      of our families and loved ones.
-    </p>
-
-    <div class="final-ornament">
-      <div class="final-diamond"></div>
-    </div>
-
-    <p class="final-quote">
-      And so, our journey as<br>
-      husband and wife begins.
-    </p>
-
-  </div>
-
-</section>
 </body>
 </html>
