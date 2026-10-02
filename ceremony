@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Our Ceremony | Pirasanth & Shankavie</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --gold: #d5aa57;
+      --deep-gold: #9f762f;
+      --cream: #fff8ee;
+      --brown: #251207;
+      --text: #3a2415;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+</body>
+</html>
