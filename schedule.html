@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Wedding schedule for Pirasanth & Sangavi – 31 October 2026."
-  >
-
-  <title>Schedule | Pirasanth & Sangavi</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
+  <title>Schedule | Pirasanth & Shankavie</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
-    /* ========================================
-       RESET
-    ======================================== */
+    :root {
+      --gold: #d5aa57;
+      --deep-gold: #9f762f;
+      --cream: #fff8ee;
+      --brown: #251207;
+      --text: #3a2415;
+    }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
@@ -38,310 +27,293 @@
     }
 
     body {
-      min-height: 100vh;
-
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(176, 138, 62, 0.07),
-          transparent 32%
-        ),
-        #fbf8f1;
-
-      color: #30352f;
-
-      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
     }
 
 
-    /* ========================================
-       VARIABLES
-    ======================================== */
-
-    :root {
-      --green: #00561b;
-      --green-dark: #003f14;
-
-      --gold: #b08a3e;
-      --gold-light: #d3bb83;
-
-      --ivory: #fbf8f1;
-      --text: #30352f;
-      --muted: #72756f;
-    }
-
-
-    /* ========================================
+    /* =========================
        NAVIGATION
-    ======================================== */
+       ========================= */
 
-    .navbar {
-      position: relative;
-      z-index: 10;
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 28px 45px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
 
-      width: 100%;
-      max-width: 1200px;
-
-      margin: 0 auto;
-      padding: 28px 35px;
+      z-index: 10;
     }
 
     .logo {
-      color: var(--green);
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.8rem;
+      color: var(--gold);
+      font-size: 28px;
+      letter-spacing: 7px;
       font-weight: 500;
-      letter-spacing: 0.08em;
-
-      text-decoration: none;
     }
 
-    .nav-links {
+    nav {
       display: flex;
-      align-items: center;
+      gap: 34px;
 
-      gap: 32px;
-
-      list-style: none;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .nav-links a {
-      position: relative;
-
-      color: #565b55;
-
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-
+    nav a {
+      color: rgba(255,255,255,0.9);
       text-decoration: none;
-      text-transform: uppercase;
-
       transition: color 0.3s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--green);
-    }
-
-    .nav-links a.active::after {
-      content: "";
-
-      position: absolute;
-      left: 50%;
-      bottom: -9px;
-
-      width: 18px;
-      height: 1px;
-
-      background: var(--gold);
-
-      transform: translateX(-50%);
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
     }
 
 
-    /* ========================================
+    /* =========================
        HERO
-    ======================================== */
+       ========================= */
 
-    .hero {
+    .schedule-hero {
+      min-height: 72vh;
       position: relative;
 
-      max-width: 900px;
+      background:
+        linear-gradient(
+          rgba(25,11,4,0.65),
+          rgba(25,11,4,0.82)
+        ),
+        url("images/hero.jpg");
 
-      margin: 0 auto;
-      padding: 75px 24px 80px;
+      background-size: cover;
+      background-position: center;
 
-      text-align: center;
-    }
-
-    .hero::before {
-      content: "";
-
-      display: block;
-
-      width: 1px;
-      height: 45px;
-
-      margin: 0 auto 25px;
-
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        var(--gold)
-      );
-    }
-
-    .hero-date {
-      display: block;
-
-      margin-bottom: 14px;
-
-      color: var(--gold);
-
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      color: var(--green);
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3.2rem, 8vw, 5.5rem);
-      font-weight: 400;
-      line-height: 0.95;
-    }
-
-    .hero-ornament {
       display: flex;
       align-items: center;
       justify-content: center;
 
-      gap: 15px;
+      padding: 130px 30px 90px;
 
-      margin: 27px auto;
+      text-align: center;
+      color: white;
     }
 
-    .hero-ornament::before,
-    .hero-ornament::after {
-      content: "";
-
-      width: 55px;
-      height: 1px;
-
-      background: linear-gradient(
-        to right,
-        transparent,
-        var(--gold)
-      );
+    .schedule-hero-content {
+      max-width: 850px;
     }
 
-    .hero-ornament::after {
-      transform: rotate(180deg);
-    }
+    .schedule-kicker {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
 
-    .hero-ornament span {
       color: var(--gold);
 
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1rem;
+      margin-bottom: 22px;
     }
 
-    .hero-description {
-      max-width: 560px;
+    .schedule-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 68px;
+      font-weight: 500;
+      letter-spacing: 2px;
 
+      margin: 0;
+
+      color: var(--cream);
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 1px;
+
+      background: var(--gold);
+
+      margin: 30px auto;
+    }
+
+    .schedule-subtitle {
+      max-width: 650px;
       margin: 0 auto;
 
-      color: var(--muted);
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.25rem;
-      font-style: italic;
+      font-size: 23px;
+      font-weight: 300;
       line-height: 1.6;
+
+      color: rgba(255,255,255,0.88);
     }
 
 
-    /* ========================================
-       SCHEDULE
-    ======================================== */
+    /* =========================
+       INTRODUCTION
+       ========================= */
 
-    .schedule {
-      width: 100%;
-      max-width: 820px;
+    .schedule-intro {
+      padding: 95px 30px 45px;
+      text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .intro-kicker {
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 22px;
+    }
+
+    .intro-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 500;
+
+      color: var(--brown);
+
+      margin: 0 0 24px;
+    }
+
+    .intro-text {
+      font-size: 21px;
+      line-height: 1.7;
+
+      margin: 0;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 16px;
+
+      margin: 45px 0 0;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+
+      width: 45px;
+      height: 1px;
+
+      background: var(--gold);
+    }
+
+    .diamond {
+      width: 8px;
+      height: 8px;
+
+      border: 1px solid var(--gold);
+
+      transform: rotate(45deg);
+    }
+
+
+    /* =========================
+       DAY SCHEDULE
+       ========================= */
+
+    .day-schedule {
+      max-width: 1000px;
 
       margin: 0 auto;
-      padding: 20px 30px 110px;
+
+      padding: 55px 30px 120px;
     }
 
-    .timeline {
+    .schedule-list {
       position: relative;
+
+      max-width: 850px;
+
+      margin: 0 auto;
     }
 
-    /*
-      Vertical gold line
-    */
+    /* Central timeline */
 
-    .timeline::before {
+    .schedule-list::before {
       content: "";
 
       position: absolute;
 
-      top: 11px;
-      bottom: 10px;
-      left: 175px;
+      top: 18px;
+      bottom: 18px;
+      left: 155px;
 
       width: 1px;
 
-      background: linear-gradient(
-        to bottom,
-        var(--gold-light),
-        var(--gold),
-        var(--gold-light)
-      );
-
-      opacity: 0.75;
+      background: rgba(213,170,87,0.55);
     }
 
 
-    /* ========================================
+    /* =========================
        SCHEDULE ITEM
-    ======================================== */
+       ========================= */
 
     .schedule-item {
       position: relative;
 
       display: grid;
+      grid-template-columns: 120px 70px 1fr;
 
-      grid-template-columns: 140px 70px 1fr;
-
-      min-height: 175px;
+      min-height: 180px;
     }
-
-
-    /* TIME */
 
     .schedule-time {
       padding-top: 1px;
 
-      color: var(--green);
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.75rem;
+      font-family: "Bodoni Moda", serif;
+      font-size: 27px;
       font-weight: 500;
-      line-height: 1;
+      line-height: 1.2;
+
+      color: var(--brown);
 
       text-align: right;
     }
 
-    .schedule-time small {
+    .schedule-time-range {
       display: block;
 
-      margin-top: 7px;
+      margin-top: 6px;
 
-      color: var(--gold);
+      font-family: "Inter", sans-serif;
+      font-size: 9px;
+      font-weight: 600;
 
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.6rem;
-      font-weight: 500;
-
-      letter-spacing: 0.12em;
+      letter-spacing: 2px;
       text-transform: uppercase;
+
+      color: var(--deep-gold);
     }
 
 
-    /* MARKER */
+    /* DOT */
 
-    .marker {
+    .schedule-marker {
       position: relative;
 
       display: flex;
@@ -350,360 +322,409 @@
       z-index: 2;
     }
 
-    .marker-dot {
-      width: 13px;
-      height: 13px;
+    .schedule-dot {
+      width: 11px;
+      height: 11px;
 
-      margin-top: 2px;
+      margin-top: 10px;
 
-      background: var(--ivory);
+      background: var(--cream);
 
       border: 2px solid var(--gold);
       border-radius: 50%;
 
-      box-shadow:
-        0 0 0 7px var(--ivory);
+      box-shadow: 0 0 0 7px var(--cream);
     }
 
 
     /* CONTENT */
 
     .schedule-content {
-      padding: 0 0 65px 5px;
+      padding: 0 0 65px;
     }
 
-    .schedule-content h2 {
-      margin-bottom: 10px;
+    .schedule-number {
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
 
-      color: var(--green);
+      letter-spacing: 4px;
 
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.8rem;
+      color: var(--deep-gold);
+
+      margin-bottom: 12px;
+    }
+
+    .schedule-item-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 32px;
+      line-height: 1.2;
       font-weight: 500;
-      line-height: 1.1;
+
+      color: var(--brown);
+
+      margin: 0 0 13px;
     }
 
-    .schedule-content p {
-      max-width: 470px;
+    .schedule-description {
+      max-width: 520px;
 
-      color: var(--muted);
+      margin: 0;
 
-      font-size: 0.88rem;
-      line-height: 1.8;
+      font-size: 20px;
+      line-height: 1.65;
     }
 
-    .schedule-content em {
-      color: #896a31;
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.05rem;
+    .schedule-description em {
+      color: var(--deep-gold);
     }
 
 
-    /* ========================================
-       MUHURTHA HIGHLIGHT
-    ======================================== */
+    /* =========================
+       MUHURTHA — FEATURED MOMENT
+       ========================= */
 
-    .schedule-item.highlight .marker-dot {
-      width: 18px;
-      height: 18px;
+    .muhurtha-item {
+      min-height: 230px;
+    }
 
-      margin-top: -1px;
+    .muhurtha-item .schedule-dot {
+      width: 17px;
+      height: 17px;
+
+      margin-top: 7px;
 
       background: var(--gold);
 
-      border: 4px solid var(--ivory);
+      border: 4px solid var(--cream);
 
       box-shadow:
         0 0 0 1px var(--gold),
-        0 0 0 8px var(--ivory);
+        0 0 0 8px var(--cream);
     }
 
-    .schedule-item.highlight .schedule-content h2 {
-      color: #9a752f;
+    .muhurtha-card {
+      position: relative;
+
+      max-width: 560px;
+
+      padding: 34px 38px;
+
+      border: 1px solid rgba(159,118,47,0.42);
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(213,170,87,0.06),
+          rgba(255,248,238,0)
+        );
     }
 
-    .schedule-item.highlight .schedule-content {
+    .muhurtha-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 8px;
+
+      border: 1px solid rgba(213,170,87,0.24);
+      border-radius: 12px;
+
+      pointer-events: none;
+    }
+
+    .muhurtha-label {
+      position: relative;
+
+      font-family: "Inter", sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: 4px;
+      text-transform: uppercase;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 14px;
+    }
+
+    .muhurtha-card .schedule-item-title,
+    .muhurtha-card .schedule-description {
       position: relative;
     }
 
-    .schedule-item.highlight .schedule-content::before {
-      content: "AUSPICIOUS TIME";
-
-      display: inline-block;
-
-      margin-bottom: 10px;
-
-      color: var(--gold);
-
-      font-size: 0.56rem;
-      font-weight: 600;
-
-      letter-spacing: 0.2em;
+    .muhurtha-card .schedule-item-title {
+      font-size: 36px;
     }
 
 
-    /* ========================================
-       FOOTER
-    ======================================== */
+    /* =========================
+       CLOSING
+       ========================= */
 
-    footer {
-      padding: 0 20px 55px;
+    .schedule-closing {
+      padding: 0 30px 105px;
 
       text-align: center;
     }
 
-    .footer-symbol {
-      margin-bottom: 16px;
+    .closing-inner {
+      max-width: 720px;
+
+      margin: 0 auto;
+    }
+
+    .closing-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 16px;
+
+      margin-bottom: 38px;
+    }
+
+    .closing-ornament::before,
+    .closing-ornament::after {
+      content: "";
+
+      width: 45px;
+      height: 1px;
+
+      background: var(--gold);
+    }
+
+    .closing-diamond {
+      width: 8px;
+      height: 8px;
+
+      border: 1px solid var(--gold);
+
+      transform: rotate(45deg);
+    }
+
+    .closing-text {
+      font-family: "Bodoni Moda", serif;
+      font-size: 29px;
+      line-height: 1.5;
+
+      color: var(--brown);
+
+      margin: 0;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      background: var(--brown);
+
+      text-align: center;
+
+      padding: 50px 25px;
+    }
+
+    .footer-logo {
+      font-size: 25px;
+      letter-spacing: 7px;
 
       color: var(--gold);
 
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.2rem;
-    }
-
-    .footer-names {
-      color: var(--green);
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.35rem;
-
-      letter-spacing: 0.08em;
+      margin-bottom: 12px;
     }
 
     .footer-date {
-      margin-top: 6px;
+      font-family: "Inter", sans-serif;
 
-      color: #98998f;
-
-      font-size: 0.58rem;
-      font-weight: 500;
-
-      letter-spacing: 0.2em;
+      font-size: 9px;
+      letter-spacing: 4px;
       text-transform: uppercase;
+
+      color: rgba(255,248,238,0.65);
     }
 
 
-    /* ========================================
+    /* =========================
        TABLET
-    ======================================== */
+       ========================= */
 
-    @media (max-width: 750px) {
+    @media (max-width: 900px) {
 
-      .navbar {
-        padding: 24px 22px;
+      nav {
+        display: none;
       }
 
-      .nav-links {
-        gap: 17px;
+      .topbar {
+        padding: 25px;
       }
 
-      .nav-links a {
-        font-size: 0.62rem;
+      .schedule-title {
+        font-size: 48px;
       }
 
-      .hero {
-        padding-top: 55px;
+      .schedule-subtitle {
+        font-size: 20px;
       }
-
-      .schedule {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
     }
 
 
-    /* ========================================
+    /* =========================
        MOBILE
-    ======================================== */
+       ========================= */
 
-    @media (max-width: 600px) {
-
-      /*
-        NAV
-      */
-
-      .navbar {
-        flex-direction: column;
-
-        gap: 20px;
-
-        padding-top: 24px;
-      }
+    @media (max-width: 700px) {
 
       .logo {
-        font-size: 1.65rem;
+        font-size: 23px;
       }
 
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+      .schedule-hero {
+        min-height: 68vh;
 
-        gap: 13px 20px;
+        padding: 120px 24px 80px;
       }
 
-
-      /*
-        HERO
-      */
-
-      .hero {
-        padding: 50px 22px 65px;
+      .schedule-title {
+        font-size: 39px;
+        line-height: 1.15;
       }
 
-      .hero::before {
-        height: 32px;
+      .schedule-kicker {
+        letter-spacing: 4px;
       }
 
-      .hero h1 {
-        font-size: 3.6rem;
-      }
-
-      .hero-description {
-        max-width: 330px;
-
-        font-size: 1.12rem;
+      .schedule-subtitle {
+        font-size: 19px;
       }
 
 
-      /*
-        TIMELINE
-      */
+      /* INTRO */
 
-      .schedule {
-        padding: 5px 22px 80px;
+      .schedule-intro {
+        padding: 70px 24px 35px;
       }
 
-      .timeline::before {
-        left: 7px;
+      .intro-title {
+        font-size: 32px;
+      }
 
-        top: 6px;
-        bottom: 30px;
+      .intro-text {
+        font-size: 19px;
+      }
+
+
+      /* SCHEDULE */
+
+      .day-schedule {
+        padding: 45px 22px 80px;
+      }
+
+      .schedule-list {
+        padding-left: 30px;
+      }
+
+      .schedule-list::before {
+        left: 5px;
+
+        top: 12px;
+        bottom: 12px;
       }
 
       .schedule-item {
         display: grid;
 
-        grid-template-columns: 28px 1fr;
+        grid-template-columns: 1fr;
 
         min-height: auto;
 
-        padding-bottom: 52px;
+        padding: 0 0 60px 25px;
       }
-
-
-      /*
-        Marker on left
-      */
-
-      .marker {
-        grid-column: 1;
-        grid-row: 1 / span 3;
-
-        justify-content: flex-start;
-      }
-
-      .marker-dot {
-        width: 11px;
-        height: 11px;
-
-        margin-top: 5px;
-        margin-left: 2px;
-
-        box-shadow:
-          0 0 0 5px var(--ivory);
-      }
-
-
-      /*
-        Time above title
-      */
 
       .schedule-time {
-        grid-column: 2;
-        grid-row: 1;
-
-        margin-bottom: 9px;
-        padding: 0;
-
-        font-size: 1.55rem;
-
         text-align: left;
+
+        font-size: 24px;
+
+        margin-bottom: 14px;
       }
 
-      .schedule-time small {
+      .schedule-time-range {
         display: inline-block;
 
         margin-top: 0;
-        margin-left: 7px;
-
-        font-size: 0.55rem;
+        margin-left: 8px;
       }
 
+      .schedule-marker {
+        position: absolute;
 
-      /*
-        Content
-      */
+        left: -30px;
+        top: 0;
+      }
+
+      .schedule-dot {
+        margin-top: 8px;
+      }
 
       .schedule-content {
-        grid-column: 2;
-        grid-row: 2;
-
         padding: 0;
       }
 
-      .schedule-content h2 {
-        margin-bottom: 8px;
-
-        font-size: 1.55rem;
+      .schedule-number {
+        margin-bottom: 10px;
       }
 
-      .schedule-content p {
-        font-size: 0.82rem;
-        line-height: 1.7;
+      .schedule-item-title {
+        font-size: 28px;
+      }
+
+      .schedule-description {
+        font-size: 18px;
       }
 
 
-      /*
-        Highlight
-      */
+      /* MUHURTHA MOBILE */
 
-      .schedule-item.highlight .marker-dot {
-        width: 15px;
-        height: 15px;
-
-        margin-top: 3px;
-        margin-left: 0;
-
-        border-width: 3px;
-
-        box-shadow:
-          0 0 0 1px var(--gold),
-          0 0 0 6px var(--ivory);
+      .muhurtha-item {
+        min-height: auto;
       }
 
-    }
-
-
-    /* ========================================
-       VERY SMALL SCREENS
-    ======================================== */
-
-    @media (max-width: 390px) {
-
-      .nav-links {
-        gap: 12px 14px;
+      .muhurtha-item .schedule-marker {
+        top: 0;
       }
 
-      .nav-links a {
-        font-size: 0.57rem;
+      .muhurtha-item .schedule-dot {
+        margin-top: 5px;
       }
 
-      .hero h1 {
-        font-size: 3.1rem;
+      .muhurtha-card {
+        padding: 30px 26px;
+
+        border-radius: 15px;
       }
 
+      .muhurtha-card::before {
+        inset: 7px;
+
+        border-radius: 10px;
+      }
+
+      .muhurtha-card .schedule-item-title {
+        font-size: 31px;
+      }
+
+
+      /* CLOSING */
+
+      .schedule-closing {
+        padding: 0 24px 80px;
+      }
+
+      .closing-text {
+        font-size: 24px;
+      }
     }
 
   </style>
@@ -713,211 +734,235 @@
 <body>
 
 
-  <!-- ========================================
+  <!-- =========================
        NAVIGATION
-  ========================================= -->
+       ========================= -->
 
-  <nav class="navbar">
+  <div class="topbar">
 
-    <a href="index.html" class="logo">
-      P &amp; S
-    </a>
-
-    <ul class="nav-links">
-
-      <li>
-        <a href="index.html">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a href="ceremony.html">
-          Ceremony
-        </a>
-      </li>
-
-      <li>
-        <a href="schedule.html" class="active">
-          Schedule
-        </a>
-      </li>
-
-      <li>
-        <a href="infos.html">
-          Infos
-        </a>
-      </li>
-
-      <li>
-        <a href="memories.html">
-          Memories
-        </a>
-      </li>
-
-    </ul>
-
-  </nav>
-
-
-  <!-- ========================================
-       HERO
-  ========================================= -->
-
-  <header class="hero">
-
-    <span class="hero-date">
-      Saturday · 31 October 2026
-    </span>
-
-    <h1>
-      Wedding Schedule
-    </h1>
-
-    <div class="hero-ornament">
-      <span>✦</span>
+    <div class="logo">
+      P & S
     </div>
 
-    <p class="hero-description">
-      A day of tradition, celebration and togetherness.
-    </p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ceremony.html">Ceremony</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="venue.html">Venue</a>
+      <a href="memories.html">Memories</a>
+    </nav>
 
-  </header>
+  </div>
 
 
-  <!-- ========================================
-       TIMELINE
-  ========================================= -->
+  <!-- =========================
+       HERO
+       ========================= -->
 
-  <main class="schedule">
+  <section class="schedule-hero">
 
-    <div class="timeline">
+    <div class="schedule-hero-content">
+
+      <div class="schedule-kicker">
+        Pirasanth & Shankavie
+      </div>
+
+      <h1 class="schedule-title">
+        WEDDING DAY
+      </h1>
+
+      <div class="gold-line"></div>
+
+      <p class="schedule-subtitle">
+        Saturday, 31 October 2026
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTRODUCTION
+       ========================= -->
+
+  <section class="schedule-intro">
+
+    <div class="intro-inner">
+
+      <div class="intro-kicker">
+        The Day
+      </div>
+
+      <h2 class="intro-title">
+        Our Wedding Schedule
+      </h2>
+
+      <p class="intro-text">
+        From the first welcome to the final celebrations,
+        here is how our wedding day will unfold.
+      </p>
+
+      <div class="ornament">
+        <div class="diamond"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SCHEDULE
+       ========================= -->
+
+  <main class="day-schedule">
+
+    <div class="schedule-list">
 
 
       <!-- =========================
-           08:30
-      ========================== -->
+           01 — GUEST ARRIVAL
+           ========================= -->
 
-      <article class="schedule-item">
+      <section class="schedule-item">
 
         <div class="schedule-time">
           08:30
         </div>
 
-        <div class="marker">
-          <div class="marker-dot"></div>
+        <div class="schedule-marker">
+          <div class="schedule-dot"></div>
         </div>
 
         <div class="schedule-content">
 
-          <h2>
-            Guest Arrival &amp; Welcome
+          <div class="schedule-number">
+            01
+          </div>
+
+          <h2 class="schedule-item-title">
+            Guest Arrival & Welcome
           </h2>
 
-          <p>
-            Fresh Appam will be available from
-            <strong>08:30 to 11:00.</strong>
+          <p class="schedule-description">
+            Guests are welcomed to the venue as the morning begins.
+            Fresh <em>Appam</em> will be available from
+            08:30 to 11:00.
           </p>
 
         </div>
 
-      </article>
+      </section>
 
 
       <!-- =========================
-           09:00
-      ========================== -->
+           02 — CEREMONY
+           ========================= -->
 
-      <article class="schedule-item">
+      <section class="schedule-item">
 
         <div class="schedule-time">
           09:00
         </div>
 
-        <div class="marker">
-          <div class="marker-dot"></div>
+        <div class="schedule-marker">
+          <div class="schedule-dot"></div>
         </div>
 
         <div class="schedule-content">
 
-          <h2>
+          <div class="schedule-number">
+            02
+          </div>
+
+          <h2 class="schedule-item-title">
             Wedding Ceremony
           </h2>
 
-          <p>
+          <p class="schedule-description">
             The traditional ceremony begins with the groom
             on the <em>Manavarai</em>.
           </p>
 
         </div>
 
-      </article>
+      </section>
 
 
       <!-- =========================
-           11:00 – 12:35
-      ========================== -->
+           03 — MUHURTHA NERAM
+           ========================= -->
 
-      <article class="schedule-item highlight">
+      <section class="schedule-item muhurtha-item">
 
         <div class="schedule-time">
-
           11:00
-
-          <small>
+          <span class="schedule-time-range">
             to 12:35
-          </small>
-
+          </span>
         </div>
 
-        <div class="marker">
-          <div class="marker-dot"></div>
+        <div class="schedule-marker">
+          <div class="schedule-dot"></div>
         </div>
 
         <div class="schedule-content">
 
-          <h2>
-            Muhurtha Neram
-          </h2>
+          <div class="muhurtha-card">
 
-          <p>
-            Including the sacred
-            <em>Thaali Kattu</em>.
-          </p>
+            <div class="muhurtha-label">
+              The Auspicious Time
+            </div>
+
+            <h2 class="schedule-item-title">
+              Muhurtha Neram
+            </h2>
+
+            <p class="schedule-description">
+              The most auspicious period of the wedding ceremony,
+              including the sacred <em>Thaali Kattu</em>.
+            </p>
+
+          </div>
 
         </div>
 
-      </article>
+      </section>
 
 
       <!-- =========================
-           13:00
-      ========================== -->
+           04 — ARAI ARISI & LUNCH
+           ========================= -->
 
-      <article class="schedule-item">
+      <section class="schedule-item">
 
         <div class="schedule-time">
           13:00
         </div>
 
-        <div class="marker">
-          <div class="marker-dot"></div>
+        <div class="schedule-marker">
+          <div class="schedule-dot"></div>
         </div>
 
         <div class="schedule-content">
 
-          <h2>
-            Arai Arisi &amp; Wedding Lunch
+          <div class="schedule-number">
+            04
+          </div>
+
+          <h2 class="schedule-item-title">
+            Arai Arisi & Wedding Lunch
           </h2>
 
-          <p>
+          <p class="schedule-description">
             The <em>Arai Arisi</em> ceremony takes place while
             a traditional vegetarian Tamil lunch is served.
           </p>
 
         </div>
 
-      </article>
+      </section>
 
 
     </div>
@@ -925,22 +970,40 @@
   </main>
 
 
-  <!-- ========================================
+  <!-- =========================
+       CLOSING
+       ========================= -->
+
+  <section class="schedule-closing">
+
+    <div class="closing-inner">
+
+      <div class="closing-ornament">
+        <div class="closing-diamond"></div>
+      </div>
+
+      <p class="closing-text">
+        We look forward to sharing<br>
+        this special day with you.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
        FOOTER
-  ========================================= -->
+       ========================= -->
 
   <footer>
 
-    <div class="footer-symbol">
-      ✦
-    </div>
-
-    <div class="footer-names">
-      Pirasanth &amp; Sangavi
+    <div class="footer-logo">
+      P & S
     </div>
 
     <div class="footer-date">
-      31 · 10 · 2026
+      31 October 2026
     </div>
 
   </footer>
