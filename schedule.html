@@ -1,990 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Schedule | Pirasanth & Shankavie</title>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap');
-
-    :root {
-      --gold: #d5aa57;
-      --deep-gold: #9f762f;
-      --cream: #fff8ee;
-      --brown: #251207;
-      --text: #3a2415;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      background: var(--cream);
-      color: var(--text);
-    }
-
-
-    /* =========================
-       NAVIGATION
-       ========================= */
-
-    .topbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 28px 45px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      z-index: 10;
-    }
-
-    .logo {
-      color: var(--gold);
-      font-size: 28px;
-      letter-spacing: 7px;
-      font-weight: 500;
-    }
-
-    nav {
-      display: flex;
-      gap: 34px;
-
-      font-family: "Inter", sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    nav a {
-      color: rgba(255,255,255,0.9);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--gold);
-    }
-
-
-    /* =========================
-       HERO
-       ========================= */
-
-    .schedule-hero {
-      min-height: 72vh;
-      position: relative;
-
-      background:
-        linear-gradient(
-          rgba(25,11,4,0.65),
-          rgba(25,11,4,0.82)
-        ),
-        url("images/hero.jpg");
-
-      background-size: cover;
-      background-position: center;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 130px 30px 90px;
-
-      text-align: center;
-      color: white;
-    }
-
-    .schedule-hero-content {
-      max-width: 850px;
-    }
-
-    .schedule-kicker {
-      font-family: "Inter", sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-
-      color: var(--gold);
-
-      margin-bottom: 22px;
-    }
-
-    .schedule-title {
-      font-family: "Bodoni Moda", serif;
-      font-size: 68px;
-      font-weight: 500;
-      letter-spacing: 2px;
-
-      margin: 0;
-
-      color: var(--cream);
-    }
-
-    .gold-line {
-      width: 65px;
-      height: 1px;
-
-      background: var(--gold);
-
-      margin: 30px auto;
-    }
-
-    .schedule-subtitle {
-      max-width: 650px;
-      margin: 0 auto;
-
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1.6;
-
-      color: rgba(255,255,255,0.88);
-    }
-
-
-    /* =========================
-       INTRODUCTION
-       ========================= */
-
-    .schedule-intro {
-      padding: 95px 30px 45px;
-      text-align: center;
-    }
-
-    .intro-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .intro-kicker {
-      font-family: "Inter", sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-
-      color: var(--deep-gold);
-
-      margin-bottom: 22px;
-    }
-
-    .intro-title {
-      font-family: "Bodoni Moda", serif;
-      font-size: 42px;
-      line-height: 1.25;
-      font-weight: 500;
-
-      color: var(--brown);
-
-      margin: 0 0 24px;
-    }
-
-    .intro-text {
-      font-size: 21px;
-      line-height: 1.7;
-
-      margin: 0;
-    }
-
-    .ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 16px;
-
-      margin: 45px 0 0;
-    }
-
-    .ornament::before,
-    .ornament::after {
-      content: "";
-
-      width: 45px;
-      height: 1px;
-
-      background: var(--gold);
-    }
-
-    .diamond {
-      width: 8px;
-      height: 8px;
-
-      border: 1px solid var(--gold);
-
-      transform: rotate(45deg);
-    }
-
-
-    /* =========================
-       DAY SCHEDULE
-       ========================= */
-
-    .day-schedule {
-      max-width: 1000px;
-
-      margin: 0 auto;
-
-      padding: 55px 30px 120px;
-    }
-
-    .schedule-list {
-      position: relative;
-
-      max-width: 850px;
-
-      margin: 0 auto;
-    }
-
-    /* Central timeline */
-
-    .schedule-list::before {
-      content: "";
-
-      position: absolute;
-
-      top: 18px;
-      bottom: 18px;
-      left: 155px;
-
-      width: 1px;
-
-      background: rgba(213,170,87,0.55);
-    }
-
-
-    /* =========================
-       SCHEDULE ITEM
-       ========================= */
-
-    .schedule-item {
-      position: relative;
-
-      display: grid;
-      grid-template-columns: 120px 70px 1fr;
-
-      min-height: 180px;
-    }
-
-    .schedule-time {
-      padding-top: 1px;
-
-      font-family: "Bodoni Moda", serif;
-      font-size: 27px;
-      font-weight: 500;
-      line-height: 1.2;
-
-      color: var(--brown);
-
-      text-align: right;
-    }
-
-    .schedule-time-range {
-      display: block;
-
-      margin-top: 6px;
-
-      font-family: "Inter", sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      color: var(--deep-gold);
-    }
-
-
-    /* DOT */
-
-    .schedule-marker {
-      position: relative;
-
-      display: flex;
-      justify-content: center;
-
-      z-index: 2;
-    }
-
-    .schedule-dot {
-      width: 11px;
-      height: 11px;
-
-      margin-top: 10px;
-
-      background: var(--cream);
-
-      border: 2px solid var(--gold);
-      border-radius: 50%;
-
-      box-shadow: 0 0 0 7px var(--cream);
-    }
-
-
-    /* CONTENT */
-
-    .schedule-content {
-      padding: 0 0 65px;
-    }
-
-    .schedule-number {
-      font-family: "Inter", sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-
-      letter-spacing: 4px;
-
-      color: var(--deep-gold);
-
-      margin-bottom: 12px;
-    }
-
-    .schedule-item-title {
-      font-family: "Bodoni Moda", serif;
-      font-size: 32px;
-      line-height: 1.2;
-      font-weight: 500;
-
-      color: var(--brown);
-
-      margin: 0 0 13px;
-    }
-
-    .schedule-description {
-      max-width: 520px;
-
-      margin: 0;
-
-      font-size: 20px;
-      line-height: 1.65;
-    }
-
-    .schedule-description em {
-      color: var(--deep-gold);
-    }
-
-
-    /* =========================
-       MUHURTHA — FEATURED MOMENT
-       ========================= */
-
-    .muhurtha-item {
-      min-height: 230px;
-    }
-
-    .muhurtha-item .schedule-dot {
-      width: 17px;
-      height: 17px;
-
-      margin-top: 7px;
-
-      background: var(--gold);
-
-      border: 4px solid var(--cream);
-
-      box-shadow:
-        0 0 0 1px var(--gold),
-        0 0 0 8px var(--cream);
-    }
-
-    .muhurtha-card {
-      position: relative;
-
-      max-width: 560px;
-
-      padding: 34px 38px;
-
-      border: 1px solid rgba(159,118,47,0.42);
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(213,170,87,0.06),
-          rgba(255,248,238,0)
-        );
-    }
-
-    .muhurtha-card::before {
-      content: "";
-
-      position: absolute;
-      inset: 8px;
-
-      border: 1px solid rgba(213,170,87,0.24);
-      border-radius: 12px;
-
-      pointer-events: none;
-    }
-
-    .muhurtha-label {
-      position: relative;
-
-      font-family: "Inter", sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: 4px;
-      text-transform: uppercase;
-
-      color: var(--deep-gold);
-
-      margin-bottom: 14px;
-    }
-
-    .muhurtha-card .schedule-item-title,
-    .muhurtha-card .schedule-description {
-      position: relative;
-    }
-
-    .muhurtha-card .schedule-item-title {
-      font-size: 36px;
-    }
-
-
-    /* =========================
-       CLOSING
-       ========================= */
-
-    .schedule-closing {
-      padding: 0 30px 105px;
-
-      text-align: center;
-    }
-
-    .closing-inner {
-      max-width: 720px;
-
-      margin: 0 auto;
-    }
-
-    .closing-ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 16px;
-
-      margin-bottom: 38px;
-    }
-
-    .closing-ornament::before,
-    .closing-ornament::after {
-      content: "";
-
-      width: 45px;
-      height: 1px;
-
-      background: var(--gold);
-    }
-
-    .closing-diamond {
-      width: 8px;
-      height: 8px;
-
-      border: 1px solid var(--gold);
-
-      transform: rotate(45deg);
-    }
-
-    .closing-text {
-      font-family: "Bodoni Moda", serif;
-      font-size: 29px;
-      line-height: 1.5;
-
-      color: var(--brown);
-
-      margin: 0;
-    }
-
-
-    /* =========================
-       FOOTER
-       ========================= */
-
-    footer {
-      background: var(--brown);
-
-      text-align: center;
-
-      padding: 50px 25px;
-    }
-
-    .footer-logo {
-      font-size: 25px;
-      letter-spacing: 7px;
-
-      color: var(--gold);
-
-      margin-bottom: 12px;
-    }
-
-    .footer-date {
-      font-family: "Inter", sans-serif;
-
-      font-size: 9px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-
-      color: rgba(255,248,238,0.65);
-    }
-
-
-    /* =========================
-       TABLET
-       ========================= */
-
-    @media (max-width: 900px) {
-
-      nav {
-        display: none;
-      }
-
-      .topbar {
-        padding: 25px;
-      }
-
-      .schedule-title {
-        font-size: 48px;
-      }
-
-      .schedule-subtitle {
-        font-size: 20px;
-      }
-    }
-
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 700px) {
-
-      .logo {
-        font-size: 23px;
-      }
-
-      .schedule-hero {
-        min-height: 68vh;
-
-        padding: 120px 24px 80px;
-      }
-
-      .schedule-title {
-        font-size: 39px;
-        line-height: 1.15;
-      }
-
-      .schedule-kicker {
-        letter-spacing: 4px;
-      }
-
-      .schedule-subtitle {
-        font-size: 19px;
-      }
-
-
-      /* INTRO */
-
-      .schedule-intro {
-        padding: 70px 24px 35px;
-      }
-
-      .intro-title {
-        font-size: 32px;
-      }
-
-      .intro-text {
-        font-size: 19px;
-      }
-
-
-      /* SCHEDULE */
-
-      .day-schedule {
-        padding: 45px 22px 80px;
-      }
-
-      .schedule-list {
-        padding-left: 30px;
-      }
-
-      .schedule-list::before {
-        left: 5px;
-
-        top: 12px;
-        bottom: 12px;
-      }
-
-      .schedule-item {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-
-        padding: 0 0 60px 25px;
-      }
-
-      .schedule-time {
-        text-align: left;
-
-        font-size: 24px;
-
-        margin-bottom: 14px;
-      }
-
-      .schedule-time-range {
-        display: inline-block;
-
-        margin-top: 0;
-        margin-left: 8px;
-      }
-
-      .schedule-marker {
-        position: absolute;
-
-        left: -30px;
-        top: 0;
-      }
-
-      .schedule-dot {
-        margin-top: 8px;
-      }
-
-      .schedule-content {
-        padding: 0;
-      }
-
-      .schedule-number {
-        margin-bottom: 10px;
-      }
-
-      .schedule-item-title {
-        font-size: 28px;
-      }
-
-      .schedule-description {
-        font-size: 18px;
-      }
-
-
-      /* MUHURTHA MOBILE */
-
-      .muhurtha-item {
-        min-height: auto;
-      }
-
-      .muhurtha-item .schedule-marker {
-        top: 0;
-      }
-
-      .muhurtha-item .schedule-dot {
-        margin-top: 5px;
-      }
-
-      .muhurtha-card {
-        padding: 30px 26px;
-
-        border-radius: 15px;
-      }
-
-      .muhurtha-card::before {
-        inset: 7px;
-
-        border-radius: 10px;
-      }
-
-      .muhurtha-card .schedule-item-title {
-        font-size: 31px;
-      }
-
-
-      /* CLOSING */
-
-      .schedule-closing {
-        padding: 0 24px 80px;
-      }
-
-      .closing-text {
-        font-size: 24px;
-      }
-    }
-
-  </style>
-</head>
-
-
-<body>
-
+<div class="schedule-list">
 
   <!-- =========================
-       NAVIGATION
+       GUEST ARRIVAL & BREAKFAST
        ========================= -->
 
-  <div class="topbar">
+  <section class="schedule-item">
 
-    <div class="logo">
-      P & S
+    <div class="schedule-time">
+      08:30
     </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="ceremony.html">Ceremony</a>
-      <a href="schedule.html" class="active">Schedule</a>
-      <a href="venue.html">Venue</a>
-      <a href="memories.html">Memories</a>
-    </nav>
-
-  </div>
-
-
-  <!-- =========================
-       HERO
-       ========================= -->
-
-  <section class="schedule-hero">
-
-    <div class="schedule-hero-content">
-
-      <div class="schedule-kicker">
-        Pirasanth & Shankavie
-      </div>
-
-      <h1 class="schedule-title">
-        WEDDING DAY
-      </h1>
-
-      <div class="gold-line"></div>
-
-      <p class="schedule-subtitle">
-        Saturday, 31st October 2026
-      </p>
-
+    <div class="schedule-marker">
+      <div class="schedule-dot"></div>
     </div>
 
-  </section>
+    <div class="schedule-content">
 
-
-  <!-- =========================
-       INTRODUCTION
-       ========================= -->
-
-  <section class="schedule-intro">
-
-    <div class="intro-inner">
-
-      <div class="intro-kicker">
-        The Day
-      </div>
-
-      <h2 class="intro-title">
-        Our Wedding Schedule
+      <h2 class="schedule-item-title">
+        Guest Arrival & Breakfast
       </h2>
 
-      <p class="intro-text">
-        From the first welcome to the final celebrations,
-        here is how our wedding day will unfold.
-      </p>
-
-      <div class="ornament">
-        <div class="diamond"></div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SCHEDULE
-       ========================= -->
-
-  <main class="day-schedule">
-
-    <div class="schedule-list">
-
-
-      <!-- =========================
-           01 — GUEST ARRIVAL
-           ========================= -->
-
-      <section class="schedule-item">
-
-        <div class="schedule-time">
-          08:30
-        </div>
-
-        <div class="schedule-marker">
-          <div class="schedule-dot"></div>
-        </div>
-
-        <div class="schedule-content">
-
-          <div class="schedule-number">
-            01
-          </div>
-
-          <h2 class="schedule-item-title">
-            Guest Arrival & Welcome
-          </h2>
-
-          <p class="schedule-description">
-            Guests are welcomed to the venue as the morning begins.
-            Fresh <em>Appam</em> will be available from
-            08:30 to 11:00.
-          </p>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           02 — CEREMONY
-           ========================= -->
-
-      <section class="schedule-item">
-
-        <div class="schedule-time">
-          09:00
-        </div>
-
-        <div class="schedule-marker">
-          <div class="schedule-dot"></div>
-        </div>
-
-        <div class="schedule-content">
-
-          <div class="schedule-number">
-            02
-          </div>
-
-          <h2 class="schedule-item-title">
-            Wedding Ceremony
-          </h2>
-
-          <p class="schedule-description">
-            The traditional ceremony begins with the groom
-            on the <em>Manavarai</em>.
-          </p>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           03 — MUHURTHA NERAM
-           ========================= -->
-
-      <section class="schedule-item muhurtha-item">
-
-        <div class="schedule-time">
-          11:00
-          <span class="schedule-time-range">
-            to 12:35
-          </span>
-        </div>
-
-        <div class="schedule-marker">
-          <div class="schedule-dot"></div>
-        </div>
-
-        <div class="schedule-content">
-
-          <div class="muhurtha-card">
-
-            <div class="muhurtha-label">
-              The Auspicious Time
-            </div>
-
-            <h2 class="schedule-item-title">
-              Muhurtha Neram
-            </h2>
-
-            <p class="schedule-description">
-              The most auspicious period of the wedding ceremony,
-              including the sacred <em>Thaali Kattu</em>.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           04 — ARAI ARISI & LUNCH
-           ========================= -->
-
-      <section class="schedule-item">
-
-        <div class="schedule-time">
-          13:00
-        </div>
-
-        <div class="schedule-marker">
-          <div class="schedule-dot"></div>
-        </div>
-
-        <div class="schedule-content">
-
-          <div class="schedule-number">
-            04
-          </div>
-
-          <h2 class="schedule-item-title">
-            Arai Arisi & Wedding Lunch
-          </h2>
-
-          <p class="schedule-description">
-            The <em>Arai Arisi</em> ceremony takes place while
-            a traditional vegetarian Tamil lunch is served.
-          </p>
-
-        </div>
-
-      </section>
-
-
-    </div>
-
-  </main>
-
-
-  <!-- =========================
-       CLOSING
-       ========================= -->
-
-  <section class="schedule-closing">
-
-    <div class="closing-inner">
-
-      <div class="closing-ornament">
-        <div class="closing-diamond"></div>
-      </div>
-
-      <p class="closing-text">
-        We look forward to sharing<br>
-        this special day with you.
+      <p class="schedule-description">
+        Fresh <em>Appam</em> will be available at the stand,
+        while a traditional breakfast with tea will be served at the tables.
       </p>
 
     </div>
@@ -993,21 +31,104 @@
 
 
   <!-- =========================
-       FOOTER
+       WEDDING CEREMONY
        ========================= -->
 
-  <footer>
+  <section class="schedule-item">
 
-    <div class="footer-logo">
-      P & S
+    <div class="schedule-time">
+      09:00
     </div>
 
-    <div class="footer-date">
-      31st October 2026
+    <div class="schedule-marker">
+      <div class="schedule-dot"></div>
     </div>
 
-  </footer>
+    <div class="schedule-content">
+
+      <h2 class="schedule-item-title">
+        Wedding Ceremony
+      </h2>
+
+      <p class="schedule-description">
+        The traditional Tamil Hindu wedding ceremony begins
+        with the groom on the <em>Manavarai</em>.
+      </p>
+
+    </div>
+
+  </section>
 
 
-</body>
-</html>
+  <!-- =========================
+       MUHURTHA NERAM
+       ========================= -->
+
+  <section class="schedule-item muhurtha-item">
+
+    <div class="schedule-time">
+      11:00
+      <span class="schedule-time-range">
+        to 12:35
+      </span>
+    </div>
+
+    <div class="schedule-marker">
+      <div class="schedule-dot"></div>
+    </div>
+
+    <div class="schedule-content">
+
+      <div class="muhurtha-card">
+
+        <div class="muhurtha-label">
+          The Auspicious Time
+        </div>
+
+        <h2 class="schedule-item-title">
+          Muhurtha Neram
+        </h2>
+
+        <p class="schedule-description">
+          The most auspicious period of the wedding ceremony,
+          including the sacred <em>Thaali Kattu</em>.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ARAI ARISI & WEDDING LUNCH
+       ========================= -->
+
+  <section class="schedule-item">
+
+    <div class="schedule-time">
+      13:00
+    </div>
+
+    <div class="schedule-marker">
+      <div class="schedule-dot"></div>
+    </div>
+
+    <div class="schedule-content">
+
+      <h2 class="schedule-item-title">
+        Arai Arisi & Wedding Lunch
+      </h2>
+
+      <p class="schedule-description">
+        The <em>Arai Arisi</em> rice ceremony takes place,
+        blessing the newly married couple,
+        while a traditional vegetarian Tamil lunch is served.
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
