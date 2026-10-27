@@ -67,6 +67,7 @@
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
+    z-index: 20;
   }
 
   nav a {
@@ -88,6 +89,12 @@
     font-size: 28px;
     letter-spacing: 7px;
     font-weight: 500;
+    z-index: 30;
+  }
+
+  /* Caché sur ordinateur */
+  .menu-toggle {
+    display: none;
   }
 
   .hero-content {
@@ -184,9 +191,92 @@
     }
   }
 
+  /* =========================
+     TABLETTE + MOBILE
+     ========================= */
   @media (max-width: 900px) {
+
+    /* Bouton hamburger */
+    .menu-toggle {
+      display: flex;
+      position: absolute;
+      top: 26px;
+      right: 25px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      background: transparent;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      z-index: 50;
+      padding: 0;
+    }
+
+    .menu-toggle span {
+      width: 27px;
+      height: 1px;
+      background: var(--gold);
+      display: block;
+      transition: all .35s ease;
+    }
+
+    /* Menu mobile fermé */
     nav {
-      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100dvh;
+      background: rgba(25, 10, 4, 0.97);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 28px;
+      font-size: 14px;
+      letter-spacing: 4px;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-10px);
+
+      transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility .35s ease;
+
+      z-index: 40;
+    }
+
+    /* Menu ouvert */
+    nav.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    nav a {
+      font-size: 14px;
+      color: rgba(255,255,255,.92);
+    }
+
+    /* Animation hamburger -> X */
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     .names {
@@ -198,7 +288,36 @@
     }
   }
 
+  /* =========================
+     TÉLÉPHONE
+     ========================= */
   @media (max-width: 600px) {
+
+    header {
+      padding: 22px;
+
+      /*
+       * On conserve cover mais on décale légèrement
+       * le cadrage pour le format vertical.
+       */
+      background-position: 38% center;
+    }
+
+    header::before {
+      background-position: 38% center;
+    }
+
+    .logo {
+      top: 27px;
+      left: 25px;
+      font-size: 23px;
+    }
+
+    .hero-content {
+      width: 100%;
+      margin-top: -20px;
+    }
+
     .names {
       font-size: 46px;
     }
@@ -210,16 +329,22 @@
     .small-title {
       font-size: 17px;
       letter-spacing: 5px;
+      margin-bottom: 25px;
     }
 
     .date {
-      font-size: 13px;
-      letter-spacing: 5px;
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-top: 30px;
+      white-space: nowrap;
     }
 
-    .logo {
-      left: 25px;
-      font-size: 23px;
+    .btn {
+      width: min(100%, 330px);
+      padding: 19px 20px;
+      margin-top: 45px;
+      font-size: 11px;
+      letter-spacing: 2.5px;
     }
   }
   </style>
@@ -230,7 +355,18 @@
   <header>
     <div class="logo">P & S</div>
 
-    <nav>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mainNav">
       <a href="/">Home</a>
       <a href="ceremony.html">Ceremony</a>
       <a href="schedule.html">Schedule</a>
@@ -252,6 +388,24 @@
       <a class="btn" href="memories.html">Share Your Memories</a>
     </div>
   </header>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.classList.toggle("open", isOpen);
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+  </script>
 
 </body>
 </html>
