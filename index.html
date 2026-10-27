@@ -6,365 +6,538 @@
   <title>Pirasanth & Shankavie</title>
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
 
-  :root {
-    --gold: #d5aa57;
-    --deep-gold: #9f762f;
-    --cream: #fff8ee;
-    --brown: #251207;
-    --text: #3a2415;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    background: var(--cream);
-    color: var(--text);
-    text-align: center;
-  }
-
-  header {
-    min-height: 100vh;
-    position: relative;
-    color: white;
-    background:
-      linear-gradient(rgba(18, 8, 3, 0.48), rgba(18, 8, 3, 0.58)),
-      url("images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    overflow: hidden;
-  }
-
-  header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.04);
-    animation: slowZoom 18s ease-in-out infinite alternate;
-    z-index: -1;
-  }
-
-  nav {
-    position: absolute;
-    top: 30px;
-    right: 45px;
-    display: flex;
-    gap: 34px;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    z-index: 20;
-  }
-
-  nav a {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover {
-    color: var(--gold);
-  }
-
-  .logo {
-    position: absolute;
-    top: 28px;
-    left: 45px;
-    color: var(--gold);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 28px;
-    letter-spacing: 7px;
-    font-weight: 500;
-    z-index: 30;
-  }
-
-  /* Caché sur ordinateur */
-  .menu-toggle {
-    display: none;
-  }
-
-  .hero-content {
-    max-width: 900px;
-    margin-top: -55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 1.8s ease forwards;
-  }
-
-  .small-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 12px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.92);
-    margin-bottom: 28px;
-  }
-
-  .names {
-    font-family: "Bodoni Moda", serif;
-    font-size: 88px;
-    line-height: .92;
-    margin: 0;
-    color: var(--gold);
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-shadow: 0 10px 35px rgba(0,0,0,.35);
-  }
-
-  .names span {
-    display: block;
-  }
-
-  .names .ampersand {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 42px;
-    font-weight: 300;
-    color: #f4d89b;
-    margin: 8px 0;
-  }
-
-  .date {
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 9px;
-    color: rgba(255,255,255,.92);
-    margin-top: 35px;
-  }
-
-  .btn {
-    display: inline-block;
-    margin-top: 55px;
-    padding: 20px 48px;
-    background: linear-gradient(180deg,#e7bc65,#c99841);
-    color: #2b1609;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    box-shadow: 0 18px 40px rgba(0,0,0,.25);
-    transition: all .35s ease;
-  }
-
-  .btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 55px rgba(0,0,0,.35);
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(28px);
+    :root {
+      --gold: #d5aa57;
+      --deep-gold: #9f762f;
+      --cream: #fff8ee;
+      --brown: #251207;
+      --text: #3a2415;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  @keyframes slowZoom {
-    from {
-      transform: scale(1.02);
+    * {
+      box-sizing: border-box;
     }
-    to {
-      transform: scale(1.09);
-    }
-  }
 
-  /* =========================
-     TABLETTE + MOBILE
-     ========================= */
-  @media (max-width: 900px) {
-
-    /* Bouton hamburger */
-    .menu-toggle {
-      display: flex;
-      position: absolute;
-      top: 26px;
-      right: 25px;
-      width: 42px;
-      height: 42px;
-      border: 0;
-      background: transparent;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 50;
+    html,
+    body {
+      margin: 0;
       padding: 0;
-    }
-
-    .menu-toggle span {
-      width: 27px;
-      height: 1px;
-      background: var(--gold);
-      display: block;
-      transition: all .35s ease;
-    }
-
-    /* Menu mobile fermé */
-    nav {
-      position: fixed;
-      inset: 0;
       width: 100%;
-      height: 100dvh;
-      background: rgba(25, 10, 4, 0.97);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      gap: 28px;
-      font-size: 14px;
-      letter-spacing: 4px;
-
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transform: translateY(-10px);
-
-      transition:
-        opacity .35s ease,
-        transform .35s ease,
-        visibility .35s ease;
-
-      z-index: 40;
     }
 
-    /* Menu ouvert */
-    nav.open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
+    body {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
+      text-align: center;
     }
 
-    nav a {
-      font-size: 14px;
-      color: rgba(255,255,255,.92);
-    }
-
-    /* Animation hamburger -> X */
-    .menu-toggle.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .names {
-      font-size: 62px;
-    }
-
-    .hero-content {
-      margin-top: -40px;
-    }
-  }
-
-  /* =========================
-     TÉLÉPHONE
-     ========================= */
-  @media (max-width: 600px) {
+    /* ========================================
+       HERO
+       ======================================== */
 
     header {
-      padding: 22px;
+      min-height: 100vh;
+      min-height: 100svh;
+      position: relative;
+      color: white;
 
-      /*
-       * On conserve cover mais on décale légèrement
-       * le cadrage pour le format vertical.
-       */
-      background-position: 38% center;
+      background:
+        linear-gradient(
+          rgba(18, 8, 3, 0.48),
+          rgba(18, 8, 3, 0.58)
+        ),
+        url("images/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+      overflow: hidden;
     }
 
     header::before {
-      background-position: 38% center;
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          rgba(18, 8, 3, 0.48),
+          rgba(18, 8, 3, 0.58)
+        ),
+        url("images/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      transform: scale(1.04);
+      animation: slowZoom 18s ease-in-out infinite alternate;
+
+      z-index: 0;
     }
+
+    /* Le background du header reste derrière le ::before */
+    header {
+      background: #251207;
+    }
+
+    /* ========================================
+       LOGO
+       ======================================== */
 
     .logo {
-      top: 27px;
-      left: 25px;
-      font-size: 23px;
+      position: absolute;
+      top: 28px;
+      left: 45px;
+
+      color: var(--gold);
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      letter-spacing: 7px;
+      font-weight: 500;
+
+      z-index: 30;
     }
+
+    /* ========================================
+       NAVIGATION DESKTOP
+       ======================================== */
+
+    nav {
+      position: absolute;
+      top: 30px;
+      right: 45px;
+
+      display: flex;
+      gap: 34px;
+
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      z-index: 30;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* Hamburger invisible sur ordinateur */
+    .menu-toggle {
+      display: none;
+    }
+
+    /* ========================================
+       CONTENU HERO
+       ======================================== */
 
     .hero-content {
-      width: 100%;
-      margin-top: -20px;
-    }
+      position: relative;
+      z-index: 10;
 
-    .names {
-      font-size: 46px;
-    }
+      max-width: 900px;
+      margin-top: -55px;
 
-    .names .ampersand {
-      font-size: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      animation: fadeIn 1.8s ease forwards;
     }
 
     .small-title {
-      font-size: 17px;
-      letter-spacing: 5px;
-      margin-bottom: 25px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.92);
+
+      margin-bottom: 28px;
+    }
+
+    .names {
+      font-family: "Bodoni Moda", serif;
+      font-size: 88px;
+      line-height: 0.92;
+
+      margin: 0;
+
+      color: var(--gold);
+
+      font-weight: 500;
+      letter-spacing: 1px;
+
+      text-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .names span {
+      display: block;
+    }
+
+    .names .ampersand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      font-weight: 300;
+
+      color: #f4d89b;
+
+      margin: 8px 0;
     }
 
     .date {
-      font-size: 12px;
-      letter-spacing: 4px;
-      margin-top: 30px;
-      white-space: nowrap;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+
+      text-transform: uppercase;
+      letter-spacing: 9px;
+
+      color: rgba(255, 255, 255, 0.92);
+
+      margin-top: 35px;
     }
 
     .btn {
-      width: min(100%, 330px);
-      padding: 19px 20px;
-      margin-top: 45px;
-      font-size: 11px;
-      letter-spacing: 2.5px;
+      display: inline-block;
+
+      margin-top: 55px;
+      padding: 20px 48px;
+
+      background: linear-gradient(
+        180deg,
+        #e7bc65,
+        #c99841
+      );
+
+      color: #2b1609;
+
+      text-decoration: none;
+      border-radius: 8px;
+
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+
+      transition: all 0.35s ease;
     }
-  }
+
+    .btn:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slowZoom {
+      from {
+        transform: scale(1.02);
+      }
+
+      to {
+        transform: scale(1.09);
+      }
+    }
+
+    /* ========================================
+       TABLETTE / MOBILE
+       ======================================== */
+
+    @media (max-width: 900px) {
+
+      /* -------------------------------
+         HAMBURGER
+         ------------------------------- */
+
+      .menu-toggle {
+        display: flex;
+
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+
+        z-index: 60;
+      }
+
+      .menu-toggle span {
+        display: block;
+
+        width: 28px;
+        height: 1.5px;
+
+        background: var(--gold);
+
+        transition:
+          transform 0.35s ease,
+          opacity 0.25s ease;
+      }
+
+      /* -------------------------------
+         MENU MOBILE
+         ------------------------------- */
+
+      nav {
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        background:
+          rgba(25, 10, 4, 0.97);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+
+        font-size: 14px;
+        letter-spacing: 4px;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease,
+          visibility 0.35s ease;
+
+        z-index: 50;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+      }
+
+      nav a {
+        font-size: 14px;
+
+        color:
+          rgba(255, 255, 255, 0.92);
+      }
+
+      /* Hamburger devient X */
+
+      .menu-toggle.open span:nth-child(1) {
+        transform:
+          translateY(7.5px)
+          rotate(45deg);
+      }
+
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open span:nth-child(3) {
+        transform:
+          translateY(-7.5px)
+          rotate(-45deg);
+      }
+
+      .names {
+        font-size: 62px;
+      }
+
+      .hero-content {
+        margin-top: -40px;
+      }
+    }
+
+    /* ========================================
+       SMARTPHONE
+       ======================================== */
+
+    @media (max-width: 600px) {
+
+      /*
+        IMPORTANT :
+        Sur téléphone on utilise une autre photo.
+
+        Fichier :
+        images/hero-mobile.jpg
+      */
+
+      header::before {
+        background:
+          linear-gradient(
+            rgba(18, 8, 3, 0.48),
+            rgba(18, 8, 3, 0.58)
+          ),
+          url("images/hero-mobile.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      header {
+        padding:
+          22px
+          18px
+          22px;
+      }
+
+      /* Logo */
+
+      .logo {
+        top: 27px;
+        left: 25px;
+
+        font-size: 23px;
+        letter-spacing: 6px;
+      }
+
+      /* Hamburger */
+
+      .menu-toggle {
+        top: 22px;
+        right: 22px;
+      }
+
+      /* Contenu */
+
+      .hero-content {
+        width: 100%;
+
+        margin-top: -20px;
+      }
+
+      .small-title {
+        font-size: 17px;
+        letter-spacing: 5px;
+
+        margin-bottom: 25px;
+
+        white-space: nowrap;
+      }
+
+      .names {
+        font-size: 46px;
+        line-height: 0.95;
+      }
+
+      .names .ampersand {
+        font-size: 30px;
+
+        margin: 7px 0;
+      }
+
+      .date {
+        font-size: 12px;
+        letter-spacing: 4px;
+
+        margin-top: 30px;
+
+        white-space: nowrap;
+      }
+
+      .btn {
+        width: min(100%, 330px);
+
+        margin-top: 45px;
+
+        padding:
+          19px
+          18px;
+
+        font-size: 11px;
+        letter-spacing: 2.5px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
   <header>
-    <div class="logo">P & S</div>
+
+    <div class="logo">
+      P & S
+    </div>
+
+    <!-- MENU HAMBURGER MOBILE -->
 
     <button
       class="menu-toggle"
       id="menuToggle"
       aria-label="Open menu"
       aria-expanded="false"
+      aria-controls="mainNav"
     >
       <span></span>
       <span></span>
       <span></span>
     </button>
+
+    <!-- NAVIGATION -->
 
     <nav id="mainNav">
       <a href="/">Home</a>
@@ -374,37 +547,110 @@
       <a href="memories.html">Memories</a>
     </nav>
 
+    <!-- HERO -->
+
     <div class="hero-content">
-      <div class="small-title">When Two Souls Meet...</div>
+
+      <div class="small-title">
+        When Two Souls Meet...
+      </div>
 
       <h1 class="names">
         <span>Pirasanth</span>
-        <span class="ampersand">&</span>
+
+        <span class="ampersand">
+          &
+        </span>
+
         <span>Shankavie</span>
       </h1>
 
-      <div class="date">31ST OCTOBER 2026</div>
+      <div class="date">
+        31ST OCTOBER 2026
+      </div>
 
-      <a class="btn" href="memories.html">Share Your Memories</a>
+      <a
+        class="btn"
+        href="memories.html"
+      >
+        Share Your Memories
+      </a>
+
     </div>
+
   </header>
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("open");
+    const menuToggle =
+      document.getElementById("menuToggle");
 
-      menuToggle.classList.toggle("open", isOpen);
-      menuToggle.setAttribute("aria-expanded", isOpen);
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close menu" : "Open menu"
-      );
+    const mainNav =
+      document.getElementById("mainNav");
 
-      document.body.style.overflow = isOpen ? "hidden" : "";
-    });
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mainNav.classList.toggle("open");
+
+        menuToggle.classList.toggle(
+          "open",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+        document.body.style.overflow =
+          isOpen
+            ? "hidden"
+            : "";
+
+      }
+    );
+
+
+    /*
+      Ferme automatiquement le menu
+      lorsqu'on clique sur un lien.
+    */
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mainNav.classList.remove("open");
+
+            menuToggle.classList.remove("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            document.body.style.overflow = "";
+
+          }
+        );
+
+      });
+
   </script>
 
 </body>
