@@ -1,317 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Memories | Pirasanth & Shankavie</title>
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
 
-  :root {
-    --gold: #d5aa57;
-    --deep-gold: #9f762f;
-    --cream: #fff8ee;
-    --brown: #251207;
-    --text: #3a2415;
-  }
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
 
-  * {
-    box-sizing: border-box;
-  }
+    :root {
+      --gold: #d5aa57;
+      --deep-gold: #9f762f;
+      --cream: #fff8ee;
+      --brown: #251207;
+      --text: #3a2415;
+    }
 
-  body {
-    margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    background: var(--cream);
-    color: var(--text);
-    text-align: center;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .topbar {
-    padding: 26px 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--brown);
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .logo {
-    color: var(--gold);
-    font-size: 28px;
-    letter-spacing: 7px;
-    font-weight: 500;
-  }
+    body {
+      margin: 0;
 
-  nav {
-    display: flex;
-    gap: 34px;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+      font-family: "Cormorant Garamond", Georgia, serif;
 
-  nav a {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-  }
+      background: var(--cream);
 
-  nav a:hover {
-    color: var(--gold);
-  }
+      color: var(--text);
 
-  main {
-  min-height: calc(100vh - 90px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px 30px;
-}
+      text-align: center;
+    }
 
-/* GRANDE CARTE */
 
-.memory-card {
-  position: relative;
-  width: min(1050px, 100%);
-  min-height: 650px;
+    /* ==================================================
+       NAVIGATION
+       ================================================== */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    .topbar {
+      position: relative;
 
-  padding: 70px 40px;
+      padding: 26px 45px;
 
-  border-radius: 18px;
-  overflow: hidden;
+      display: flex;
 
-  border: 1px solid rgba(159,118,47,.40);
+      justify-content: space-between;
+      align-items: center;
 
-  box-shadow:
-    0 25px 70px rgba(72,42,18,.13),
-    inset 0 0 0 7px rgba(255,248,238,.65);
+      background: var(--brown);
 
-  background:
-  linear-gradient(
-    rgba(255,248,238,.83),
-    rgba(255,248,238,.90)
-  ),
-  url("images/couple.jpg");
+      z-index: 50;
+    }
 
-  background-size: cover;
-  background-position: center;
-}
+    .logo {
+      color: var(--gold);
 
-/* PETIT CADRE DORÉ INTÉRIEUR */
+      font-size: 28px;
 
-.memory-card::after {
-  content: "";
-  position: absolute;
-  inset: 15px;
-  border: 1px solid rgba(213,170,87,.45);
-  border-radius: 11px;
-  pointer-events: none;
-}
+      letter-spacing: 7px;
 
-/* CONTENU */
+      font-weight: 500;
+    }
 
-.memory-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  width: 100%;
-}
+    nav {
+      display: flex;
 
-.memory-eyebrow {
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: var(--deep-gold);
-  margin-bottom: 22px;
-}
+      gap: 34px;
 
-h1 {
-  font-family: "Bodoni Moda", serif;
-  font-size: 54px;
-  font-weight: 400;
-  margin: 0 0 18px;
-}
+      font-family: "Inter", sans-serif;
 
-.intro {
-  font-size: 21px;
-  line-height: 1.55;
-  margin: 0 auto;
-}
+      font-size: 12px;
 
-.ornament {
-  color: var(--gold);
-  font-size: 24px;
-  margin: 20px 0;
-}
+      font-weight: 500;
 
-/* QR */
+      letter-spacing: 2px;
 
-.qr-wrap {
-  margin: 15px auto 0;
-  padding: 13px;
-  width: fit-content;
+      text-transform: uppercase;
+    }
 
-  background: rgba(255,255,255,.94);
+    nav a {
+      color: rgba(255,255,255,0.9);
 
-  border-radius: 12px;
-  border: 1px solid rgba(213,170,87,.25);
+      text-decoration: none;
 
-  box-shadow: 0 12px 35px rgba(72,42,18,.12);
-}
+      transition: color .3s ease;
+    }
 
-.qr-wrap img {
-  display: block;
-  width: 180px;
-  height: 180px;
-}
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
 
-/* BOUTON */
 
-.btn {
-  display: inline-block;
+    /* ==================================================
+       HAMBURGER
+       Caché sur ordinateur
+       ================================================== */
 
-  margin-top: 30px;
-  padding: 18px 44px;
+    .menu-toggle {
+      display: none;
+    }
 
-  background: linear-gradient(180deg,#e7bc65,#c99841);
 
-  color: #2b1609;
-  text-decoration: none;
+    /* ==================================================
+       MAIN
+       ================================================== */
 
-  border-radius: 7px;
+    main {
+      min-height: calc(100vh - 90px);
 
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
+      display: flex;
 
-  letter-spacing: 3px;
-  text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
 
-  box-shadow: 0 15px 35px rgba(80,45,15,.17);
+      padding: 70px 30px;
+    }
 
-  transition: all .35s ease;
-}
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 45px rgba(80,45,15,.22);
-}
+    /* ==================================================
+       GRANDE CARTE
+       ================================================== */
 
-.private-note {
-  margin-top: 20px;
+    .memory-card {
+      position: relative;
 
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
+      width: min(1050px, 100%);
 
-  color: #7b6657;
-}
+      min-height: 650px;
 
-  @media (max-width: 700px) {
+      display: flex;
 
-  .topbar {
-    padding: 22px 25px;
-    flex-direction: column;
-    gap: 18px;
-  }
+      align-items: center;
+      justify-content: center;
 
-  nav {
-    gap: 18px;
-    font-size: 10px;
-  }
+      padding: 70px 40px;
 
-  main {
-    padding: 30px 15px;
-  }
+      border-radius: 18px;
 
-  .memory-card {
-    min-height: auto;
-    padding: 55px 22px;
-    border-radius: 14px;
-  }
+      overflow: hidden;
 
-  .memory-card::after {
-    inset: 9px;
-  }
+      border:
+        1px solid
+        rgba(159,118,47,.40);
 
-  h1 {
-    font-size: 39px;
-  }
+      box-shadow:
+        0 25px 70px rgba(72,42,18,.13),
+        inset 0 0 0 7px rgba(255,248,238,.65);
 
-  .intro {
-    font-size: 18px;
-  }
+      /*
+        IMAGE DESKTOP
+      */
 
-  .qr-wrap img {
-    width: 165px;
-    height: 165px;
-  }
-}
-  }
+      background:
+        linear-gradient(
+          rgba(255,248,238,.83),
+          rgba(255,248,238,.90)
+        ),
+        url("images/couple.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      background-repeat: no-repeat;
+    }
+
+
+    /* ==================================================
+       PETIT CADRE DORÉ INTÉRIEUR
+       ================================================== */
+
+    .memory-card::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 15px;
+
+      border:
+        1px solid
+        rgba(213,170,87,.45);
+
+      border-radius: 11px;
+
+      pointer-events: none;
+    }
+
+
+    /* ==================================================
+       CONTENU
+       ================================================== */
+
+    .memory-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 700px;
+
+      width: 100%;
+    }
+
+    .memory-eyebrow {
+      font-family: "Inter", sans-serif;
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: 4px;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-family: "Bodoni Moda", serif;
+
+      font-size: 54px;
+
+      font-weight: 400;
+
+      margin: 0 0 18px;
+    }
+
+    .intro {
+      font-size: 21px;
+
+      line-height: 1.55;
+
+      margin: 0 auto;
+    }
+
+    .ornament {
+      color: var(--gold);
+
+      font-size: 24px;
+
+      margin: 20px 0;
+    }
+
+
+    /* ==================================================
+       QR CODE
+       ================================================== */
+
+    .qr-wrap {
+      margin: 15px auto 0;
+
+      padding: 13px;
+
+      width: fit-content;
+
+      background:
+        rgba(255,255,255,.94);
+
+      border-radius: 12px;
+
+      border:
+        1px solid
+        rgba(213,170,87,.25);
+
+      box-shadow:
+        0 12px 35px
+        rgba(72,42,18,.12);
+    }
+
+    .qr-wrap img {
+      display: block;
+
+      width: 180px;
+
+      height: 180px;
+    }
+
+
+    /* ==================================================
+       BOUTON
+       ================================================== */
+
+    .btn {
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 18px 44px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #e7bc65,
+          #c99841
+        );
+
+      color: #2b1609;
+
+      text-decoration: none;
+
+      border-radius: 7px;
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      box-shadow:
+        0 15px 35px
+        rgba(80,45,15,.17);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .btn:hover {
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 20px 45px
+        rgba(80,45,15,.22);
+    }
+
+    .private-note {
+      margin-top: 20px;
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 13px;
+
+      color: #7b6657;
+    }
+
+
+    /* ==================================================
+       TABLET / MOBILE NAVIGATION
+       ================================================== */
+
+    @media (max-width: 900px) {
+
+      .topbar {
+        padding: 22px 25px;
+      }
+
+
+      /* --------------------------
+         HAMBURGER
+         -------------------------- */
+
+      .menu-toggle {
+        display: flex;
+
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+
+        z-index: 70;
+      }
+
+      .menu-toggle span {
+        display: block;
+
+        width: 28px;
+
+        height: 1.5px;
+
+        background: var(--gold);
+
+        transition:
+          transform .35s ease,
+          opacity .25s ease;
+      }
+
+
+      /* --------------------------
+         MENU PLEIN ÉCRAN
+         -------------------------- */
+
+      nav {
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100vh;
+        height: 100dvh;
+
+        background:
+          rgba(25,10,4,.97);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+
+        font-family:
+          "Inter",
+          sans-serif;
+
+        font-size: 14px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+          translateY(-10px);
+
+        transition:
+          opacity .35s ease,
+          transform .35s ease,
+          visibility .35s ease;
+
+        z-index: 65;
+      }
+
+      nav.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+          translateY(0);
+      }
+
+      nav a {
+        font-size: 14px;
+
+        color:
+          rgba(255,255,255,.92);
+      }
+
+
+      /* --------------------------
+         HAMBURGER -> X
+         -------------------------- */
+
+      .menu-toggle.open span:nth-child(1) {
+        transform:
+          translateY(7.5px)
+          rotate(45deg);
+      }
+
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open span:nth-child(3) {
+        transform:
+          translateY(-7.5px)
+          rotate(-45deg);
+      }
+    }
+
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 600px) {
+
+      .logo {
+        font-size: 23px;
+
+        letter-spacing: 6px;
+      }
+
+
+      /* --------------------------
+         MAIN
+         -------------------------- */
+
+      main {
+        min-height:
+          calc(100svh - 88px);
+
+        padding: 25px 15px;
+      }
+
+
+      /* ==================================================
+         CARTE MOBILE
+
+         Même image mobile que Ceremony :
+         ceremony-mobile.jpg
+         ================================================== */
+
+      .memory-card {
+        min-height:
+          calc(100svh - 138px);
+
+        padding:
+          50px
+          22px;
+
+        border-radius: 14px;
+
+        background:
+          linear-gradient(
+            rgba(255,248,238,.78),
+            rgba(255,248,238,.86)
+          ),
+          url("images/ceremony-mobile.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+      }
+
+      .memory-card::after {
+        inset: 9px;
+
+        border-radius: 9px;
+      }
+
+
+      /* --------------------------
+         CONTENU
+         -------------------------- */
+
+      .memory-content {
+        max-width: 100%;
+      }
+
+      .memory-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 17px;
+      }
+
+      h1 {
+        font-size: 39px;
+
+        line-height: 1.1;
+
+        margin-bottom: 15px;
+      }
+
+      .intro {
+        font-size: 18px;
+
+        line-height: 1.5;
+      }
+
+      .ornament {
+        margin: 16px 0;
+
+        font-size: 22px;
+      }
+
+
+      /* --------------------------
+         QR
+         -------------------------- */
+
+      .qr-wrap {
+        padding: 10px;
+
+        margin-top: 10px;
+      }
+
+      .qr-wrap img {
+        width: 155px;
+
+        height: 155px;
+      }
+
+
+      /* --------------------------
+         BOUTON
+         -------------------------- */
+
+      .btn {
+        width: min(100%, 320px);
+
+        margin-top: 24px;
+
+        padding:
+          17px
+          16px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.3px;
+      }
+
+      .private-note {
+        max-width: 300px;
+
+        margin:
+          17px
+          auto
+          0;
+
+        font-size: 11px;
+
+        line-height: 1.45;
+      }
+    }
+
+
+    /* ==================================================
+       PETITS TÉLÉPHONES
+       ================================================== */
+
+    @media (max-width: 380px) {
+
+      main {
+        padding:
+          20px
+          12px;
+      }
+
+      .memory-card {
+        padding:
+          42px
+          18px;
+      }
+
+      h1 {
+        font-size: 35px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+
+      .qr-wrap img {
+        width: 145px;
+
+        height: 145px;
+      }
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- ==================================================
+       NAVIGATION
+       ================================================== -->
+
   <div class="topbar">
-    <div class="logo">P & S</div>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="ceremony.html">Ceremony</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="venue.html">Venue</a>
-      <a href="memories.html">Memories</a>
-    </nav>
-  </div>
+    <div class="logo">
+      P & S
+    </div>
 
-  <main>
-    <main>
-  <div class="memory-card">
 
-    <div class="memory-content">
+    <!-- HAMBURGER MOBILE -->
 
-      <div class="memory-eyebrow">P & S · 31ST OCTOBER 2026</div>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
 
-      <h1>Share Your Memories</h1>
+      <span></span>
+      <span></span>
+      <span></span>
 
-      <p class="intro">
-        Help us capture our special day through your eyes.<br>
-        Share your favourite photos and videos with us.
-      </p>
+    </button>
 
-      <div class="ornament">♡</div>
 
-      <div class="qr-wrap">
-        <img
-          src="wedding-upload-qr.png"
-          alt="QR code to upload wedding photos and videos"
-        />
-      </div>
+    <nav id="mainNav">
 
-      <a
-        class="btn"
-        href="https://www.dropbox.com/request/c42fzfps639uzr42k158"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Upload Photos & Videos
+      <a href="/">
+        Home
       </a>
 
-      <div class="private-note">
-        Your uploads are private and will only be accessible to us.
+      <a href="ceremony.html">
+        Ceremony
+      </a>
+
+      <a href="schedule.html">
+        Schedule
+      </a>
+
+      <a href="venue.html">
+        Venue
+      </a>
+
+      <a
+        href="memories.html"
+        class="active"
+      >
+        Memories
+      </a>
+
+    </nav>
+
+  </div>
+
+
+  <!-- ==================================================
+       MEMORIES
+       ================================================== -->
+
+  <main>
+
+    <div class="memory-card">
+
+      <div class="memory-content">
+
+
+        <div class="memory-eyebrow">
+          P & S · 31ST OCTOBER 2026
+        </div>
+
+
+        <h1>
+          Share Your Memories
+        </h1>
+
+
+        <p class="intro">
+          Help us capture our special day through your eyes.<br>
+          Share your favourite photos and videos with us.
+        </p>
+
+
+        <div class="ornament">
+          ♡
+        </div>
+
+
+        <!-- QR CODE -->
+
+        <div class="qr-wrap">
+
+          <img
+            src="wedding-upload-qr.png"
+            alt="QR code to upload wedding photos and videos"
+          />
+
+        </div>
+
+
+        <!-- UPLOAD BUTTON -->
+
+        <a
+          class="btn"
+          href="https://www.dropbox.com/request/c42fzfps639uzr42k158"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Upload Photos & Videos
+        </a>
+
+
+        <div class="private-note">
+          Your uploads are private and will only be accessible to us.
+        </div>
+
+
       </div>
 
     </div>
 
-  </div>
-</main>
+  </main>
+
+
+  <!-- ==================================================
+       MOBILE MENU SCRIPT
+       ================================================== -->
+
+  <script>
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mainNav.classList.toggle("open");
+
+
+        menuToggle.classList.toggle(
+          "open",
+          isOpen
+        );
+
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+
+        document.body.style.overflow =
+          isOpen
+            ? "hidden"
+            : "";
+
+      }
+    );
+
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mainNav.classList.remove(
+              "open"
+            );
+
+
+            menuToggle.classList.remove(
+              "open"
+            );
+
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open menu"
+            );
+
+
+            document.body.style.overflow = "";
+
+          }
+        );
+
+      });
+
+  </script>
+
 
 </body>
+
 </html>
