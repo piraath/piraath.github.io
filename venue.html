@@ -1,306 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Wedding Infos | Pirasanth & Shankavie</title>
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
 
-  :root {
-    --gold: #d5aa57;
-    --deep-gold: #9f762f;
-    --cream: #fff8ee;
-    --brown: #251207;
-    --text: #3a2415;
-  }
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
 
-  * {
-    box-sizing: border-box;
-  }
+    :root {
+      --gold: #d5aa57;
+      --deep-gold: #9f762f;
+      --cream: #fff8ee;
+      --brown: #251207;
+      --text: #3a2415;
+    }
 
-  body {
-    margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    background: var(--cream);
-    color: var(--text);
-    text-align: center;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .topbar {
-    padding: 26px 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--brown);
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .logo {
-    color: var(--gold);
-    font-size: 28px;
-    letter-spacing: 7px;
-    font-weight: 500;
-  }
+    body {
+      margin: 0;
 
-  nav {
-    display: flex;
-    gap: 34px;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-  nav a {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    transition: color .3s ease;
-  }
+      background: var(--cream);
 
-  nav a:hover {
-    color: var(--gold);
-  }
+      color: var(--text);
 
-  main {
-    min-height: calc(100vh - 90px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 70px 30px;
-  }
+      text-align: center;
+    }
 
-  .info-card {
-    position: relative;
-    width: min(950px, 100%);
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 70px 45px;
 
-    border-radius: 18px;
-    overflow: hidden;
+    /* ==================================================
+       NAVIGATION
+       ================================================== */
 
-    border: 1px solid rgba(159,118,47,.40);
-
-    box-shadow:
-      0 25px 70px rgba(72,42,18,.13),
-      inset 0 0 0 7px rgba(255,248,238,.65);
-
-    background:
-      linear-gradient(
-        rgba(255,248,238,.82),
-        rgba(255,248,238,.90)
-      ),
-      url("images/infos-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-  }
-
-  .info-card::after {
-    content: "";
-    position: absolute;
-    inset: 15px;
-    border: 1px solid rgba(213,170,87,.45);
-    border-radius: 11px;
-    pointer-events: none;
-  }
-
-  .info-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 760px;
-  }
-
-  .eyebrow {
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    color: var(--deep-gold);
-    margin-bottom: 22px;
-  }
-
-  h1 {
-    font-family: "Bodoni Moda", serif;
-    font-size: 54px;
-    font-weight: 400;
-    margin: 0 0 20px;
-  }
-
-  .ornament {
-    color: var(--gold);
-    font-size: 24px;
-    margin: 10px 0 30px;
-  }
-
-  .details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    margin: 0 auto 35px;
-    max-width: 620px;
-  }
-
-  .detail-box {
-    background: rgba(255,248,238,.55);
-    border: 1px solid rgba(213,170,87,.28);
-    border-radius: 12px;
-    padding: 20px 18px;
-    backdrop-filter: blur(3px);
-  }
-
-  .detail-label {
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--deep-gold);
-    margin-bottom: 8px;
-  }
-
-  .detail-value {
-    font-size: 22px;
-    line-height: 1.4;
-  }
-
-  .venue-name {
-    font-family: "Bodoni Moda", serif;
-    font-size: 30px;
-    color: var(--deep-gold);
-    margin-bottom: 10px;
-  }
-
-  .venue-address {
-    font-size: 21px;
-    line-height: 1.55;
-    margin: 0;
-  }
-
-  .btn {
-    display: inline-block;
-    margin-top: 32px;
-    padding: 18px 44px;
-
-    background: linear-gradient(180deg,#e7bc65,#c99841);
-
-    color: #2b1609;
-    text-decoration: none;
-    border-radius: 7px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    box-shadow: 0 15px 35px rgba(80,45,15,.17);
-    transition: all .35s ease;
-  }
-
-  .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 45px rgba(80,45,15,.22);
-  }
-
-  @media (max-width: 700px) {
     .topbar {
-      padding: 22px 25px;
-      flex-direction: column;
-      gap: 18px;
+      position: relative;
+
+      padding: 26px 45px;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      background: var(--brown);
+
+      z-index: 50;
+    }
+
+    .logo {
+      color: var(--gold);
+
+      font-size: 28px;
+
+      letter-spacing: 7px;
+
+      font-weight: 500;
     }
 
     nav {
-      gap: 18px;
-      font-size: 10px;
+      display: flex;
+
+      gap: 34px;
+
+      font-family:
+        "Inter",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 500;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
     }
+
+    nav a {
+      color:
+        rgba(255,255,255,0.9);
+
+      text-decoration: none;
+
+      transition:
+        color .3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+
+    /* ==================================================
+       HAMBURGER
+       Caché sur ordinateur
+       ================================================== */
+
+    .menu-toggle {
+      display: none;
+    }
+
+
+    /* ==================================================
+       MAIN
+       ================================================== */
 
     main {
-      padding: 30px 15px;
+      min-height:
+        calc(100vh - 90px);
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        70px
+        30px;
     }
+
+
+    /* ==================================================
+       INFO CARD
+       ================================================== */
 
     .info-card {
-      min-height: auto;
-      padding: 55px 22px;
-      border-radius: 14px;
+      position: relative;
+
+      width:
+        min(950px, 100%);
+
+      min-height: 650px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        70px
+        45px;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(159,118,47,.40);
+
+      box-shadow:
+        0 25px 70px
+        rgba(72,42,18,.13),
+
+        inset
+        0 0 0 7px
+        rgba(255,248,238,.65);
+
+      background:
+        linear-gradient(
+          rgba(255,248,238,.82),
+          rgba(255,248,238,.90)
+        ),
+        url("images/infos-bg.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      background-repeat: no-repeat;
     }
 
+
+    /* CADRE DORÉ INTÉRIEUR */
+
     .info-card::after {
-      inset: 9px;
+      content: "";
+
+      position: absolute;
+
+      inset: 15px;
+
+      border:
+        1px solid
+        rgba(213,170,87,.45);
+
+      border-radius: 11px;
+
+      pointer-events: none;
+    }
+
+
+    /* ==================================================
+       CONTENT
+       ================================================== */
+
+    .info-content {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      font-family:
+        "Inter",
+        sans-serif;
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: 4px;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: 39px;
+      font-family:
+        "Bodoni Moda",
+        serif;
+
+      font-size: 54px;
+
+      font-weight: 400;
+
+      margin:
+        0
+        0
+        20px;
     }
+
+    .ornament {
+      color: var(--gold);
+
+      font-size: 24px;
+
+      margin:
+        10px
+        0
+        30px;
+    }
+
+
+    /* ==================================================
+       DETAILS
+       ================================================== */
 
     .details-grid {
-      grid-template-columns: 1fr;
-      gap: 14px;
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 22px;
+
+      margin:
+        0
+        auto
+        35px;
+
+      max-width: 620px;
     }
 
-    .detail-value,
-    .venue-address {
-      font-size: 18px;
+    .detail-box {
+      background:
+        rgba(255,248,238,.55);
+
+      border:
+        1px solid
+        rgba(213,170,87,.28);
+
+      border-radius: 12px;
+
+      padding:
+        20px
+        18px;
+
+      backdrop-filter:
+        blur(3px);
     }
+
+    .detail-label {
+      font-family:
+        "Inter",
+        sans-serif;
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 8px;
+    }
+
+    .detail-value {
+      font-size: 22px;
+
+      line-height: 1.4;
+    }
+
+
+    /* ==================================================
+       VENUE
+       ================================================== */
 
     .venue-name {
-      font-size: 27px;
+      font-family:
+        "Bodoni Moda",
+        serif;
+
+      font-size: 30px;
+
+      color: var(--deep-gold);
+
+      margin-bottom: 10px;
     }
-  }
+
+    .venue-address {
+      font-size: 21px;
+
+      line-height: 1.55;
+
+      margin: 0;
+    }
+
+
+    /* ==================================================
+       BUTTON
+       ================================================== */
+
+    .btn {
+      display: inline-block;
+
+      margin-top: 32px;
+
+      padding:
+        18px
+        44px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #e7bc65,
+          #c99841
+        );
+
+      color: #2b1609;
+
+      text-decoration: none;
+
+      border-radius: 7px;
+
+      font-family:
+        "Inter",
+        sans-serif;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      box-shadow:
+        0 15px 35px
+        rgba(80,45,15,.17);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .btn:hover {
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 20px 45px
+        rgba(80,45,15,.22);
+    }
+
+
+    /* ==================================================
+       TABLET / MOBILE NAVIGATION
+       ================================================== */
+
+    @media (max-width: 900px) {
+
+      .topbar {
+        padding:
+          22px
+          25px;
+
+        z-index: 60;
+      }
+
+
+      /* --------------------------
+         HAMBURGER
+         -------------------------- */
+
+      .menu-toggle {
+        display: flex;
+
+        position: relative;
+
+        width: 44px;
+
+        height: 44px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+
+        z-index: 70;
+      }
+
+      .menu-toggle span {
+        display: block;
+
+        width: 28px;
+
+        height: 1.5px;
+
+        background: var(--gold);
+
+        transition:
+          transform .35s ease,
+          opacity .25s ease;
+      }
+
+
+      /* --------------------------
+         MENU PLEIN ÉCRAN
+         -------------------------- */
+
+      nav {
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100vh;
+        height: 100dvh;
+
+        background:
+          rgba(25,10,4,.97);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+
+        font-family:
+          "Inter",
+          sans-serif;
+
+        font-size: 14px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+          translateY(-10px);
+
+        transition:
+          opacity .35s ease,
+          transform .35s ease,
+          visibility .35s ease;
+
+        z-index: 65;
+      }
+
+      nav.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+          translateY(0);
+      }
+
+      nav a {
+        font-size: 14px;
+
+        color:
+          rgba(255,255,255,.92);
+      }
+
+
+      /* --------------------------
+         HAMBURGER -> X
+         -------------------------- */
+
+      .menu-toggle.open
+      span:nth-child(1) {
+        transform:
+          translateY(7.5px)
+          rotate(45deg);
+      }
+
+      .menu-toggle.open
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open
+      span:nth-child(3) {
+        transform:
+          translateY(-7.5px)
+          rotate(-45deg);
+      }
+    }
+
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 700px) {
+
+      .logo {
+        font-size: 23px;
+
+        letter-spacing: 6px;
+      }
+
+      main {
+        padding:
+          30px
+          15px;
+      }
+
+      .info-card {
+        min-height: auto;
+
+        padding:
+          55px
+          22px;
+
+        border-radius: 14px;
+      }
+
+      .info-card::after {
+        inset: 9px;
+      }
+
+      h1 {
+        font-size: 39px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+      }
+
+      .detail-value,
+      .venue-address {
+        font-size: 18px;
+      }
+
+      .venue-name {
+        font-size: 27px;
+      }
+
+      .btn {
+        width:
+          min(100%, 320px);
+
+        padding:
+          17px
+          16px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.3px;
+      }
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <div class="topbar">
-    <div class="logo">P & S</div>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="ceremony.html">Ceremony</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="venue.html">Venue</a>
-      <a href="memories.html">Memories</a>
+  <!-- ==================================================
+       NAVIGATION
+       ================================================== -->
+
+  <div class="topbar">
+
+    <div class="logo">
+      P & S
+    </div>
+
+
+    <!-- HAMBURGER MOBILE -->
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav id="mainNav">
+
+      <a href="/">
+        Home
+      </a>
+
+      <a href="ceremony.html">
+        Ceremony
+      </a>
+
+      <a href="schedule.html">
+        Schedule
+      </a>
+
+      <a
+        href="venue.html"
+        class="active"
+      >
+        Venue
+      </a>
+
+      <a href="memories.html">
+        Memories
+      </a>
+
     </nav>
+
   </div>
 
+
+  <!-- ==================================================
+       WEDDING INFORMATION
+       ================================================== -->
+
   <main>
+
     <div class="info-card">
 
       <div class="info-content">
 
-        <div class="eyebrow">P & S · 31ST OCTOBER 2026</div>
 
-        <h1>Wedding Information</h1>
+        <div class="eyebrow">
+          P & S · 31ST OCTOBER 2026
+        </div>
 
-        <div class="ornament">♡</div>
+
+        <h1>
+          Wedding Information
+        </h1>
+
+
+        <div class="ornament">
+          ♡
+        </div>
+
+
+        <!-- DETAILS -->
 
         <div class="details-grid">
 
-          <div class="detail-box">
-            <div class="detail-label">Date</div>
-            <div class="detail-value">31st October 2026</div>
-          </div>
 
           <div class="detail-box">
-            <div class="detail-label">Ceremony</div>
-            <div class="detail-value">09:00 AM</div>
+
+            <div class="detail-label">
+              Date
+            </div>
+
+            <div class="detail-value">
+              31st October 2026
+            </div>
+
           </div>
+
+
+          <div class="detail-box">
+
+            <div class="detail-label">
+              Ceremony
+            </div>
+
+            <div class="detail-value">
+              09:00 AM
+            </div>
+
+          </div>
+
 
         </div>
 
-        <div class="venue-name">Hall 111</div>
+
+        <!-- VENUE -->
+
+        <div class="venue-name">
+          Hall 111
+        </div>
+
 
         <p class="venue-address">
           Im Grund 5<br>
           5014 Gretzenbach<br>
           Switzerland
         </p>
+
+
+        <!-- GOOGLE MAPS -->
 
         <a
           class="btn"
@@ -311,10 +782,104 @@
           Open in Google Maps
         </a>
 
+
       </div>
 
     </div>
+
   </main>
 
+
+  <!-- ==================================================
+       MOBILE MENU SCRIPT
+       ================================================== -->
+
+  <script>
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mainNav.classList.toggle("open");
+
+
+        menuToggle.classList.toggle(
+          "open",
+          isOpen
+        );
+
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+
+        document.body.style.overflow =
+          isOpen
+            ? "hidden"
+            : "";
+
+      }
+    );
+
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mainNav.classList.remove(
+              "open"
+            );
+
+
+            menuToggle.classList.remove(
+              "open"
+            );
+
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open menu"
+            );
+
+
+            document.body.style.overflow = "";
+
+          }
+        );
+
+      });
+
+  </script>
+
+
 </body>
+
 </html>
