@@ -44,10 +44,12 @@
       left: 0;
       width: 100%;
       padding: 28px 45px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+
+      z-index: 50;
     }
 
     .logo {
@@ -60,9 +62,11 @@
     nav {
       display: flex;
       gap: 34px;
+
       font-family: "Inter", sans-serif;
       font-size: 12px;
       font-weight: 500;
+
       letter-spacing: 2px;
       text-transform: uppercase;
     }
@@ -70,12 +74,19 @@
     nav a {
       color: rgba(255,255,255,0.9);
       text-decoration: none;
+
       transition: color 0.3s ease;
     }
 
     nav a:hover,
     nav a.active {
       color: var(--gold);
+    }
+
+    /* Hamburger invisible sur desktop */
+
+    .menu-toggle {
+      display: none;
     }
 
 
@@ -85,6 +96,7 @@
 
     .ceremony-hero {
       min-height: 72vh;
+
       position: relative;
 
       background:
@@ -96,6 +108,7 @@
 
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
 
       display: flex;
       align-items: center;
@@ -113,36 +126,48 @@
 
     .ceremony-kicker {
       font-family: "Inter", sans-serif;
+
       font-size: 11px;
       font-weight: 500;
+
       letter-spacing: 6px;
       text-transform: uppercase;
+
       color: var(--gold);
+
       margin-bottom: 22px;
     }
 
     .ceremony-title {
       font-family: "Bodoni Moda", serif;
+
       font-size: 68px;
       font-weight: 500;
+
       letter-spacing: 2px;
+
       margin: 0;
+
       color: var(--cream);
     }
 
     .gold-line {
       width: 65px;
       height: 1px;
+
       background: var(--gold);
+
       margin: 30px auto;
     }
 
     .ceremony-subtitle {
       max-width: 650px;
+
       margin: 0 auto;
 
       font-size: 23px;
       font-weight: 300;
+
       line-height: 1.6;
 
       color: rgba(255,255,255,0.88);
@@ -155,36 +180,49 @@
 
     .ceremony-intro {
       padding: 95px 30px 80px;
+
       text-align: center;
     }
 
     .intro-inner {
       max-width: 760px;
+
       margin: 0 auto;
     }
 
     .intro-kicker {
       font-family: "Inter", sans-serif;
+
       font-size: 10px;
       font-weight: 600;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
+
       color: var(--deep-gold);
+
       margin-bottom: 22px;
     }
 
     .intro-title {
       font-family: "Bodoni Moda", serif;
+
       font-size: 42px;
       line-height: 1.25;
+
       font-weight: 500;
+
       color: var(--brown);
+
       margin: 0 0 28px;
     }
 
     .intro-text {
       font-size: 21px;
+
       line-height: 1.7;
+
       margin: 0;
     }
 
@@ -195,24 +233,31 @@
 
     .ornament {
       display: flex;
+
       align-items: center;
       justify-content: center;
+
       gap: 16px;
+
       margin: 45px 0 0;
     }
 
     .ornament::before,
     .ornament::after {
       content: "";
+
       width: 45px;
       height: 1px;
+
       background: var(--gold);
     }
 
     .diamond {
       width: 8px;
       height: 8px;
+
       border: 1px solid var(--gold);
+
       transform: rotate(45deg);
     }
 
@@ -223,19 +268,25 @@
 
     .timeline {
       position: relative;
+
       max-width: 1100px;
+
       margin: 0 auto;
+
       padding: 50px 30px 80px;
     }
 
     .timeline::before {
       content: "";
+
       position: absolute;
+
       top: 0;
       bottom: 0;
       left: 50%;
 
       width: 1px;
+
       background: rgba(213,170,87,0.55);
 
       transform: translateX(-50%);
@@ -243,28 +294,34 @@
 
     .timeline-item {
       position: relative;
+
       width: 50%;
+
       padding: 35px 70px 90px;
     }
 
     .timeline-item.left {
       left: 0;
+
       text-align: right;
     }
 
     .timeline-item.right {
       left: 50%;
+
       text-align: left;
     }
 
     .timeline-dot {
       position: absolute;
+
       top: 43px;
 
       width: 11px;
       height: 11px;
 
       background: var(--cream);
+
       border: 2px solid var(--gold);
       border-radius: 50%;
 
@@ -281,32 +338,44 @@
 
     .timeline-number {
       font-family: "Inter", sans-serif;
+
       font-size: 11px;
       font-weight: 600;
+
       letter-spacing: 5px;
+
       color: var(--deep-gold);
+
       margin-bottom: 14px;
     }
 
     .timeline-title {
       font-family: "Bodoni Moda", serif;
+
       font-size: 31px;
       line-height: 1.2;
+
       font-weight: 500;
+
       color: var(--brown);
+
       margin: 0 0 8px;
     }
 
     .timeline-traditional {
       font-size: 18px;
       font-style: italic;
+
       color: var(--deep-gold);
+
       margin-bottom: 20px;
     }
 
     .timeline-text {
       font-size: 19px;
+
       line-height: 1.65;
+
       margin: 0;
     }
 
@@ -317,28 +386,34 @@
 
     .thaali-section {
       background: var(--cream);
+
       padding: 35px 35px 105px;
     }
 
     .thaali-card {
       position: relative;
+
       isolation: isolate;
 
       max-width: 1050px;
+
       margin: 0 auto;
 
       min-height: 590px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       border: 1px solid rgba(159,118,47,0.55);
+
       border-radius: 22px;
 
       overflow: hidden;
 
       background-image: url("images/thaali-kattu.png");
+
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -351,6 +426,7 @@
       content: "";
 
       position: absolute;
+
       inset: 0;
 
       background: rgba(255,248,238,0.88);
@@ -365,12 +441,15 @@
       content: "";
 
       position: absolute;
+
       inset: 13px;
 
       border: 1px solid rgba(213,170,87,0.60);
+
       border-radius: 15px;
 
       z-index: 2;
+
       pointer-events: none;
     }
 
@@ -379,12 +458,14 @@
 
     .thaali-inner {
       position: relative;
+
       z-index: 1;
 
       width: 100%;
       max-width: 780px;
 
       margin: 0 auto;
+
       padding: 75px 35px;
 
       text-align: center;
@@ -392,8 +473,10 @@
 
     .thaali-number {
       font-family: "Inter", sans-serif;
+
       font-size: 11px;
       font-weight: 600;
+
       letter-spacing: 5px;
 
       color: var(--deep-gold);
@@ -403,6 +486,7 @@
 
     .thaali-kicker {
       font-size: 19px;
+
       font-style: italic;
 
       color: var(--deep-gold);
@@ -415,6 +499,7 @@
 
       font-size: 54px;
       line-height: 1.15;
+
       font-weight: 500;
 
       color: var(--brown);
@@ -424,6 +509,7 @@
 
     .thaali-traditional {
       font-size: 21px;
+
       font-style: italic;
 
       color: var(--deep-gold);
@@ -433,6 +519,7 @@
 
     .thaali-ornament {
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -462,9 +549,11 @@
 
     .thaali-text {
       max-width: 680px;
+
       margin: 0 auto;
 
       font-size: 21px;
+
       line-height: 1.75;
 
       color: var(--brown);
@@ -477,18 +566,22 @@
 
     .final-rituals {
       padding: 70px 30px 115px;
+
       text-align: center;
     }
 
     .final-inner {
       max-width: 760px;
+
       margin: 0 auto;
     }
 
     .final-number {
       font-family: "Inter", sans-serif;
+
       font-size: 11px;
       font-weight: 600;
+
       letter-spacing: 5px;
 
       color: var(--deep-gold);
@@ -501,6 +594,7 @@
 
       font-size: 44px;
       line-height: 1.2;
+
       font-weight: 500;
 
       color: var(--brown);
@@ -510,6 +604,7 @@
 
     .final-traditional {
       font-size: 19px;
+
       font-style: italic;
 
       color: var(--deep-gold);
@@ -519,6 +614,7 @@
 
     .final-text {
       font-size: 20px;
+
       line-height: 1.7;
 
       margin: 0;
@@ -526,6 +622,7 @@
 
     .final-ornament {
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -557,6 +654,7 @@
       font-family: "Bodoni Moda", serif;
 
       font-size: 28px;
+
       line-height: 1.45;
 
       color: var(--brown);
@@ -579,6 +677,7 @@
 
     .footer-logo {
       font-size: 25px;
+
       letter-spacing: 7px;
 
       color: var(--gold);
@@ -590,26 +689,156 @@
       font-family: "Inter", sans-serif;
 
       font-size: 9px;
+
       letter-spacing: 4px;
+
       text-transform: uppercase;
 
       color: rgba(255,248,238,0.65);
     }
 
 
-    /* =========================
-       TABLET
-       ========================= */
+    /* ==================================================
+       TABLET / MOBILE NAVIGATION
+       ================================================== */
 
     @media (max-width: 900px) {
 
-      nav {
-        display: none;
-      }
-
       .topbar {
         padding: 25px;
+
+        z-index: 60;
       }
+
+      /*
+        HAMBURGER
+      */
+
+      .menu-toggle {
+        display: flex;
+
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+
+        z-index: 70;
+      }
+
+      .menu-toggle span {
+        display: block;
+
+        width: 28px;
+        height: 1.5px;
+
+        background: var(--gold);
+
+        transition:
+          transform 0.35s ease,
+          opacity 0.25s ease;
+      }
+
+
+      /*
+        MENU PLEIN ECRAN
+      */
+
+      nav {
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        background: rgba(25,10,4,0.97);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+
+        font-family: "Inter", sans-serif;
+
+        font-size: 14px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease,
+          visibility 0.35s ease;
+
+        z-index: 65;
+      }
+
+      nav.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+      }
+
+      nav a {
+        font-size: 14px;
+
+        color: rgba(255,255,255,0.92);
+      }
+
+
+      /*
+        HAMBURGER -> X
+      */
+
+      .menu-toggle.open span:nth-child(1) {
+        transform:
+          translateY(7.5px)
+          rotate(45deg);
+      }
+
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open span:nth-child(3) {
+        transform:
+          translateY(-7.5px)
+          rotate(-45deg);
+      }
+
 
       .ceremony-title {
         font-size: 48px;
@@ -639,6 +868,7 @@
       .timeline-item.left,
       .timeline-item.right {
         width: 100%;
+
         left: 0;
 
         text-align: left;
@@ -649,28 +879,58 @@
       .timeline-item.left .timeline-dot,
       .timeline-item.right .timeline-dot {
         left: -28px;
+
         right: auto;
       }
     }
 
 
-    /* =========================
+    /* ==================================================
        MOBILE
-       ========================= */
+       ================================================== */
 
     @media (max-width: 600px) {
 
+      .topbar {
+        padding: 22px 25px;
+      }
+
       .logo {
         font-size: 23px;
+
+        letter-spacing: 6px;
       }
+
+
+      /*
+        HERO MOBILE
+
+        Utilise une image différente
+        de la version desktop.
+      */
 
       .ceremony-hero {
         min-height: 68vh;
+
         padding: 120px 24px 80px;
+
+        background:
+          linear-gradient(
+            rgba(25,11,4,0.48),
+            rgba(25,11,4,0.64)
+          ),
+          url("images/ceremony-mobile.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
       }
 
       .ceremony-title {
         font-size: 39px;
+
         line-height: 1.15;
       }
 
@@ -681,6 +941,9 @@
       .ceremony-subtitle {
         font-size: 19px;
       }
+
+
+      /* INTRO */
 
       .ceremony-intro {
         padding: 70px 24px 60px;
@@ -693,6 +956,9 @@
       .intro-text {
         font-size: 19px;
       }
+
+
+      /* TIMELINE */
 
       .timeline-title {
         font-size: 27px;
@@ -719,6 +985,7 @@
 
       .thaali-card::before {
         inset: 9px;
+
         border-radius: 12px;
       }
 
@@ -744,6 +1011,7 @@
 
       .thaali-text {
         font-size: 19px;
+
         line-height: 1.65;
       }
 
@@ -784,12 +1052,44 @@
       P & S
     </div>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="ceremony.html">Ceremony</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="venue.html">Venue</a>
-      <a href="memories.html">Memories</a>
+
+    <!-- HAMBURGER MOBILE -->
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav id="mainNav">
+
+      <a href="/">
+        Home
+      </a>
+
+      <a href="ceremony.html" class="active">
+        Ceremony
+      </a>
+
+      <a href="schedule.html">
+        Schedule
+      </a>
+
+      <a href="venue.html">
+        Venue
+      </a>
+
+      <a href="memories.html">
+        Memories
+      </a>
+
     </nav>
 
   </div>
@@ -873,7 +1173,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">01</div>
+      <div class="timeline-number">
+        01
+      </div>
 
       <h3 class="timeline-title">
         Welcoming the Groom
@@ -900,7 +1202,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">02</div>
+      <div class="timeline-number">
+        02
+      </div>
 
       <h3 class="timeline-title">
         Opening Prayers
@@ -927,7 +1231,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">03</div>
+      <div class="timeline-number">
+        03
+      </div>
 
       <h3 class="timeline-title">
         Arrival of the Bride
@@ -953,7 +1259,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">04</div>
+      <div class="timeline-number">
+        04
+      </div>
 
       <h3 class="timeline-title">
         The Sacred Fire
@@ -979,7 +1287,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">05</div>
+      <div class="timeline-number">
+        05
+      </div>
 
       <h3 class="timeline-title">
         The Joining of Two Families
@@ -1005,7 +1315,9 @@
 
       <div class="timeline-dot"></div>
 
-      <div class="timeline-number">06</div>
+      <div class="timeline-number">
+        06
+      </div>
 
       <h3 class="timeline-title">
         The Koorai & Thaali
@@ -1134,6 +1446,88 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       MOBILE MENU SCRIPT
+       ========================= -->
+
+  <script>
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mainNav.classList.toggle("open");
+
+        menuToggle.classList.toggle(
+          "open",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+        document.body.style.overflow =
+          isOpen
+            ? "hidden"
+            : "";
+
+      }
+    );
+
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mainNav.classList.remove(
+              "open"
+            );
+
+            menuToggle.classList.remove(
+              "open"
+            );
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open menu"
+            );
+
+            document.body.style.overflow = "";
+
+          }
+        );
+
+      });
+
+  </script>
 
 
 </body>
