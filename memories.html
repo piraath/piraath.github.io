@@ -101,7 +101,6 @@
 
     /* ==================================================
        HAMBURGER
-       Caché sur ordinateur
        ================================================== */
 
     .menu-toggle {
@@ -126,7 +125,8 @@
 
 
     /* ==================================================
-       GRANDE CARTE
+       MEMORY CARD
+       DESKTOP
        ================================================== */
 
     .memory-card {
@@ -147,9 +147,7 @@
 
       overflow: hidden;
 
-      border:
-        1px solid
-        rgba(159,118,47,.40);
+      border: 1px solid rgba(159,118,47,.40);
 
       box-shadow:
         0 25px 70px rgba(72,42,18,.13),
@@ -175,7 +173,7 @@
 
 
     /* ==================================================
-       PETIT CADRE DORÉ INTÉRIEUR
+       CADRE DORÉ
        ================================================== */
 
     .memory-card::after {
@@ -185,9 +183,7 @@
 
       inset: 15px;
 
-      border:
-        1px solid
-        rgba(213,170,87,.45);
+      border: 1px solid rgba(213,170,87,.45);
 
       border-radius: 11px;
 
@@ -196,7 +192,7 @@
 
 
     /* ==================================================
-       CONTENU
+       CONTENT
        ================================================== */
 
     .memory-content {
@@ -261,18 +257,14 @@
 
       width: fit-content;
 
-      background:
-        rgba(255,255,255,.94);
+      background: rgba(255,255,255,.94);
 
       border-radius: 12px;
 
-      border:
-        1px solid
-        rgba(213,170,87,.25);
+      border: 1px solid rgba(213,170,87,.25);
 
       box-shadow:
-        0 12px 35px
-        rgba(72,42,18,.12);
+        0 12px 35px rgba(72,42,18,.12);
     }
 
     .qr-wrap img {
@@ -285,7 +277,7 @@
 
 
     /* ==================================================
-       BOUTON
+       BUTTON
        ================================================== */
 
     .btn {
@@ -319,8 +311,7 @@
       text-transform: uppercase;
 
       box-shadow:
-        0 15px 35px
-        rgba(80,45,15,.17);
+        0 15px 35px rgba(80,45,15,.17);
 
       transition:
         transform .35s ease,
@@ -328,12 +319,10 @@
     }
 
     .btn:hover {
-      transform:
-        translateY(-3px);
+      transform: translateY(-3px);
 
       box-shadow:
-        0 20px 45px
-        rgba(80,45,15,.22);
+        0 20px 45px rgba(80,45,15,.22);
     }
 
     .private-note {
@@ -358,9 +347,7 @@
       }
 
 
-      /* --------------------------
-         HAMBURGER
-         -------------------------- */
+      /* HAMBURGER */
 
       .menu-toggle {
         display: flex;
@@ -403,9 +390,7 @@
       }
 
 
-      /* --------------------------
-         MENU PLEIN ÉCRAN
-         -------------------------- */
+      /* MENU PLEIN ÉCRAN */
 
       nav {
         position: fixed;
@@ -417,8 +402,7 @@
         height: 100vh;
         height: 100dvh;
 
-        background:
-          rgba(25,10,4,.97);
+        background: rgba(25,10,4,.97);
 
         display: flex;
 
@@ -429,9 +413,7 @@
 
         gap: 30px;
 
-        font-family:
-          "Inter",
-          sans-serif;
+        font-family: "Inter", sans-serif;
 
         font-size: 14px;
 
@@ -445,8 +427,7 @@
 
         pointer-events: none;
 
-        transform:
-          translateY(-10px);
+        transform: translateY(-10px);
 
         transition:
           opacity .35s ease,
@@ -463,21 +444,17 @@
 
         pointer-events: auto;
 
-        transform:
-          translateY(0);
+        transform: translateY(0);
       }
 
       nav a {
         font-size: 14px;
 
-        color:
-          rgba(255,255,255,.92);
+        color: rgba(255,255,255,.92);
       }
 
 
-      /* --------------------------
-         HAMBURGER -> X
-         -------------------------- */
+      /* HAMBURGER -> X */
 
       .menu-toggle.open span:nth-child(1) {
         transform:
@@ -510,32 +487,26 @@
       }
 
 
-      /* --------------------------
-         MAIN
-         -------------------------- */
+      /* MAIN */
 
       main {
-        min-height:
-          calc(100svh - 88px);
+        min-height: calc(100svh - 88px);
 
         padding: 25px 15px;
       }
 
 
       /* ==================================================
-         CARTE MOBILE
+         MEMORY CARD MOBILE
 
-         Même image mobile que Ceremony :
-         ceremony-mobile.jpg
+         MÊME IMAGE QUE LA PAGE D'ACCUEIL MOBILE
+         images/hero-mobile.jpg
          ================================================== */
 
       .memory-card {
-        min-height:
-          calc(100svh - 138px);
+        min-height: calc(100svh - 138px);
 
-        padding:
-          50px
-          22px;
+        padding: 50px 22px;
 
         border-radius: 14px;
 
@@ -544,7 +515,7 @@
             rgba(255,248,238,.78),
             rgba(255,248,238,.86)
           ),
-          url("images/ceremony-mobile.jpg");
+          url("images/hero-mobile.jpg");
 
         background-size: cover;
 
@@ -560,9 +531,7 @@
       }
 
 
-      /* --------------------------
-         CONTENU
-         -------------------------- */
+      /* CONTENT */
 
       .memory-content {
         max-width: 100%;
@@ -597,9 +566,7 @@
       }
 
 
-      /* --------------------------
-         QR
-         -------------------------- */
+      /* QR */
 
       .qr-wrap {
         padding: 10px;
@@ -614,18 +581,14 @@
       }
 
 
-      /* --------------------------
-         BOUTON
-         -------------------------- */
+      /* BUTTON */
 
       .btn {
         width: min(100%, 320px);
 
         margin-top: 24px;
 
-        padding:
-          17px
-          16px;
+        padding: 17px 16px;
 
         font-size: 10px;
 
@@ -635,10 +598,7 @@
       .private-note {
         max-width: 300px;
 
-        margin:
-          17px
-          auto
-          0;
+        margin: 17px auto 0;
 
         font-size: 11px;
 
@@ -648,21 +608,17 @@
 
 
     /* ==================================================
-       PETITS TÉLÉPHONES
+       SMALL PHONES
        ================================================== */
 
     @media (max-width: 380px) {
 
       main {
-        padding:
-          20px
-          12px;
+        padding: 20px 12px;
       }
 
       .memory-card {
-        padding:
-          42px
-          18px;
+        padding: 42px 18px;
       }
 
       h1 {
@@ -681,7 +637,6 @@
     }
 
   </style>
-
 </head>
 
 
@@ -698,8 +653,6 @@
       P & S
     </div>
 
-
-    <!-- HAMBURGER MOBILE -->
 
     <button
       class="menu-toggle"
@@ -815,7 +768,7 @@
 
 
   <!-- ==================================================
-       MOBILE MENU SCRIPT
+       MOBILE MENU
        ================================================== -->
 
   <script>
@@ -872,27 +825,19 @@
           "click",
           () => {
 
-            mainNav.classList.remove(
-              "open"
-            );
+            mainNav.classList.remove("open");
 
-
-            menuToggle.classList.remove(
-              "open"
-            );
-
+            menuToggle.classList.remove("open");
 
             menuToggle.setAttribute(
               "aria-expanded",
               "false"
             );
 
-
             menuToggle.setAttribute(
               "aria-label",
               "Open menu"
             );
-
 
             document.body.style.overflow = "";
 
