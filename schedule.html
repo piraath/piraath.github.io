@@ -8,7 +8,6 @@
   <title>Schedule | Pirasanth & Shankavie</title>
 
   <style>
-
     @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
     :root {
@@ -29,34 +28,25 @@
 
     body {
       margin: 0;
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+      font-family: "Cormorant Garamond", Georgia, serif;
       background: var(--cream);
-
       color: var(--text);
     }
 
 
-    /* ==================================================
+    /* =========================
        NAVIGATION
-       ================================================== */
+       ========================= */
 
     .topbar {
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 100%;
 
       padding: 28px 45px;
 
       display: flex;
-
       justify-content: space-between;
       align-items: center;
 
@@ -65,40 +55,28 @@
 
     .logo {
       color: var(--gold);
-
       font-size: 28px;
-
       letter-spacing: 7px;
-
       font-weight: 500;
     }
 
     nav {
       display: flex;
-
       gap: 34px;
 
-      font-family:
-        "Inter",
-        sans-serif;
-
+      font-family: "Inter", sans-serif;
       font-size: 12px;
-
       font-weight: 500;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
 
     nav a {
-      color:
-        rgba(255,255,255,0.9);
-
+      color: rgba(255,255,255,0.9);
       text-decoration: none;
 
-      transition:
-        color 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     nav a:hover,
@@ -106,29 +84,19 @@
       color: var(--gold);
     }
 
-
-    /* ==================================================
-       HAMBURGER
-       ================================================== */
-
     .menu-toggle {
       display: none;
     }
 
 
-    /* ==================================================
+    /* =========================
        HERO
-       ================================================== */
+       ========================= */
 
     .schedule-hero {
       min-height: 72vh;
 
       position: relative;
-
-      /*
-        DESKTOP :
-        image originale conservée
-      */
 
       background:
         linear-gradient(
@@ -138,23 +106,16 @@
         url("images/hero.jpg");
 
       background-size: cover;
-
       background-position: center;
-
       background-repeat: no-repeat;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
-      padding:
-        130px
-        30px
-        90px;
+      padding: 130px 30px 90px;
 
       text-align: center;
-
       color: white;
     }
 
@@ -163,16 +124,12 @@
     }
 
     .schedule-kicker {
-      font-family:
-        "Inter",
-        sans-serif;
+      font-family: "Inter", sans-serif;
 
       font-size: 11px;
-
       font-weight: 500;
 
       letter-spacing: 6px;
-
       text-transform: uppercase;
 
       color: var(--gold);
@@ -181,12 +138,9 @@
     }
 
     .schedule-title {
-      font-family:
-        "Bodoni Moda",
-        serif;
+      font-family: "Bodoni Moda", serif;
 
       font-size: 68px;
-
       font-weight: 500;
 
       letter-spacing: 2px;
@@ -198,7 +152,6 @@
 
     .gold-line {
       width: 65px;
-
       height: 1px;
 
       background: var(--gold);
@@ -212,25 +165,20 @@
       margin: 0 auto;
 
       font-size: 23px;
-
       font-weight: 300;
 
       line-height: 1.6;
 
-      color:
-        rgba(255,255,255,0.88);
+      color: rgba(255,255,255,0.88);
     }
 
 
-    /* ==================================================
+    /* =========================
        INTRODUCTION
-       ================================================== */
+       ========================= */
 
     .schedule-intro {
-      padding:
-        95px
-        30px
-        45px;
+      padding: 95px 30px 45px;
 
       text-align: center;
     }
@@ -242,16 +190,12 @@
     }
 
     .intro-kicker {
-      font-family:
-        "Inter",
-        sans-serif;
+      font-family: "Inter", sans-serif;
 
       font-size: 10px;
-
       font-weight: 600;
 
       letter-spacing: 5px;
-
       text-transform: uppercase;
 
       color: var(--deep-gold);
@@ -260,27 +204,20 @@
     }
 
     .intro-title {
-      font-family:
-        "Bodoni Moda",
-        serif;
+      font-family: "Bodoni Moda", serif;
 
       font-size: 42px;
-
       line-height: 1.25;
 
       font-weight: 500;
 
       color: var(--brown);
 
-      margin:
-        0
-        0
-        24px;
+      margin: 0 0 24px;
     }
 
     .intro-text {
       font-size: 21px;
-
       line-height: 1.7;
 
       margin: 0;
@@ -288,16 +225,12 @@
 
     .ornament {
       display: flex;
-
       align-items: center;
       justify-content: center;
 
       gap: 16px;
 
-      margin:
-        45px
-        0
-        0;
+      margin: 45px 0 0;
     }
 
     .ornament::before,
@@ -305,7 +238,6 @@
       content: "";
 
       width: 45px;
-
       height: 1px;
 
       background: var(--gold);
@@ -313,31 +245,24 @@
 
     .diamond {
       width: 8px;
-
       height: 8px;
 
-      border:
-        1px solid
-        var(--gold);
+      border: 1px solid var(--gold);
 
-      transform:
-        rotate(45deg);
+      transform: rotate(45deg);
     }
 
 
-    /* ==================================================
+    /* =========================
        DAY SCHEDULE
-       ================================================== */
+       ========================= */
 
     .day-schedule {
       max-width: 1000px;
 
       margin: 0 auto;
 
-      padding:
-        55px
-        30px
-        120px;
+      padding: 55px 30px 120px;
     }
 
     .schedule-list {
@@ -349,7 +274,7 @@
     }
 
 
-    /* CENTRAL TIMELINE */
+    /* Central timeline */
 
     .schedule-list::before {
       content: "";
@@ -357,31 +282,26 @@
       position: absolute;
 
       top: 18px;
-
       bottom: 18px;
 
       left: 155px;
 
       width: 1px;
 
-      background:
-        rgba(213,170,87,0.55);
+      background: rgba(213,170,87,0.55);
     }
 
 
-    /* ==================================================
+    /* =========================
        SCHEDULE ITEM
-       ================================================== */
+       ========================= */
 
     .schedule-item {
       position: relative;
 
       display: grid;
 
-      grid-template-columns:
-        120px
-        70px
-        1fr;
+      grid-template-columns: 120px 70px 1fr;
 
       min-height: 180px;
     }
@@ -389,12 +309,9 @@
     .schedule-time {
       padding-top: 1px;
 
-      font-family:
-        "Bodoni Moda",
-        serif;
+      font-family: "Bodoni Moda", serif;
 
       font-size: 27px;
-
       font-weight: 500;
 
       line-height: 1.2;
@@ -409,31 +326,24 @@
 
       margin-top: 6px;
 
-      font-family:
-        "Inter",
-        sans-serif;
+      font-family: "Inter", sans-serif;
 
       font-size: 9px;
-
       font-weight: 600;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
 
       color: var(--deep-gold);
     }
 
 
-    /* ==================================================
-       DOT
-       ================================================== */
+    /* DOT */
 
     .schedule-marker {
       position: relative;
 
       display: flex;
-
       justify-content: center;
 
       z-index: 2;
@@ -441,53 +351,36 @@
 
     .schedule-dot {
       width: 11px;
-
       height: 11px;
 
       margin-top: 10px;
 
       background: var(--cream);
 
-      border:
-        2px solid
-        var(--gold);
-
+      border: 2px solid var(--gold);
       border-radius: 50%;
 
-      box-shadow:
-        0 0 0 7px
-        var(--cream);
+      box-shadow: 0 0 0 7px var(--cream);
     }
 
 
-    /* ==================================================
-       SCHEDULE CONTENT
-       ================================================== */
+    /* CONTENT */
 
     .schedule-content {
-      padding:
-        0
-        0
-        65px;
+      padding: 0 0 65px;
     }
 
     .schedule-item-title {
-      font-family:
-        "Bodoni Moda",
-        serif;
+      font-family: "Bodoni Moda", serif;
 
       font-size: 32px;
-
       line-height: 1.2;
 
       font-weight: 500;
 
       color: var(--brown);
 
-      margin:
-        0
-        0
-        13px;
+      margin: 0 0 13px;
     }
 
     .schedule-description {
@@ -496,7 +389,6 @@
       margin: 0;
 
       font-size: 20px;
-
       line-height: 1.65;
     }
 
@@ -505,9 +397,9 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        MUHURTHA
-       ================================================== */
+       ========================= */
 
     .muhurtha-item {
       min-height: 230px;
@@ -515,16 +407,13 @@
 
     .muhurtha-item .schedule-dot {
       width: 17px;
-
       height: 17px;
 
       margin-top: 7px;
 
       background: var(--gold);
 
-      border:
-        4px solid
-        var(--cream);
+      border: 4px solid var(--cream);
 
       box-shadow:
         0 0 0 1px var(--gold),
@@ -536,13 +425,9 @@
 
       max-width: 560px;
 
-      padding:
-        34px
-        38px;
+      padding: 34px 38px;
 
-      border:
-        1px solid
-        rgba(159,118,47,0.42);
+      border: 1px solid rgba(159,118,47,0.42);
 
       border-radius: 18px;
 
@@ -561,9 +446,7 @@
 
       inset: 8px;
 
-      border:
-        1px solid
-        rgba(213,170,87,0.24);
+      border: 1px solid rgba(213,170,87,0.24);
 
       border-radius: 12px;
 
@@ -573,16 +456,12 @@
     .muhurtha-label {
       position: relative;
 
-      font-family:
-        "Inter",
-        sans-serif;
+      font-family: "Inter", sans-serif;
 
       font-size: 9px;
-
       font-weight: 600;
 
       letter-spacing: 4px;
-
       text-transform: uppercase;
 
       color: var(--deep-gold);
@@ -590,28 +469,22 @@
       margin-bottom: 14px;
     }
 
-    .muhurtha-card
-    .schedule-item-title,
-    .muhurtha-card
-    .schedule-description {
+    .muhurtha-card .schedule-item-title,
+    .muhurtha-card .schedule-description {
       position: relative;
     }
 
-    .muhurtha-card
-    .schedule-item-title {
+    .muhurtha-card .schedule-item-title {
       font-size: 36px;
     }
 
 
-    /* ==================================================
+    /* =========================
        CLOSING
-       ================================================== */
+       ========================= */
 
     .schedule-closing {
-      padding:
-        0
-        30px
-        105px;
+      padding: 0 30px 105px;
 
       text-align: center;
     }
@@ -624,7 +497,6 @@
 
     .closing-ornament {
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -638,7 +510,6 @@
       content: "";
 
       width: 45px;
-
       height: 1px;
 
       background: var(--gold);
@@ -646,24 +517,17 @@
 
     .closing-diamond {
       width: 8px;
-
       height: 8px;
 
-      border:
-        1px solid
-        var(--gold);
+      border: 1px solid var(--gold);
 
-      transform:
-        rotate(45deg);
+      transform: rotate(45deg);
     }
 
     .closing-text {
-      font-family:
-        "Bodoni Moda",
-        serif;
+      font-family: "Bodoni Moda", serif;
 
       font-size: 29px;
-
       line-height: 1.5;
 
       color: var(--brown);
@@ -672,18 +536,16 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        FOOTER
-       ================================================== */
+       ========================= */
 
     footer {
       background: var(--brown);
 
       text-align: center;
 
-      padding:
-        50px
-        25px;
+      padding: 50px 25px;
     }
 
     .footer-logo {
@@ -697,23 +559,19 @@
     }
 
     .footer-date {
-      font-family:
-        "Inter",
-        sans-serif;
+      font-family: "Inter", sans-serif;
 
       font-size: 9px;
 
       letter-spacing: 4px;
-
       text-transform: uppercase;
 
-      color:
-        rgba(255,248,238,0.65);
+      color: rgba(255,248,238,0.65);
     }
 
 
     /* ==================================================
-       TABLET / HAMBURGER
+       TABLET / MOBILE NAVIGATION
        ================================================== */
 
     @media (max-width: 900px) {
@@ -733,7 +591,6 @@
         position: relative;
 
         width: 44px;
-
         height: 44px;
 
         padding: 0;
@@ -745,7 +602,6 @@
         flex-direction: column;
 
         justify-content: center;
-
         align-items: center;
 
         gap: 6px;
@@ -759,7 +615,6 @@
         display: block;
 
         width: 28px;
-
         height: 1.5px;
 
         background: var(--gold);
@@ -780,25 +635,26 @@
         width: 100%;
 
         height: 100vh;
-
         height: 100dvh;
+
+        background: rgba(25,10,4,0.97);
 
         display: flex;
 
         flex-direction: column;
 
         align-items: center;
-
         justify-content: center;
 
         gap: 30px;
 
-        background:
-          rgba(25,10,4,0.97);
+        font-family: "Inter", sans-serif;
 
         font-size: 14px;
 
         letter-spacing: 4px;
+
+        text-transform: uppercase;
 
         opacity: 0;
 
@@ -806,8 +662,7 @@
 
         pointer-events: none;
 
-        transform:
-          translateY(-10px);
+        transform: translateY(-10px);
 
         transition:
           opacity 0.35s ease,
@@ -824,34 +679,29 @@
 
         pointer-events: auto;
 
-        transform:
-          translateY(0);
+        transform: translateY(0);
       }
 
       nav a {
         font-size: 14px;
 
-        color:
-          rgba(255,255,255,0.92);
+        color: rgba(255,255,255,0.92);
       }
 
 
       /* HAMBURGER -> X */
 
-      .menu-toggle.open
-      span:nth-child(1) {
+      .menu-toggle.open span:nth-child(1) {
         transform:
           translateY(7.5px)
           rotate(45deg);
       }
 
-      .menu-toggle.open
-      span:nth-child(2) {
+      .menu-toggle.open span:nth-child(2) {
         opacity: 0;
       }
 
-      .menu-toggle.open
-      span:nth-child(3) {
+      .menu-toggle.open span:nth-child(3) {
         transform:
           translateY(-7.5px)
           rotate(-45deg);
@@ -868,40 +718,36 @@
     }
 
 
-    /* ==================================================
+    /* =========================
        MOBILE
-       ================================================== */
+       ========================= */
 
     @media (max-width: 700px) {
 
       .logo {
         font-size: 23px;
-
         letter-spacing: 6px;
       }
 
 
-      /* ==================================================
+      /* ================================================
          HERO MOBILE
 
-         MÊME PHOTO QUE HOME MOBILE :
-         images/hero-mobile.jpg
-         ================================================== */
+         DEUXIÈME IMAGE MOBILE :
+         ceremony-mobile.jpg
+         ================================================ */
 
       .schedule-hero {
         min-height: 68vh;
 
-        padding:
-          120px
-          24px
-          80px;
+        padding: 120px 24px 80px;
 
         background:
           linear-gradient(
             rgba(25,11,4,0.48),
             rgba(25,11,4,0.64)
           ),
-          url("images/hero-mobile.jpg");
+          url("images/ceremony-mobile.jpg");
 
         background-size: cover;
 
@@ -925,15 +771,10 @@
       }
 
 
-      /* ==================================================
-         INTRO
-         ================================================== */
+      /* INTRO */
 
       .schedule-intro {
-        padding:
-          70px
-          24px
-          35px;
+        padding: 70px 24px 35px;
       }
 
       .intro-title {
@@ -945,15 +786,10 @@
       }
 
 
-      /* ==================================================
-         SCHEDULE MOBILE
-         ================================================== */
+      /* SCHEDULE */
 
       .day-schedule {
-        padding:
-          45px
-          22px
-          80px;
+        padding: 45px 22px 80px;
       }
 
       .schedule-list {
@@ -964,7 +800,6 @@
         left: 5px;
 
         top: 12px;
-
         bottom: 12px;
       }
 
@@ -975,11 +810,7 @@
 
         min-height: auto;
 
-        padding:
-          0
-          0
-          60px
-          25px;
+        padding: 0 0 60px 25px;
       }
 
       .schedule-time {
@@ -994,7 +825,6 @@
         display: inline-block;
 
         margin-top: 0;
-
         margin-left: 8px;
       }
 
@@ -1023,28 +853,22 @@
       }
 
 
-      /* ==================================================
-         MUHURTHA MOBILE
-         ================================================== */
+      /* MUHURTHA MOBILE */
 
       .muhurtha-item {
         min-height: auto;
       }
 
-      .muhurtha-item
-      .schedule-marker {
+      .muhurtha-item .schedule-marker {
         top: 0;
       }
 
-      .muhurtha-item
-      .schedule-dot {
+      .muhurtha-item .schedule-dot {
         margin-top: 5px;
       }
 
       .muhurtha-card {
-        padding:
-          30px
-          26px;
+        padding: 30px 26px;
 
         border-radius: 15px;
       }
@@ -1055,21 +879,15 @@
         border-radius: 10px;
       }
 
-      .muhurtha-card
-      .schedule-item-title {
+      .muhurtha-card .schedule-item-title {
         font-size: 31px;
       }
 
 
-      /* ==================================================
-         CLOSING
-         ================================================== */
+      /* CLOSING */
 
       .schedule-closing {
-        padding:
-          0
-          24px
-          80px;
+        padding: 0 24px 80px;
       }
 
       .closing-text {
@@ -1078,16 +896,15 @@
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- ==================================================
+  <!-- =========================
        NAVIGATION
-       ================================================== -->
+       ========================= -->
 
   <div class="topbar">
 
@@ -1096,7 +913,7 @@
     </div>
 
 
-    <!-- HAMBURGER -->
+    <!-- HAMBURGER MOBILE -->
 
     <button
       class="menu-toggle"
@@ -1105,11 +922,9 @@
       aria-expanded="false"
       aria-controls="mainNav"
     >
-
       <span></span>
       <span></span>
       <span></span>
-
     </button>
 
 
@@ -1143,9 +958,9 @@
   </div>
 
 
-  <!-- ==================================================
+  <!-- =========================
        HERO
-       ================================================== -->
+       ========================= -->
 
   <section class="schedule-hero">
 
@@ -1170,9 +985,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        INTRODUCTION
-       ================================================== -->
+       ========================= -->
 
   <section class="schedule-intro">
 
@@ -1200,9 +1015,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        SCHEDULE
-       ================================================== -->
+       ========================= -->
 
   <main class="day-schedule">
 
@@ -1340,9 +1155,9 @@
   </main>
 
 
-  <!-- ==================================================
+  <!-- =========================
        CLOSING
-       ================================================== -->
+       ========================= -->
 
   <section class="schedule-closing">
 
@@ -1362,9 +1177,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        FOOTER
-       ================================================== -->
+       ========================= -->
 
   <footer>
 
@@ -1379,9 +1194,9 @@
   </footer>
 
 
-  <!-- ==================================================
+  <!-- =========================
        MOBILE MENU SCRIPT
-       ================================================== -->
+       ========================= -->
 
   <script>
 
@@ -1399,18 +1214,15 @@
         const isOpen =
           mainNav.classList.toggle("open");
 
-
         menuToggle.classList.toggle(
           "open",
           isOpen
         );
 
-
         menuToggle.setAttribute(
           "aria-expanded",
           isOpen
         );
-
 
         menuToggle.setAttribute(
           "aria-label",
@@ -1418,7 +1230,6 @@
             ? "Close menu"
             : "Open menu"
         );
-
 
         document.body.style.overflow =
           isOpen
@@ -1441,23 +1252,19 @@
               "open"
             );
 
-
             menuToggle.classList.remove(
               "open"
             );
-
 
             menuToggle.setAttribute(
               "aria-expanded",
               "false"
             );
 
-
             menuToggle.setAttribute(
               "aria-label",
               "Open menu"
             );
-
 
             document.body.style.overflow = "";
 
@@ -1470,5 +1277,4 @@
 
 
 </body>
-
 </html>
